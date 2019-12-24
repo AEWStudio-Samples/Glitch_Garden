@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: eda19985597b88041b998a3bd5ae8cd2
+guid: 583291cf346a8bb48916e0fdc1666a96
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1904368223378512772
-    second: '#Throw Sheet_0'
+      213: 4329101700749926836
+    second: '#Star Coin Sheet_0'
   - first:
-      213: -5274675993955308767
-    second: '#Throw Sheet_1'
+      213: 4258439367292540794
+    second: '#Star Coin Sheet_1'
   - first:
-      213: -6443037438563633430
-    second: '#Throw Sheet_2'
+      213: 6614337716570544544
+    second: '#Star Coin Sheet_2'
   - first:
-      213: 6358966982888625247
-    second: '#Throw Sheet_3'
+      213: -2678690935536138384
+    second: '#Star Coin Sheet_3'
   - first:
-      213: 195741165941872474
-    second: '#Throw Sheet_4'
+      213: -2797974410660918058
+    second: '#Star Coin Sheet_4'
   - first:
-      213: 5309254751048954030
-    second: '#Throw Sheet_5'
+      213: 8562006711351419268
+    second: '#Star Coin Sheet_5'
   - first:
-      213: 5321379571070170230
-    second: '#Throw Sheet_6'
+      213: -7401379726659881128
+    second: '#Star Coin Sheet_6'
   - first:
-      213: -5502020963117175758
-    second: '#Throw Sheet_7'
+      213: -3546835637425103242
+    second: '#Star Coin Sheet_7'
   - first:
-      213: -2987022926054748668
-    second: '#Throw Sheet_8'
+      213: -7451875504896811441
+    second: '#Star Coin Sheet_8'
   - first:
-      213: 8365323050461429176
-    second: '#Throw Sheet_9'
+      213: -5401511156390583656
+    second: '#Star Coin Sheet_9'
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -75,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 439
+  spritePixelsToUnits: 1140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -128,211 +128,211 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '#Throw Sheet_0'
+      name: '#Star Coin Sheet_0'
       rect:
         serializedVersion: 2
-        x: 0
-        y: 451
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 1144
+        width: 569
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 302595588049aa140a87b57c2dc228a5
-      internalID: -1904368223378512772
+      spriteID: 5899c115e5bf0d24cbfb3be8c2782d07
+      internalID: 4329101700749926836
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_1'
+      name: '#Star Coin Sheet_1'
       rect:
         serializedVersion: 2
-        x: 377
-        y: 451
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 571
+        y: 1145
+        width: 565
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d7544fc8760347740ae1aaef3f97865a
-      internalID: -5274675993955308767
+      spriteID: dc53d9c5986195b4f9200037e9d1dec0
+      internalID: 4258439367292540794
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_2'
+      name: '#Star Coin Sheet_2'
       rect:
         serializedVersion: 2
-        x: 754
-        y: 451
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1137
+        y: 1145
+        width: 510
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 44bcdcc91925baf4db66451b4cc412ac
-      internalID: -6443037438563633430
+      spriteID: 5def57eead442c74e9b4785e5562af3e
+      internalID: 6614337716570544544
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_3'
+      name: '#Star Coin Sheet_3'
       rect:
         serializedVersion: 2
-        x: 1131
-        y: 451
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 5
+        y: 576
+        width: 434
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80eadb5445744ba419224a81b2f28ec0
-      internalID: 6358966982888625247
+      spriteID: 849e0131353014f46a1fa2cbe6c324ab
+      internalID: -2678690935536138384
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_4'
+      name: '#Star Coin Sheet_4'
       rect:
         serializedVersion: 2
-        x: 1508
-        y: 451
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 436
+        y: 573
+        width: 268
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a8901d5c8ed20f4886bf6cc704ba72d
-      internalID: 195741165941872474
+      spriteID: d8c9bf5b97579c24b8764ff8d5e09ce7
+      internalID: -2797974410660918058
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_5'
+      name: '#Star Coin Sheet_5'
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 705
+        y: 573
+        width: 114
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45b6b31f3f1936e469b045849e286d83
-      internalID: 5309254751048954030
+      spriteID: 531c26c7f4e70244b95d262603e73160
+      internalID: 8562006711351419268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_6'
+      name: '#Star Coin Sheet_6'
       rect:
         serializedVersion: 2
-        x: 377
-        y: 0
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 820
+        y: 573
+        width: 268
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8995d2a5331245d4da5889a2ed8353eb
-      internalID: 5321379571070170230
+      spriteID: 6ae1f73c0729c224aa543e0c4c303fe4
+      internalID: -7401379726659881128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_7'
+      name: '#Star Coin Sheet_7'
       rect:
         serializedVersion: 2
-        x: 754
-        y: 0
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1089
+        y: 572
+        width: 434
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6bf0aeced372db4c91c690a67265d17
-      internalID: -5502020963117175758
+      spriteID: 5b8d75383a86d464097f980b7a4715b4
+      internalID: -3546835637425103242
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_8'
+      name: '#Star Coin Sheet_8'
       rect:
         serializedVersion: 2
-        x: 1131
-        y: 0
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 1
+        y: 1
+        width: 509
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e45ff0d218664a24b83c4b32ef13ef4d
-      internalID: -2987022926054748668
+      spriteID: 914bf1f843eb23a4d907c138eeee07ae
+      internalID: -7451875504896811441
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Throw Sheet_9'
+      name: '#Star Coin Sheet_9'
       rect:
         serializedVersion: 2
-        x: 1508
-        y: 0
-        width: 377
-        height: 451
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 511
+        y: 1
+        width: 565
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5806c3af4960c634b901655a02ed4f31
-      internalID: 8365323050461429176
+      spriteID: aa4a4ff47cf557340b2312bac0768f5f
+      internalID: -5401511156390583656
       vertices: []
       indices: 
       edges: []
