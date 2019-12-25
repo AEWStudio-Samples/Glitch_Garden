@@ -1,0 +1,355 @@
+fileFormatVersion: 2
+guid: 48336d506947861459fe2bed45ba0526
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7015456133527134443
+    second: '#1 Bronze Coin Sheet_0'
+  - first:
+      213: -5354922558701765948
+    second: '#1 Bronze Coin Sheet_1'
+  - first:
+      213: -2306546165653960790
+    second: '#1 Bronze Coin Sheet_2'
+  - first:
+      213: 4107500369612363607
+    second: '#1 Bronze Coin Sheet_3'
+  - first:
+      213: 8896510692862171685
+    second: '#1 Bronze Coin Sheet_4'
+  - first:
+      213: -3249726581487325525
+    second: '#1 Bronze Coin Sheet_5'
+  - first:
+      213: 7203221848258516123
+    second: '#1 Bronze Coin Sheet_6'
+  - first:
+      213: -1551484723976447759
+    second: '#1 Bronze Coin Sheet_7'
+  - first:
+      213: 2443976517120436783
+    second: '#1 Bronze Coin Sheet_8'
+  - first:
+      213: -6266646693968414073
+    second: '#1 Bronze Coin Sheet_9'
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1140
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_0'
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1136
+        width: 565
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d2679fba6049f246bdf714dad037670
+      internalID: 7015456133527134443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_1'
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1136
+        width: 561
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101c231f3a1822b4badf8c6eb48948fe
+      internalID: -5354922558701765948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_2'
+      rect:
+        serializedVersion: 2
+        x: 1129
+        y: 1136
+        width: 506
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d911b1f88578c549be5fa9e52ccefe7
+      internalID: -2306546165653960790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_3'
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 568
+        width: 430
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd3f9d49a6f2c14ea1b3362af6372be
+      internalID: 4107500369612363607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_4'
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 569
+        width: 264
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe252cedad03bf41985fb070acdb801
+      internalID: 8896510692862171685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_5'
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 569
+        width: 110
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c030519cccb13c4f8a5e174164fb806
+      internalID: -3249726581487325525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_6'
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 569
+        width: 264
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b067d484857207d40a9b3343f466c926
+      internalID: 7203221848258516123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_7'
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 568
+        width: 430
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436aa2fdad2f69049ae9ad3751fcd6c0
+      internalID: -1551484723976447759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_8'
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1
+        width: 505
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b4230e345450fb479729c225999c0f3
+      internalID: 2443976517120436783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#1 Bronze Coin Sheet_9'
+      rect:
+        serializedVersion: 2
+        x: 507
+        y: 1
+        width: 561
+        height: 566
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb798d9159f0ed4d917a1bd97bb9a73
+      internalID: -6266646693968414073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

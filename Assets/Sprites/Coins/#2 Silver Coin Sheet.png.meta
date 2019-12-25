@@ -1,37 +1,37 @@
 fileFormatVersion: 2
-guid: 583291cf346a8bb48916e0fdc1666a96
+guid: 4522f6b8d5acc5a4bb6437c7bd70b9f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4329101700749926836
-    second: '#Star Coin Sheet_0'
+      213: 4755700760893575162
+    second: '#2 Silver Coin Sheet_0'
   - first:
-      213: 4258439367292540794
-    second: '#Star Coin Sheet_1'
+      213: 3024688220312907426
+    second: '#2 Silver Coin Sheet_1'
   - first:
-      213: 6614337716570544544
-    second: '#Star Coin Sheet_2'
+      213: -8950947518039635264
+    second: '#2 Silver Coin Sheet_2'
   - first:
-      213: -2678690935536138384
-    second: '#Star Coin Sheet_3'
+      213: 4592243435105495983
+    second: '#2 Silver Coin Sheet_3'
   - first:
-      213: -2797974410660918058
-    second: '#Star Coin Sheet_4'
+      213: 5773363414799931431
+    second: '#2 Silver Coin Sheet_4'
   - first:
-      213: 8562006711351419268
-    second: '#Star Coin Sheet_5'
+      213: -6278898841970775196
+    second: '#2 Silver Coin Sheet_5'
   - first:
-      213: -7401379726659881128
-    second: '#Star Coin Sheet_6'
+      213: -1875781834548618703
+    second: '#2 Silver Coin Sheet_6'
   - first:
-      213: -3546835637425103242
-    second: '#Star Coin Sheet_7'
+      213: 6801882280010219264
+    second: '#2 Silver Coin Sheet_7'
   - first:
-      213: -7451875504896811441
-    second: '#Star Coin Sheet_8'
+      213: 7972468002995026280
+    second: '#2 Silver Coin Sheet_8'
   - first:
-      213: -5401511156390583656
-    second: '#Star Coin Sheet_9'
+      213: -1576808734333011708
+    second: '#2 Silver Coin Sheet_9'
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -128,34 +128,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: '#Star Coin Sheet_0'
+      name: '#2 Silver Coin Sheet_0'
       rect:
         serializedVersion: 2
         x: 1
-        y: 1144
-        width: 569
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5899c115e5bf0d24cbfb3be8c2782d07
-      internalID: 4329101700749926836
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: '#Star Coin Sheet_1'
-      rect:
-        serializedVersion: 2
-        x: 571
-        y: 1145
+        y: 1136
         width: 565
-        height: 570
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc53d9c5986195b4f9200037e9d1dec0
-      internalID: 4258439367292540794
+      spriteID: 05b8ff606cd3d7241aa89698614b0392
+      internalID: 4755700760893575162
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_2'
+      name: '#2 Silver Coin Sheet_1'
       rect:
         serializedVersion: 2
-        x: 1137
-        y: 1145
-        width: 510
-        height: 570
+        x: 567
+        y: 1136
+        width: 561
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +163,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5def57eead442c74e9b4785e5562af3e
-      internalID: 6614337716570544544
+      spriteID: e8f65f64d68c14a488864d82b9473dc6
+      internalID: 3024688220312907426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_3'
+      name: '#2 Silver Coin Sheet_2'
       rect:
         serializedVersion: 2
-        x: 5
-        y: 576
-        width: 434
-        height: 571
+        x: 1129
+        y: 1136
+        width: 506
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +184,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 849e0131353014f46a1fa2cbe6c324ab
-      internalID: -2678690935536138384
+      spriteID: 0eb1045c8543e4e42912b3fad9d29e30
+      internalID: -8950947518039635264
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_4'
+      name: '#2 Silver Coin Sheet_3'
       rect:
         serializedVersion: 2
-        x: 436
-        y: 573
-        width: 268
-        height: 570
+        x: 1
+        y: 568
+        width: 430
+        height: 567
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +205,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8c9bf5b97579c24b8764ff8d5e09ce7
-      internalID: -2797974410660918058
+      spriteID: 4a65ad79d7a9ab24f9801120f5003f7a
+      internalID: 4592243435105495983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_5'
+      name: '#2 Silver Coin Sheet_4'
       rect:
         serializedVersion: 2
-        x: 705
-        y: 573
-        width: 114
-        height: 570
+        x: 432
+        y: 569
+        width: 264
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +226,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 531c26c7f4e70244b95d262603e73160
-      internalID: 8562006711351419268
+      spriteID: 28bbf3fb96425aa4abd99d01f2885d48
+      internalID: 5773363414799931431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_6'
+      name: '#2 Silver Coin Sheet_5'
       rect:
         serializedVersion: 2
-        x: 820
-        y: 573
-        width: 268
-        height: 570
+        x: 697
+        y: 569
+        width: 110
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,20 +247,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ae1f73c0729c224aa543e0c4c303fe4
-      internalID: -7401379726659881128
+      spriteID: a622aacc4b3e87645ba1e259f0d5b16d
+      internalID: -6278898841970775196
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_7'
+      name: '#2 Silver Coin Sheet_6'
       rect:
         serializedVersion: 2
-        x: 1089
-        y: 572
-        width: 434
-        height: 571
+        x: 808
+        y: 569
+        width: 264
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,20 +268,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b8d75383a86d464097f980b7a4715b4
-      internalID: -3546835637425103242
+      spriteID: f85083c8a0faef04d9a65d4c653f82b6
+      internalID: -1875781834548618703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_8'
+      name: '#2 Silver Coin Sheet_7'
+      rect:
+        serializedVersion: 2
+        x: 1073
+        y: 568
+        width: 430
+        height: 567
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679eb05cf1be51447a36f2a55164e14a
+      internalID: 6801882280010219264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#2 Silver Coin Sheet_8'
       rect:
         serializedVersion: 2
         x: 1
         y: 1
-        width: 509
-        height: 570
+        width: 505
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -310,20 +310,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 914bf1f843eb23a4d907c138eeee07ae
-      internalID: -7451875504896811441
+      spriteID: ad333aa772f1346449782f36b4e54b13
+      internalID: 7972468002995026280
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: '#Star Coin Sheet_9'
+      name: '#2 Silver Coin Sheet_9'
       rect:
         serializedVersion: 2
-        x: 511
+        x: 507
         y: 1
-        width: 565
-        height: 570
+        width: 561
+        height: 566
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -331,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa4a4ff47cf557340b2312bac0768f5f
-      internalID: -5401511156390583656
+      spriteID: 8e623e87c0197db46b3e2d65bc120536
+      internalID: -1576808734333011708
       vertices: []
       indices: 
       edges: []
