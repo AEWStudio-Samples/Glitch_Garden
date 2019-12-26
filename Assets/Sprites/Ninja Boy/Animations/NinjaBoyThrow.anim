@@ -46,8 +46,11 @@ AnimationClip:
     - time: 0.6666667
       value: {fileID: -2987022926054748668, guid: eda19985597b88041b998a3bd5ae8cd2,
         type: 3}
+    - time: 0.75
+      value: {fileID: 8365323050461429176, guid: eda19985597b88041b998a3bd5ae8cd2,
+        type: 3}
     attribute: m_Sprite
-    path: 
+    path: Ninja Boy Sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -58,7 +61,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1993265453
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -74,12 +77,13 @@ AnimationClip:
     - {fileID: 5321379571070170230, guid: eda19985597b88041b998a3bd5ae8cd2, type: 3}
     - {fileID: -5502020963117175758, guid: eda19985597b88041b998a3bd5ae8cd2, type: 3}
     - {fileID: -2987022926054748668, guid: eda19985597b88041b998a3bd5ae8cd2, type: 3}
+    - {fileID: 8365323050461429176, guid: eda19985597b88041b998a3bd5ae8cd2, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.75
+    m_StopTime: 0.8333333
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -98,11 +102,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.25
-    functionName: 
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

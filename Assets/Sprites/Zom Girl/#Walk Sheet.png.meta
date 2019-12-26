@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: bc766ab4353b67d46bab533d5d4bba30
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7868283925045670015
+    second: '#Walk Sheet_0'
+  - first:
+      213: -3236835702839800072
+    second: '#Walk Sheet_1'
+  - first:
+      213: 5577664458398399419
+    second: '#Walk Sheet_2'
+  - first:
+      213: 4971954547212742625
+    second: '#Walk Sheet_3'
+  - first:
+      213: 5363164415373737427
+    second: '#Walk Sheet_4'
+  - first:
+      213: 5975243468852925187
+    second: '#Walk Sheet_5'
+  - first:
+      213: -771231201452321401
+    second: '#Walk Sheet_6'
+  - first:
+      213: 8556276973270513980
+    second: '#Walk Sheet_7'
+  - first:
+      213: -5748745281311703226
+    second: '#Walk Sheet_8'
+  - first:
+      213: 296365816974770061
+    second: '#Walk Sheet_9'
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +70,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +100,243 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '#Walk Sheet_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 576
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a5c953284df6348ae22432b9ebbb38
+      internalID: -7868283925045670015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_1'
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 576
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 331ca732296bf3947b97f385cc0686a3
+      internalID: -3236835702839800072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_2'
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 576
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e601a053743944585f8627b29c235f
+      internalID: 5577664458398399419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_3'
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 576
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebc5b6ed1d145e647aceecbcba1ab6e5
+      internalID: 4971954547212742625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_4'
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 576
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1fb28d788682241909f4949ef48cc4
+      internalID: 5363164415373737427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_5'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07f76ad8f4676f047962f9419ff15ff2
+      internalID: 5975243468852925187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_6'
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 0
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db65c3dffa63936459933b5f64dcc335
+      internalID: -771231201452321401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_7'
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 0
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1d9e39f06b0964fa47ff3091ed8e08
+      internalID: 8556276973270513980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_8'
+      rect:
+        serializedVersion: 2
+        x: 1563
+        y: 0
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc79976fa40ba545a950745407edaab
+      internalID: -5748745281311703226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Walk Sheet_9'
+      rect:
+        serializedVersion: 2
+        x: 2084
+        y: 0
+        width: 521
+        height: 576
+      alignment: 9
+      pivot: {x: 0.4528236, y: 0.02335919}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7022052b8f6d4d40a372b56af2486bb
+      internalID: 296365816974770061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

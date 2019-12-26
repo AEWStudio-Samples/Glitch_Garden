@@ -1,7 +1,37 @@
 fileFormatVersion: 2
 guid: d1cabb4662147ff4a83d0c94a0d62ee7
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2598882610045784845
+    second: '#Attack Sheet_0'
+  - first:
+      213: 7742769944057356246
+    second: '#Attack Sheet_1'
+  - first:
+      213: -1973875614721217903
+    second: '#Attack Sheet_2'
+  - first:
+      213: -2844074760942304802
+    second: '#Attack Sheet_3'
+  - first:
+      213: 8626464726951945981
+    second: '#Attack Sheet_4'
+  - first:
+      213: 8930175125180142661
+    second: '#Attack Sheet_5'
+  - first:
+      213: -7622270957689701368
+    second: '#Attack Sheet_6'
+  - first:
+      213: -7067360101243101635
+    second: '#Attack Sheet_7'
+  - first:
+      213: -6977233724752978004
+    second: '#Attack Sheet_8'
+  - first:
+      213: -4876168940973945153
+    second: '#Attack Sheet_9'
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +70,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +100,243 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '#Attack Sheet_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 565
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bad305b0dad4a8d46a96f3f44ad953b1
+      internalID: -2598882610045784845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_1'
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 565
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d031219f66d1041988477b60a6f2c2
+      internalID: 7742769944057356246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_2'
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 565
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09eb7b65c5147f488fce938dc8627b2
+      internalID: -1973875614721217903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_3'
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 565
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea1c4f7c382b0f4a82ffaadf9140972
+      internalID: -2844074760942304802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_4'
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 565
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8fa5518ce56e4644ae2e39faaa301ed
+      internalID: 8626464726951945981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_5'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ce43cb37e8ebd146ab4661e99f18cb2
+      internalID: 8930175125180142661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_6'
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 0
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb57f7d6787a4c04e99b87dcb37e2c1c
+      internalID: -7622270957689701368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_7'
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 0
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cdb2b80376b5c7479044054fd8508d5
+      internalID: -7067360101243101635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_8'
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 0
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14abf0b6a4d410e47919570abe22489f
+      internalID: -6977233724752978004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Attack Sheet_9'
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 0
+        width: 524
+        height: 565
+      alignment: 9
+      pivot: {x: 0.2896361, y: 0.08451014}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c41408d218a88d40922f6aa5e0f7fac
+      internalID: -4876168940973945153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

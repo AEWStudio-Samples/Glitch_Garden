@@ -1,7 +1,43 @@
 fileFormatVersion: 2
 guid: 3c0e8d6d59792b54e8073077bfce9d97
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -5909890852084369328
+    second: '#Dead Sheet_0'
+  - first:
+      213: 735672958738563204
+    second: '#Dead Sheet_1'
+  - first:
+      213: -8214168699651823785
+    second: '#Dead Sheet_2'
+  - first:
+      213: 2143182595697372404
+    second: '#Dead Sheet_3'
+  - first:
+      213: 2837138847800091120
+    second: '#Dead Sheet_4'
+  - first:
+      213: 9080973027868707710
+    second: '#Dead Sheet_5'
+  - first:
+      213: -893760065208813778
+    second: '#Dead Sheet_6'
+  - first:
+      213: -4400380749117669107
+    second: '#Dead Sheet_7'
+  - first:
+      213: -7884016497911118602
+    second: '#Dead Sheet_8'
+  - first:
+      213: 2008490250329551564
+    second: '#Dead Sheet_9'
+  - first:
+      213: -8170490014607479687
+    second: '#Dead Sheet_10'
+  - first:
+      213: 5409624134586536315
+    second: '#Dead Sheet_11'
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +76,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 450
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +106,285 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: '#Dead Sheet_0'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1254
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 770dd9c7ac79f8044a5573f1f64ae1df
+      internalID: -5909890852084369328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_1'
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1254
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4111189022f9b3439d7f524386e50e1
+      internalID: 735672958738563204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_2'
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 1254
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6877529ca51066a46a6988dc00d7154e
+      internalID: -8214168699651823785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_3'
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 1254
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553fd24a67b81254391463b3d4cdeda8
+      internalID: 2143182595697372404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_4'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 627
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba21ba81ae2a6d4e805ebe2d201db40
+      internalID: 2837138847800091120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_5'
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 627
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d58dbde6b81ab647a083d19924ec5f7
+      internalID: 9080973027868707710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_6'
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 627
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0708c3e8e59233241ac50c61c1e6f8b5
+      internalID: -893760065208813778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_7'
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 627
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1262059339a1ee41b57887b8ae1d49b
+      internalID: -4400380749117669107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_8'
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3341753a9c4c2f948b9ce92164344f7b
+      internalID: -7884016497911118602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_9'
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 0
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b2015b17dc5b94eb33720661ec9974
+      internalID: 2008490250329551564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_10'
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 0
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b424bc6a1340a44aae87288defb0f04
+      internalID: -8170490014607479687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: '#Dead Sheet_11'
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 0
+        width: 684
+        height: 627
+      alignment: 9
+      pivot: {x: 0.1705713, y: 0.1233648}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b56fe2422a14ec499e1a4fc35b60983
+      internalID: 5409624134586536315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -49,7 +49,7 @@ AnimationClip:
     - time: 0.75
       value: {fileID: 58237834354421180, guid: 2353f8151b578ee44b219f2a43df129f, type: 3}
     attribute: m_Sprite
-    path: 
+    path: Ninja Boy Sprite
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -60,7 +60,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1993265453
       attribute: 0
       script: {fileID: 0}
       typeID: 212
