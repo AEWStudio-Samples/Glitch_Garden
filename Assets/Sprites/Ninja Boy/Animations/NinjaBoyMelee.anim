@@ -39,7 +39,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.41666666
         value: 0.5
         inSlope: 0
         outSlope: 0
@@ -60,7 +60,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: Ninja Boy Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   m_PPtrCurves:
@@ -96,7 +96,7 @@ AnimationClip:
       value: {fileID: -1973875614721217903, guid: b123796348c1e5f4785224da4b33fb79,
         type: 3}
     attribute: m_Sprite
-    path: Ninja Boy Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -107,14 +107,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1993265453
+      path: 0
       attribute: 1460864421
       script: {fileID: 0}
       typeID: 224
       customType: 28
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1993265453
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -174,7 +174,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.41666666
         value: 0.5
         inSlope: 0
         outSlope: 0
@@ -195,7 +195,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_AnchoredPosition.x
-    path: Ninja Boy Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves: []

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class CoinControll : MonoBehaviour
 {
@@ -19,14 +20,16 @@ public class CoinControll : MonoBehaviour
     SpriteRenderer myRender;
     Animator anim;
     int coinHash = Animator.StringToHash("Coin Type");
+    int heartHash = Animator.StringToHash("Heart");
     Rigidbody2D myRigidbody;
     Canvas gui; // change to GUIControll
 
     // state vars for collecting the coin
-    int coinValue;
+    int coinType;
     bool coinCollected = false;
     Vector3 moveFallBack = new Vector3(1, 1, 0);
-    Vector3 moveTo;
+    Vector3 coinCollector;
+    Vector3 heartCollector;
     int moveX, moveY;
 
     private void Awake()
@@ -45,9 +48,12 @@ public class CoinControll : MonoBehaviour
 
     private void SetCoinType()
     {
+        coinType = RandInt(3);
+
         anim = GetComponent<Animator>();
-        anim.SetInteger(coinHash, coinValue = RandInt(3));
-        //print(coinValue);
+        anim.SetInteger(coinHash, coinType);
+
+        if (RandInt(100) > 90) anim.SetTrigger(heartHash);
     }
 
     // gets a random int between 1 and max
@@ -74,9 +80,21 @@ public class CoinControll : MonoBehaviour
             if (canvas.CompareTag("GUI")) gui = canvas;
         }
 
-        //if (gui) { moveTo = gui.GetCoinCollector().position }
-        //else { moveTo = moveFallBack }
-        moveTo = moveFallBack; // remove after GUI is setup
+        /*  TODO Update after getting the GUIControll.cs code done
+        if (gui)
+        {
+            coinCollector = gui.GetCoinCollector().position;
+            heartCollector = gui.GetHeartCollector().position;
+        }
+        else
+        {
+            coinCollector = moveFallBack;
+            heartCollector = moveFallBack;
+        }
+        */
+
+        coinCollector = moveFallBack; // remove after GUI is setup
+        heartCollector = moveFallBack; // remove after GUI is setup
     }
 
     private void PlayFX()
@@ -88,13 +106,18 @@ public class CoinControll : MonoBehaviour
     {
         if (initialize) { myRigidbody.velocity = Vector2.down * fallSpeed; return; }
 
-        Vector3 moveDirection = (moveTo - transform.position);
+        Vector3 collector = coinCollector;
+        if (coinType == 4) collector = heartCollector;
+
+        Vector3 moveDirection = (coinCollector - transform.position);
         myRigidbody.velocity = moveDirection;
 
         if (moveDirection.magnitude <= .2f)
         {
-            //gui.AddCoins(coinValues[coinValue])
-            Destroy(gameObject);
+            /*
+            if (coinType == 4) { gui.AddHeart(); }
+            else { gui.AddCoins(coinValues[coinType - 1]); }
+            */Destroy(gameObject);
         }
     }
 
@@ -105,7 +128,7 @@ public class CoinControll : MonoBehaviour
 
     void CollectCoin()
     {
-        if (transform.position.y <= 0.5f) coinCollected = true;
+        if (transform.position.y <= 0.5f && coinType != 4) coinCollected = true;
 
         if (coinCollected)
         {

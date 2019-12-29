@@ -49,7 +49,7 @@ AnimationClip:
     - time: 0.75
       value: {fileID: 58237834354421180, guid: 3d0d33fcb751fff43a49b5cb785eb8f7, type: 3}
     attribute: m_Sprite
-    path: Ninja Girl Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -60,7 +60,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3424276583
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212

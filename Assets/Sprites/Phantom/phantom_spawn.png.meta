@@ -1,0 +1,1195 @@
+fileFormatVersion: 2
+guid: 06c196de0eb6a4f40af426b39304431b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7019862482084463805
+    second: phantom_spawn_0
+  - first:
+      213: -5893172653621327198
+    second: phantom_spawn_1
+  - first:
+      213: -5918377699147695588
+    second: phantom_spawn_2
+  - first:
+      213: -37795808800161452
+    second: phantom_spawn_3
+  - first:
+      213: 509228496844230676
+    second: phantom_spawn_4
+  - first:
+      213: 4146929145263419750
+    second: phantom_spawn_5
+  - first:
+      213: -995771227680643516
+    second: phantom_spawn_6
+  - first:
+      213: -6379515790949114265
+    second: phantom_spawn_7
+  - first:
+      213: 5103312664309792705
+    second: phantom_spawn_8
+  - first:
+      213: -7591317344122600689
+    second: phantom_spawn_9
+  - first:
+      213: -8070484667464622027
+    second: phantom_spawn_10
+  - first:
+      213: 6853863002420893659
+    second: phantom_spawn_11
+  - first:
+      213: 1940339242750488342
+    second: phantom_spawn_12
+  - first:
+      213: -4798471493950717414
+    second: phantom_spawn_13
+  - first:
+      213: -6734198191314987550
+    second: phantom_spawn_14
+  - first:
+      213: 3050361112952115850
+    second: phantom_spawn_15
+  - first:
+      213: 7081079838047670461
+    second: phantom_spawn_16
+  - first:
+      213: -4769335306004213496
+    second: phantom_spawn_17
+  - first:
+      213: 5198613594109985321
+    second: phantom_spawn_18
+  - first:
+      213: -6520231172612181981
+    second: phantom_spawn_19
+  - first:
+      213: -5153465345635067657
+    second: phantom_spawn_20
+  - first:
+      213: -1491836768669037688
+    second: phantom_spawn_21
+  - first:
+      213: 8299793673390063655
+    second: phantom_spawn_22
+  - first:
+      213: 348912137327237041
+    second: phantom_spawn_23
+  - first:
+      213: -6438574329935127021
+    second: phantom_spawn_24
+  - first:
+      213: 6672885781965967129
+    second: phantom_spawn_25
+  - first:
+      213: 3002091643378008114
+    second: phantom_spawn_26
+  - first:
+      213: 1106056013414818256
+    second: phantom_spawn_27
+  - first:
+      213: 4422805449680131133
+    second: phantom_spawn_28
+  - first:
+      213: 4792216310468143483
+    second: phantom_spawn_29
+  - first:
+      213: 5198519152192278761
+    second: phantom_spawn_30
+  - first:
+      213: -694060512851744825
+    second: phantom_spawn_31
+  - first:
+      213: 922521893909213758
+    second: phantom_spawn_32
+  - first:
+      213: 4000508228492278129
+    second: phantom_spawn_33
+  - first:
+      213: 3957844854662785420
+    second: phantom_spawn_34
+  - first:
+      213: -4334629019656291649
+    second: phantom_spawn_35
+  - first:
+      213: 2365424372225013347
+    second: phantom_spawn_36
+  - first:
+      213: 2402821405637614855
+    second: phantom_spawn_37
+  - first:
+      213: 5144535542038239433
+    second: phantom_spawn_38
+  - first:
+      213: 5287966145662037850
+    second: phantom_spawn_39
+  - first:
+      213: -138583306512104175
+    second: phantom_spawn_40
+  - first:
+      213: 9179302563958430069
+    second: phantom_spawn_41
+  - first:
+      213: 5308417508347610137
+    second: phantom_spawn_42
+  - first:
+      213: 754909112087489947
+    second: phantom_spawn_43
+  - first:
+      213: 4892831286570028148
+    second: phantom_spawn_44
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: phantom_spawn_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f94df149a0ee5e4b8bed67e200d2d54
+      internalID: 7019862482084463805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_1
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efe579a610a3bd4cbecbdae93f1eed7
+      internalID: -5893172653621327198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_2
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0822459520091041a4e759261838bb7
+      internalID: -5918377699147695588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_3
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0253daf9fa18d49b4c5e6d3630a032
+      internalID: -37795808800161452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_4
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04d1dd5b997a4ac4ebad2e708043f8b7
+      internalID: 509228496844230676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bc755188a8417c498aae7f0f2d7181a
+      internalID: 4146929145263419750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_6
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e05f69833a95e340a11fab664e226f9
+      internalID: -995771227680643516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 338fe707f5ad87b4888e3c1df1048bcf
+      internalID: -6379515790949114265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_8
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9002cbf7f104f2847be8ce02f8cf2a10
+      internalID: 5103312664309792705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_9
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d523e1d94134d4e96cd9c81de1222c
+      internalID: -7591317344122600689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_10
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede340e6ba9be8f4884fde1853660980
+      internalID: -8070484667464622027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f2bb324af509f44ba0509adacddd1d9
+      internalID: 6853863002420893659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_12
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d55f41d7006d2b4db9310fc973549a4
+      internalID: 1940339242750488342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_13
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2edcc2d89934847ada8c9c71ed2469
+      internalID: -4798471493950717414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_14
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c592e56a33099234d8e91663d4fd2a0b
+      internalID: -6734198191314987550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_15
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8192d71ab403c9e4f9f37d3312415e97
+      internalID: 3050361112952115850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_16
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 810b1b32df4558f49a182ff4cb7d8940
+      internalID: 7081079838047670461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 784f361cc2bfa8643b7f3b8c4de6cbe0
+      internalID: -4769335306004213496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_18
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e114e9516afc1449f137eb3fab43b3
+      internalID: 5198613594109985321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_19
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d0d0adcf99d8942807bf6b5d1285c6
+      internalID: -6520231172612181981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_20
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4400b843447dce3469e318d4ef6d2832
+      internalID: -5153465345635067657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_21
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b64e79dbcbc97d4380e50a894ec4c98
+      internalID: -1491836768669037688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_22
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83f7a992a840bc54e99d8c59f438e8f6
+      internalID: 8299793673390063655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbd84d17363560545a3d66debf57bcad
+      internalID: 348912137327237041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_24
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef805fe359d8af049b0f3d1b6df32326
+      internalID: -6438574329935127021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_25
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03433f7db86d1d24a91b6de137f2ce0d
+      internalID: 6672885781965967129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_26
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eb1ee981fee8774993de6ad0372efbd
+      internalID: 3002091643378008114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_27
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de0acd34ebd9d6044b70646e0e3e3cb9
+      internalID: 1106056013414818256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_28
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14fc9d1d417d044187a6cede47f4f7d
+      internalID: 4422805449680131133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_29
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2719be5453db4458e0e640660579da
+      internalID: 4792216310468143483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_30
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67e06e7f681f4ae47be067989a787f3d
+      internalID: 5198519152192278761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_31
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74800318fa8c46b4db5ebb934e3dbf0a
+      internalID: -694060512851744825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_32
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dc7ed52e5fa484b8d3d0e0911ddb79
+      internalID: 922521893909213758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_33
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c4eb38a5b193e4bb2f25e716bc1a57
+      internalID: 4000508228492278129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_34
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e35ab248bc3ec47a1439d3c644cdb8
+      internalID: 3957844854662785420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81973aa9f1906fa4283928413225b4ad
+      internalID: -4334629019656291649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_36
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d3949d6467bcb4ca8e97829af14afc
+      internalID: 2365424372225013347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_37
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3582502098432ee4baa31308da018715
+      internalID: 2402821405637614855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_38
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050b921c6265937458e16cda9075728c
+      internalID: 5144535542038239433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_39
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f876bb03813324ebe284e5eca8048a
+      internalID: 5287966145662037850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_40
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8441367c7ff4fc40b1448fe057990f7
+      internalID: -138583306512104175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_41
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f6021698ca31d0478601f81f8798ca5
+      internalID: 9179302563958430069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_42
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e787e33cba876d459f6300219020e56
+      internalID: 5308417508347610137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_43
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcc7da916e2f1c1459258b9b9b71d71f
+      internalID: 754909112087489947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_spawn_44
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610d1f4bba2293b468588e52ab42c5c0
+      internalID: 4892831286570028148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

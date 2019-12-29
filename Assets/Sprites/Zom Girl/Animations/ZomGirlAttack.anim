@@ -44,7 +44,7 @@ AnimationClip:
       value: {fileID: -7067360101243101635, guid: 54c96f8ff0d07c646a8969c753e6171e,
         type: 3}
     attribute: m_Sprite
-    path: Zom Girl Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -55,7 +55,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 1924968226
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212

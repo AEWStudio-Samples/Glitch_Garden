@@ -1,0 +1,2302 @@
+fileFormatVersion: 2
+guid: 6ebac0ab647c7d246ab518a406ce3a32
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8463782819895633485
+    second: phantom_detonate_0
+  - first:
+      213: -4792273739960269115
+    second: phantom_detonate_1
+  - first:
+      213: 1121626293137608187
+    second: phantom_detonate_2
+  - first:
+      213: -360340145109654926
+    second: phantom_detonate_3
+  - first:
+      213: 5261432115337446716
+    second: phantom_detonate_4
+  - first:
+      213: 709837738900103328
+    second: phantom_detonate_5
+  - first:
+      213: 8035686771885926565
+    second: phantom_detonate_6
+  - first:
+      213: -7439789256841454491
+    second: phantom_detonate_7
+  - first:
+      213: -3696681124451312075
+    second: phantom_detonate_8
+  - first:
+      213: 649668184587302609
+    second: phantom_detonate_9
+  - first:
+      213: 9198821266779708060
+    second: phantom_detonate_10
+  - first:
+      213: 2509449217479992272
+    second: phantom_detonate_11
+  - first:
+      213: 9010729592976574098
+    second: phantom_detonate_12
+  - first:
+      213: 5320763675064126513
+    second: phantom_detonate_13
+  - first:
+      213: -5796579843027069496
+    second: phantom_detonate_14
+  - first:
+      213: 5723867500974942820
+    second: phantom_detonate_15
+  - first:
+      213: 3828520408755012254
+    second: phantom_detonate_16
+  - first:
+      213: -2069351443849601786
+    second: phantom_detonate_17
+  - first:
+      213: 8230121473206368328
+    second: phantom_detonate_18
+  - first:
+      213: 8497298468538226015
+    second: phantom_detonate_19
+  - first:
+      213: 678183659608371066
+    second: phantom_detonate_20
+  - first:
+      213: -6406204732527155458
+    second: phantom_detonate_21
+  - first:
+      213: 1776100358904294279
+    second: phantom_detonate_22
+  - first:
+      213: -1010928862154022687
+    second: phantom_detonate_23
+  - first:
+      213: 620927022590185972
+    second: phantom_detonate_24
+  - first:
+      213: -2058630608754419428
+    second: phantom_detonate_25
+  - first:
+      213: -5194091104802603384
+    second: phantom_detonate_26
+  - first:
+      213: 8044815406681453638
+    second: phantom_detonate_27
+  - first:
+      213: 8038825554972773037
+    second: phantom_detonate_28
+  - first:
+      213: 3845283556748494180
+    second: phantom_detonate_29
+  - first:
+      213: -709211047406501148
+    second: phantom_detonate_30
+  - first:
+      213: 3104417704806733536
+    second: phantom_detonate_31
+  - first:
+      213: -3522739607012951066
+    second: phantom_detonate_32
+  - first:
+      213: 253435427423079407
+    second: phantom_detonate_33
+  - first:
+      213: 6082630986780690552
+    second: phantom_detonate_34
+  - first:
+      213: -6268115494561777235
+    second: phantom_detonate_35
+  - first:
+      213: -5196063983663086096
+    second: phantom_detonate_36
+  - first:
+      213: -2790219172395082253
+    second: phantom_detonate_37
+  - first:
+      213: 4389035161164730042
+    second: phantom_detonate_38
+  - first:
+      213: -4728269673417674095
+    second: phantom_detonate_39
+  - first:
+      213: -8137537703215364844
+    second: phantom_detonate_40
+  - first:
+      213: 2055401952762121224
+    second: phantom_detonate_41
+  - first:
+      213: 4516274428237722171
+    second: phantom_detonate_42
+  - first:
+      213: 2773230398034590774
+    second: phantom_detonate_43
+  - first:
+      213: 8604668511127404869
+    second: phantom_detonate_44
+  - first:
+      213: 7570029654959839092
+    second: phantom_detonate_45
+  - first:
+      213: 4623840742291446116
+    second: phantom_detonate_46
+  - first:
+      213: -4211768058242135975
+    second: phantom_detonate_47
+  - first:
+      213: -9136038712689311263
+    second: phantom_detonate_48
+  - first:
+      213: 5892978311786630861
+    second: phantom_detonate_49
+  - first:
+      213: 3903022508218473690
+    second: phantom_detonate_50
+  - first:
+      213: -2875669253040842572
+    second: phantom_detonate_51
+  - first:
+      213: 2835152329183632689
+    second: phantom_detonate_52
+  - first:
+      213: 7085674481857125868
+    second: phantom_detonate_53
+  - first:
+      213: 4719891222120224028
+    second: phantom_detonate_54
+  - first:
+      213: -5331599245815368613
+    second: phantom_detonate_55
+  - first:
+      213: 7198033085502734183
+    second: phantom_detonate_56
+  - first:
+      213: -3102885003652080647
+    second: phantom_detonate_57
+  - first:
+      213: -7581523813271829276
+    second: phantom_detonate_58
+  - first:
+      213: -3120820125728530976
+    second: phantom_detonate_59
+  - first:
+      213: -8928798121078987144
+    second: phantom_detonate_60
+  - first:
+      213: 9107600702292825137
+    second: phantom_detonate_61
+  - first:
+      213: -5245412984993651781
+    second: phantom_detonate_62
+  - first:
+      213: -7484597438034074599
+    second: phantom_detonate_63
+  - first:
+      213: -3590289984395106016
+    second: phantom_detonate_64
+  - first:
+      213: -7978106541515237850
+    second: phantom_detonate_65
+  - first:
+      213: -4003503478787836564
+    second: phantom_detonate_66
+  - first:
+      213: -459367125583553750
+    second: phantom_detonate_67
+  - first:
+      213: 4124052661862458855
+    second: phantom_detonate_68
+  - first:
+      213: -6609672692183314906
+    second: phantom_detonate_69
+  - first:
+      213: -985185894836006156
+    second: phantom_detonate_70
+  - first:
+      213: 2614585888994512886
+    second: phantom_detonate_71
+  - first:
+      213: 3081540141348452091
+    second: phantom_detonate_72
+  - first:
+      213: 5884218269627884970
+    second: phantom_detonate_73
+  - first:
+      213: 1027848591770849764
+    second: phantom_detonate_74
+  - first:
+      213: 1470108098673273943
+    second: phantom_detonate_75
+  - first:
+      213: -6943130187993634405
+    second: phantom_heart_00
+  - first:
+      213: -3991824153525238475
+    second: phantom_heart_01
+  - first:
+      213: -1806473427227354978
+    second: phantom_heart_02
+  - first:
+      213: -2697624577465790718
+    second: phantom_heart_03
+  - first:
+      213: 5651121198571999620
+    second: phantom_heart_04
+  - first:
+      213: -2308294823393451743
+    second: phantom_heart_05
+  - first:
+      213: -1431594350923703287
+    second: phantom_heart_06
+  - first:
+      213: 8427745883799429859
+    second: phantom_heart_07
+  - first:
+      213: -7971988032819104898
+    second: phantom_heart_-8
+  - first:
+      213: 8696152770827295440
+    second: phantom_heart_09
+  - first:
+      213: 1947368338962612245
+    second: phantom_heart_10
+  - first:
+      213: 1780065514757788224
+    second: phantom_heart_11
+  - first:
+      213: -2932276807962042062
+    second: phantom_heart_12
+  - first:
+      213: 5213627337660571361
+    second: phantom_heart_13
+  - first:
+      213: 3984354108229837923
+    second: phantom_heart_14
+  - first:
+      213: 3408901341199789386
+    second: phantom_heart_08
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: phantom_detonate_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef7d1ca378930f54ab14eb47a5828afb
+      internalID: -8463782819895633485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7621d8e4f8d255e4ba69c8d366c44ae3
+      internalID: -4792273739960269115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f29cfa7fe50f824cb0a9f2a4e75c71b
+      internalID: 1121626293137608187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_3
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705a3f0c5187ecc47b0f99bea4aa1a45
+      internalID: -360340145109654926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_4
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3df1867635cde5241862783a7d30a2e6
+      internalID: 5261432115337446716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_5
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2568
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60271b2b773c03743b507f07b13ed61f
+      internalID: 709837738900103328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0ab7ba09307a0e47a6a47af0508af47
+      internalID: 8035686771885926565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_7
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07eea025af6c4747b2b7a2f01278b32
+      internalID: -7439789256841454491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d132a4c98d6c6df4bb0901189bc140f1
+      internalID: -3696681124451312075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33868a59fbe09a4e8113d074a3bd456
+      internalID: 649668184587302609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_10
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65753d476c0a2af4d895f3dc3d439e8b
+      internalID: 9198821266779708060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_11
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2354
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c354e0706940b449b714a4960e80392
+      internalID: 2509449217479992272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a36319246c93fed4aa5eb6ec0579be48
+      internalID: 9010729592976574098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_13
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38406a5c65bbae429ea504f2090e890
+      internalID: 5320763675064126513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b38ef2866e171d4bb35daa650fe6828
+      internalID: -5796579843027069496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_15
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d7ecaf4d61e6414492dc52d8bdc0a32
+      internalID: 5723867500974942820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_16
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5626ad2e3fbfb6d41a227aea43775e77
+      internalID: 3828520408755012254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 2140
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4128ffde6fb74aa4a82d0033ba76c178
+      internalID: -2069351443849601786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379af0201c1b5e543a2ad47b328422af
+      internalID: 8230121473206368328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_19
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eeb5d05a70043d40b6cc5269e952432
+      internalID: 8497298468538226015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0235a42826f60c543b146d29bceaf7f4
+      internalID: 678183659608371066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29cbd306306670459e485aaf85fcbd2
+      internalID: -6406204732527155458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_22
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8738944995d2cc7449db23813992c01a
+      internalID: 1776100358904294279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_23
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1926
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f36da309e206774cbffb4b97bb3e79b
+      internalID: -1010928862154022687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2a5fb79f2e0e8b48a05ff4ce376adba
+      internalID: 620927022590185972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbcf5cb147591a048abcaaaf4e69d7bb
+      internalID: -2058630608754419428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_26
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d290d088e3e22438d8d43e3c92dc96
+      internalID: -5194091104802603384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_27
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51a9849e53385ab489af6a31861c2739
+      internalID: 8044815406681453638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_28
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 489c14e532c664c4cbcd2782f9d14260
+      internalID: 8038825554972773037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_29
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0665c659564955f41a1d9db8ff7bc54f
+      internalID: 3845283556748494180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6428adbb64a13414081e8d44b7ae5218
+      internalID: -709211047406501148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_31
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6d32fbb92f4b3499d76068188e5497
+      internalID: 3104417704806733536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_32
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ab718c63268cd4ba1b3d0e5bd3b266
+      internalID: -3522739607012951066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_33
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90502260e41f99c4094b3a94ee1be1de
+      internalID: 253435427423079407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_34
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37ec5d274871ca744b3690191207aa2c
+      internalID: 6082630986780690552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_35
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87732e8a12c8cc48aa386e599a80b0a
+      internalID: -6268115494561777235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c297ef31d2310241857f364f514bf4d
+      internalID: -5196063983663086096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_37
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d23e16a7e6424e44c9db90a4c87ccd3c
+      internalID: -2790219172395082253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_38
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42fbef40c5c455b4387026f8396f3114
+      internalID: 4389035161164730042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_39
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f2f607482833d54eba89e6015d529f3
+      internalID: -4728269673417674095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_40
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9e0d05a31b48d47b45811d9a7b934c
+      internalID: -8137537703215364844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_41
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64df76c4e975df44af54553657e5b31
+      internalID: 2055401952762121224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e964cedb42f9cf42893a58912935a74
+      internalID: 4516274428237722171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_43
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 528a88d73c1754947ad616072573f938
+      internalID: 2773230398034590774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_44
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 050acb9879ec44641838a318d16a2541
+      internalID: 8604668511127404869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_45
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09d14f5ef17189c4fa9e04b5c8ea6f3a
+      internalID: 7570029654959839092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_46
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514b24795c36d0c49898cf3c372f697b
+      internalID: 4623840742291446116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_47
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c88fa84cc98e14a9742ada316f2cf0
+      internalID: -4211768058242135975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13b75f861496e2049b2b3e2a4f6a7970
+      internalID: -9136038712689311263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d32f6152b8c3d49b02329134e36c85
+      internalID: 5892978311786630861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_50
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586fd92e44e9e2a4c83ffa06d03c1630
+      internalID: 3903022508218473690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_51
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba8588914b699c46b9f45e6255b026d
+      internalID: -2875669253040842572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_52
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713de7198f23ee94f8a29a0b6cad1d37
+      internalID: 2835152329183632689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_53
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d239396982b49d741a8ac2710c51ba1e
+      internalID: 7085674481857125868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79f9edaf49958da47a8e491d0953862b
+      internalID: 4719891222120224028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_55
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a176e2d740627364b828c4fa2c98e51c
+      internalID: -5331599245815368613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_56
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d73623741181944846683a85b3d27e
+      internalID: 7198033085502734183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_57
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 875327d52077d66468f07cb59527c339
+      internalID: -3102885003652080647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_58
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b77689999a700449c8f89e4bca79e8
+      internalID: -7581523813271829276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_59
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c971720a291774c8f2f287ee8c6894
+      internalID: -3120820125728530976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e4217cc46fed645998429d47617f25
+      internalID: -8928798121078987144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_61
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2137282c36a45094eaf44ba1f78fe130
+      internalID: 9107600702292825137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_62
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58042ea798cfce243bba448a811ede30
+      internalID: -5245412984993651781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_63
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c3957c3aaad2741b62f0bccd7d3890
+      internalID: -7484597438034074599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_64
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 363c8bb01eb534748b80a8d1042063c7
+      internalID: -3590289984395106016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_65
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 268e0f629e54cb24ab6785280bddeef1
+      internalID: -7978106541515237850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd0d220d4d42cd347b4902b5b3e84dbf
+      internalID: -4003503478787836564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_67
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66588b5cfafd741418bb60a14e62f65d
+      internalID: -459367125583553750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_68
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4fe0818afb71834d932b19e2a4bac56
+      internalID: 4124052661862458855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_69
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a1c234943af5d1469877135b314275d
+      internalID: -6609672692183314906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_70
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c5fb11ca0baf645a4ef22b2c309cd9
+      internalID: -985185894836006156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_71
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51c5f9bbae8421a4d8b74fd21c06538d
+      internalID: 2614585888994512886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2055ed3a9671a94fad9d2e0a2b595a8
+      internalID: 3081540141348452091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_73
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4101fa6ff9f884aa92f901fd4c2656
+      internalID: 5884218269627884970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_74
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1b8ea845b231d240b572c9be26f8f44
+      internalID: 1027848591770849764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_detonate_75
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c01edddf9af6aae48a082b69f8061625
+      internalID: 1470108098673273943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_00
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 428
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e70bf7149b819a4985c1859adb60f18
+      internalID: -6943130187993634405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_01
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 428
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 473799b268b091f4daa1e443d6f11e1a
+      internalID: -3991824153525238475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_02
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 428
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a8d8a05d53f5441ab5dfe470f90b55
+      internalID: -1806473427227354978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_03
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 428
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ea081f91c018c4faa87447c94d6cf2
+      internalID: -2697624577465790718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_04
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 428
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dfb01ae0b262943931031edd368a41
+      internalID: 5651121198571999620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_05
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f739d7b1c656494aad6860f3e22ab63
+      internalID: -2308294823393451743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_06
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4136091b02029ab47a36848dc0492412
+      internalID: -1431594350923703287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_07
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa3653b4d5d636148bf40b17e311d283
+      internalID: 8427745883799429859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_09
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92ebd9180eb7c24c91898886d0386e6
+      internalID: 8696152770827295440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_10
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372b6e3b48a890f4faed694470ee876a
+      internalID: 1947368338962612245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_11
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5243667e7a3104ca4916e77ce8ccb8
+      internalID: 1780065514757788224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_12
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9c14331caf2dad4990122aa22c1798d
+      internalID: -2932276807962042062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_13
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 0
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07ec9533c07cde4a9c6b1454083cc62
+      internalID: 5213627337660571361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_14
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 0
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d1e989831072a469b9fb69a97ccd0f
+      internalID: 3984354108229837923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_heart_08
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 214
+        width: 60
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea04a4090ccf4849a8b3a450cddc212
+      internalID: 3408901341199789386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

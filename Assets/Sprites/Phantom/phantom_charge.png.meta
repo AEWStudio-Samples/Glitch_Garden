@@ -1,0 +1,1363 @@
+fileFormatVersion: 2
+guid: 6fb7fef87a7b0fe419839a2fd22e20c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1502917794211573629
+    second: phantom_charge_0
+  - first:
+      213: 3869192102861136262
+    second: phantom_charge_1
+  - first:
+      213: -2478021506135106245
+    second: phantom_charge_2
+  - first:
+      213: 3396826573423455024
+    second: phantom_charge_3
+  - first:
+      213: -6324912996497118687
+    second: phantom_charge_4
+  - first:
+      213: -3695182003208841076
+    second: phantom_charge_5
+  - first:
+      213: -6854027017810122285
+    second: phantom_charge_6
+  - first:
+      213: 794435377333848958
+    second: phantom_charge_7
+  - first:
+      213: -1827559574374082349
+    second: phantom_charge_8
+  - first:
+      213: 5862756963034670885
+    second: phantom_charge_9
+  - first:
+      213: -2698633275748343980
+    second: phantom_charge_10
+  - first:
+      213: 4848916993328101058
+    second: phantom_charge_11
+  - first:
+      213: 3985373097629096947
+    second: phantom_charge_12
+  - first:
+      213: -3216335008262475384
+    second: phantom_charge_13
+  - first:
+      213: 962477213583012554
+    second: phantom_charge_14
+  - first:
+      213: -5677481214949789083
+    second: phantom_charge_15
+  - first:
+      213: 9208782937539438430
+    second: phantom_charge_16
+  - first:
+      213: -2182965047380712977
+    second: phantom_charge_17
+  - first:
+      213: 8378833285436819162
+    second: phantom_charge_18
+  - first:
+      213: 5877031613459148273
+    second: phantom_charge_19
+  - first:
+      213: 326423525361109765
+    second: phantom_charge_20
+  - first:
+      213: 8466384155465522951
+    second: phantom_charge_21
+  - first:
+      213: -2455098917373136878
+    second: phantom_charge_22
+  - first:
+      213: -1663341413756382896
+    second: phantom_charge_23
+  - first:
+      213: -9196851432424630495
+    second: phantom_charge_24
+  - first:
+      213: -6834811616256811060
+    second: phantom_charge_25
+  - first:
+      213: 2128462591638864269
+    second: phantom_charge_26
+  - first:
+      213: 5028879883925481476
+    second: phantom_charge_27
+  - first:
+      213: -3995723205621920405
+    second: phantom_charge_28
+  - first:
+      213: 2276812359564530476
+    second: phantom_charge_29
+  - first:
+      213: -5624803153418837142
+    second: phantom_charge_30
+  - first:
+      213: -4387891090152033115
+    second: phantom_charge_31
+  - first:
+      213: -3512410457173519315
+    second: phantom_charge_32
+  - first:
+      213: 4385679359959648730
+    second: phantom_charge_33
+  - first:
+      213: 4446021559194666463
+    second: phantom_charge_34
+  - first:
+      213: 1437386710460158310
+    second: phantom_charge_35
+  - first:
+      213: -3401740754813937625
+    second: phantom_charge_36
+  - first:
+      213: -6577436286027884382
+    second: phantom_charge_37
+  - first:
+      213: 5875681100657866831
+    second: phantom_charge_38
+  - first:
+      213: -150212375014134372
+    second: phantom_charge_39
+  - first:
+      213: -8352412711681796921
+    second: phantom_charge_40
+  - first:
+      213: 5813603083784426753
+    second: phantom_charge_41
+  - first:
+      213: 7280846953806803427
+    second: phantom_charge_42
+  - first:
+      213: 3701132409150521174
+    second: phantom_charge_43
+  - first:
+      213: 6878344903503102502
+    second: phantom_charge_44
+  - first:
+      213: 5753955347346018127
+    second: phantom_charge_45
+  - first:
+      213: -2182237227277167449
+    second: phantom_charge_46
+  - first:
+      213: 7980081126407412425
+    second: phantom_charge_47
+  - first:
+      213: 4400965870550334373
+    second: phantom_charge_48
+  - first:
+      213: 8540970682890263919
+    second: phantom_charge_49
+  - first:
+      213: 8638904207181456377
+    second: phantom_charge_50
+  - first:
+      213: 5906401847836649745
+    second: phantom_charge_51
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 120
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: phantom_charge_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13df3273f9bf1144db1b5a59f25a90c5
+      internalID: -1502917794211573629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_1
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b87b4e022f8fb442a6a166fd6ca8357
+      internalID: 3869192102861136262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_2
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81794c12fce8f9d448ddef3a6b9b7592
+      internalID: -2478021506135106245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_3
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38c6a06828388a341805b879b2871516
+      internalID: 3396826573423455024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_4
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d335a8b88a7d634c84501f559ad4c8e
+      internalID: -6324912996497118687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_5
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1712
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea85ac0597a294d8ab6aa0083beea0
+      internalID: -3695182003208841076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e56cd625103696498309e33abad5611
+      internalID: -6854027017810122285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_7
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d54cedeb8ff488f4bb6c2fa59156c021
+      internalID: 794435377333848958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_8
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd391c6b2dba0849912287ace4955a9
+      internalID: -1827559574374082349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_9
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af99ba770485f5247b1c89916374ffdc
+      internalID: 5862756963034670885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_10
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c2f0108c24fd74fa1759e79f8366ff
+      internalID: -2698633275748343980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_11
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1498
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 557f6adcbdda1a84fb0b534935e60771
+      internalID: 4848916993328101058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef2c0df6306d3794faabffc7acc482db
+      internalID: 3985373097629096947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_13
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d7d387b6ba5b764ca264259a1b70867
+      internalID: -3216335008262475384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e7280eee4d36e847a1be52b89411c60
+      internalID: 962477213583012554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_15
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f73d111c1d35fd499cc81b74777f230
+      internalID: -5677481214949789083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_16
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af653634f391fb45ba5964cb9696365
+      internalID: 9208782937539438430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_17
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1284
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eef9e5c14e218774bac2652fe1bb337e
+      internalID: -2182965047380712977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb6247182436eff47a62605e543a3ec1
+      internalID: 8378833285436819162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_19
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9662ae10c90d34e9dce3cc9eb70f44
+      internalID: 5877031613459148273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_20
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab4e6cc4af0585a4f8ed6d694742ae6f
+      internalID: 326423525361109765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50ce69c9b14565848af133823fa704f3
+      internalID: 8466384155465522951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_22
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29987e766b452984281312d079edc8ff
+      internalID: -2455098917373136878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_23
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 1070
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5a16add7074bd247ac641afd8f22535
+      internalID: -1663341413756382896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d898bc062aa02094b89ecbcce706cc83
+      internalID: -9196851432424630495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_25
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59f8faf4a9d5f5749804947bcf3387b2
+      internalID: -6834811616256811060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_26
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3f86f9be5fb0a4daa5d07715e013ab
+      internalID: 2128462591638864269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_27
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af586f956109e0146a01ce20bfe04c0c
+      internalID: 5028879883925481476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_28
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 712a7503898833440990b68e8c828d8b
+      internalID: -3995723205621920405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_29
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 856
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a17ebb43ff63ca46baaa43fa3164eeb
+      internalID: 2276812359564530476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 739328433c6efad4eab505adfb71477e
+      internalID: -5624803153418837142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_31
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a483b505df91e04eb17703ac3206f43
+      internalID: -4387891090152033115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_32
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 062ad64768a67d64a8f33b28bf163fa5
+      internalID: -3512410457173519315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_33
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f04734d84bdeb041829b698c08856d3
+      internalID: 4385679359959648730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_34
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84beb484baf62704e95071c663511a6b
+      internalID: 4446021559194666463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_35
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 642
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352805cfb58ff6745943dee0e57de0f3
+      internalID: 1437386710460158310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1bf2917498f30c4a8f3fbaaba2ffaf1
+      internalID: -3401740754813937625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_37
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02a09ba1303dbbb46a267fffd5deecfb
+      internalID: -6577436286027884382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_38
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa35fab2455163e42b1a4db3229859e9
+      internalID: 5875681100657866831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_39
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7580278483a6f34cb2e4b27cb90cc56
+      internalID: -150212375014134372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_40
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 555fb7fd7844e8c478705cdb06e20469
+      internalID: -8352412711681796921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_41
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 428
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47213c371467b7459ab59c433350d53
+      internalID: 5813603083784426753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8121f347f2f786647b3292a877c7ba9a
+      internalID: 7280846953806803427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_43
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a7a6513c4c6d4347bcbf393d41c200b
+      internalID: 3701132409150521174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_44
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001641cbc2a263841af7b424273216e4
+      internalID: 6878344903503102502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_45
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdace11c669ad904f86ad2ba534f6039
+      internalID: 5753955347346018127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_46
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f3d9d3d3eee6149ad4ebff1f1d5ff3
+      internalID: -2182237227277167449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_47
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 214
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b32dfc2087c0489ee44a08079aecf
+      internalID: 7980081126407412425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34744543d1d82c245853a99877917c8d
+      internalID: 4400965870550334373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_49
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290d8bb00f60dab4a89aa72428f83866
+      internalID: 8540970682890263919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_50
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4bde8dbcf0ea8d4eacd599151418065
+      internalID: 8638904207181456377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: phantom_charge_51
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 0
+        width: 147
+        height: 214
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc05d187d68dd644cb10ab94a73c44e2
+      internalID: 5906401847836649745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

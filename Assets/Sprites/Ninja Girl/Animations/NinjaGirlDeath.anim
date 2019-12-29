@@ -47,7 +47,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Ninja Girl Sprite
+    path: 
   m_PositionCurves: []
   m_ScaleCurves: []
   m_FloatCurves: []
@@ -84,7 +84,7 @@ AnimationClip:
       value: {fileID: 2008490250329551564, guid: 421ce900462eee6488faca30bbb6bf3b,
         type: 3}
     attribute: m_Sprite
-    path: Ninja Girl Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -95,14 +95,14 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3424276583
+      path: 0
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3424276583
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -174,7 +174,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -211,7 +211,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -248,7 +248,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -259,7 +259,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -269,7 +269,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
   - curve:
@@ -279,9 +279,9 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Ninja Girl Sprite
+    path: 
     classID: 224
     script: {fileID: 0}
-  m_HasGenericRootTransform: 0
+  m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events: []

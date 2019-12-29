@@ -29,10 +29,10 @@ AnimationClip:
       value: {fileID: -6443037438563633430, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
         type: 3}
     - time: 0.25
-      value: {fileID: 195741165941872474, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
+      value: {fileID: 6358966982888625247, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
         type: 3}
     - time: 0.33333334
-      value: {fileID: 5321379571070170230, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
+      value: {fileID: 195741165941872474, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
         type: 3}
     - time: 0.41666666
       value: {fileID: 5309254751048954030, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
@@ -50,7 +50,7 @@ AnimationClip:
       value: {fileID: 8365323050461429176, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205,
         type: 3}
     attribute: m_Sprite
-    path: Ninja Girl Sprite
+    path: 
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 12
@@ -61,7 +61,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3424276583
+      path: 0
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -71,8 +71,8 @@ AnimationClip:
     - {fileID: -1904368223378512772, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: -5274675993955308767, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: -6443037438563633430, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
+    - {fileID: 6358966982888625247, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: 195741165941872474, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
-    - {fileID: 5321379571070170230, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: 5309254751048954030, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: 5321379571070170230, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
     - {fileID: -5502020963117175758, guid: 8c4fa8ebf6fd4c74480b5ccbd4630205, type: 3}
