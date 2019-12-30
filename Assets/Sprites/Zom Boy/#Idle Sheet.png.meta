@@ -47,6 +47,9 @@ TextureImporter:
   - first:
       213: 2461178564920947549
     second: '#Idle Sheet_14'
+  - first:
+      213: -8296067801725591426
+    second: GUIZombie
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -453,6 +456,27 @@ TextureImporter:
       bones: []
       spriteID: 1cd4b167488c7ff4ba1cb8894b223d4b
       internalID: 2461178564920947549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUIZombie
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 1237
+        width: 270
+        height: 270
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf386dd5c7f14ff41b3bd2f6ec8b00cc
+      internalID: -8296067801725591426
       vertices: []
       indices: 
       edges: []

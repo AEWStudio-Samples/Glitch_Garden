@@ -53,7 +53,11 @@ public class CoinControll : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetInteger(coinHash, coinType);
 
-        if (RandInt(100) > 90) anim.SetTrigger(heartHash);
+        if (RandInt(100) > 90)
+        {
+            coinType = 4;
+            anim.SetTrigger(heartHash);
+        }
     }
 
     // gets a random int between 1 and max
@@ -109,10 +113,11 @@ public class CoinControll : MonoBehaviour
         Vector3 collector = coinCollector;
         if (coinType == 4) collector = heartCollector;
 
-        Vector3 moveDirection = (coinCollector - transform.position);
+        Vector3 moveDirection = (collector - transform.position);
+        moveDirection.z = 0;
         myRigidbody.velocity = moveDirection;
 
-        if (moveDirection.magnitude <= .2f)
+        if (moveDirection.magnitude <= 0.2f)
         {
             /*
             if (coinType == 4) { gui.AddHeart(); }
