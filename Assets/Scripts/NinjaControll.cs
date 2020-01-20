@@ -14,13 +14,28 @@ public class NinjaControll : MonoBehaviour
     [SerializeField, Space(10)]
     GameObject rankInsignia = null;
     [SerializeField, Space(10)]
-    LayerMask enemies;
+    GameObject kunai = null;
+    [SerializeField, Space(10)]
+    LayerMask enemyLayers = 9;
 
     // state vars
     GameObject activeNinja;
+    GUIControll guiControll;
+    PriceManager priceManager;
+
+    // state vars for the animator
+    Animator anim;
+    int rankHash = Animator.StringToHash("Rank");
+    int rankUpHash = Animator.StringToHash("Rank Up");
+    int hitHash = Animator.StringToHash("Hit");
+    int attackHash = Animator.StringToHash("Attack");
+    int meleeHash = Animator.StringToHash("Melee");
+    int deathHash = Animator.StringToHash("Dead");
 
     private void Awake()
     {
+        LinkGUI();
+
         foreach (GameObject ninja in ninjas)
         {
             ninja.SetActive(false);
@@ -29,17 +44,58 @@ public class NinjaControll : MonoBehaviour
         rankInsignia.SetActive(false);
     }
 
+    private void LinkGUI()
+    {
+        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
+
+        foreach (GUIControll guiTest in guiList)
+        {
+            if (guiTest.CompareTag("GUI")) guiControll = guiTest;
+        }
+    }
+
     void Start()
     {
-        SpawnNinja();
+        UpdateNinjas(true);
+    }
+
+    public void UpdateNinjas(bool spawn)
+    {
+        if (guiControll)
+        {
+            if (spawn)
+            {
+                guiControll.ninjaCount++;
+
+                if (!guiControll.BuyNinja()) { Destroy(gameObject); guiControll.ninjaCount--; return; }
+
+                SpawnNinja();
+            }
+            else if (!spawn)
+            {
+                priceManager = FindObjectOfType<PriceManager>();
+
+                guiControll.ninjaCount--;
+
+                priceManager.curNinjaCost -= priceManager.ninjaBasePrice;
+            }
+        }
     }
 
     void SpawnNinja()
     {
         activeNinja = ninjas[RandInt(1)];
+        anim = activeNinja.GetComponent<Animator>();
         attackPoint.SetActive(true);
         activeNinja.SetActive(true);
         SetSortingOrder();
+    }
+
+    // gets a random int between 0 and max
+    private static int RandInt(int max)
+    {
+        max += 1;
+        return Random.Range(0, max);
     }
 
     private void SetSortingOrder()
@@ -51,18 +107,41 @@ public class NinjaControll : MonoBehaviour
 
     void Update()
     {
+        float distX = 9 - attackPoint.transform.position.x;
 
-    }
+        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.right, distX, enemyLayers);
 
-    // gets a random int between 0 and max
-    private static int RandInt(int max)
-    {
-        max += 1;
-        return Random.Range(0, max);
+        if (hit)
+        {
+            if (hit.distance <= 1)
+            {
+                Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.red);
+                anim.SetBool(meleeHash, true);
+                anim.SetTrigger(attackHash);
+            }
+            else
+            {
+                Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
+                anim.SetBool(meleeHash, false);
+                anim.SetTrigger(attackHash);
+            }
+        }
+        else
+        {
+            Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * distX, Color.white);
+        }
     }
 
     public void FinishSpawn()
     {
         rankInsignia.SetActive(true);
+    }
+
+    public void ThrowKunai()
+    {
+        if (kunai)
+        {
+            GameObject newKunai = Instantiate(kunai, attackPoint.transform.position, Quaternion.identity);
+        }
     }
 }

@@ -11,7 +11,7 @@ public class AnimationTriggerLink : MonoBehaviour
     AnimType animationType = AnimType.Mine;
 
     // state vars
-    enum AnimType { Mine, Ninja, Phantom, Pit, Wall, Zombie, }
+    enum AnimType { Mine, Ninja, Phantom, Pit, Wall, Zombie, Title}
     MineControll mineControll;
     NinjaControll ninjaControll;
     PhantomControll phantomControll;
@@ -49,28 +49,48 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    private void FinishTitle()
+    {
+        if (animationType != AnimType.Title) { return; }
+        GUIControll guiCon = FindObjectOfType<GUIControll>();
+        guiCon.GoToScene("MainMenu");
+    }
+
     private void FinishSpawn()
     {
         switch (animationType)
         {
             case AnimType.Mine:
-                //mineControll = root.GetComponent<MineControll>();
+                //mineControll.FinishSpawn();
                 break;
             case AnimType.Ninja:
                 ninjaControll.FinishSpawn();
                 break;
             case AnimType.Phantom:
-                //phantomControll = root.GetComponent<PhantomControll>();
+                //phantomControll.FinishSpawn();
                 break;
             case AnimType.Pit:
-                //pitControll = root.GetComponent<PitControll>();
+                //pitControll.FinishSpawn();
                 break;
             case AnimType.Wall:
-                //wallControll = root.GetComponent<WallControll>();
+                //wallControll.FinishSpawn();
                 break;
             case AnimType.Zombie:
-                //zombieControll = root.GetComponent<ZombieControll>();
+                zombieControll.FinishSpawn();
                 break;
         }
     }
+
+    private void ThrowKunai()
+    {
+        ninjaControll.ThrowKunai();
+    }
+
+    private void Walk()
+    {
+        if (animationType == AnimType.Title) { return; }
+        zombieControll.Walk();
+    }
+
+
 }

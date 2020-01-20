@@ -416,7 +416,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 160496704}
-  - component: {fileID: 160496707}
   m_Layer: 0
   m_Name: Zom Boy (6)
   m_TagString: Untagged
@@ -437,27 +436,8 @@ Transform:
   m_Children:
   - {fileID: 255521970}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 12
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &160496707
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 160496703}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &232404822
 GameObject:
   m_ObjectHideFlags: 0
@@ -467,7 +447,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232404823}
-  - component: {fileID: 232404826}
   m_Layer: 0
   m_Name: Zom Girl
   m_TagString: Untagged
@@ -488,27 +467,8 @@ Transform:
   m_Children:
   - {fileID: 1062703378}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 1
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &232404826
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232404822}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &255521969
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,6 +479,8 @@ GameObject:
   m_Component:
   - component: {fileID: 255521970}
   - component: {fileID: 255521971}
+  - component: {fileID: 255521972}
+  - component: {fileID: 255521973}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -590,6 +552,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &255521972
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255521969}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &255521973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 255521969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &292845367
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +595,8 @@ GameObject:
   m_Component:
   - component: {fileID: 292845368}
   - component: {fileID: 292845369}
+  - component: {fileID: 292845370}
+  - component: {fileID: 292845371}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -671,6 +668,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &292845370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292845367}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &292845371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 292845367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &327191501
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,7 +710,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 327191502}
-  - component: {fileID: 327191505}
   m_Layer: 0
   m_Name: Zom Girl (6)
   m_TagString: Untagged
@@ -701,27 +730,8 @@ Transform:
   m_Children:
   - {fileID: 704311607}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 13
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &327191505
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 327191501}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &440959512
 GameObject:
   m_ObjectHideFlags: 0
@@ -732,6 +742,8 @@ GameObject:
   m_Component:
   - component: {fileID: 440959513}
   - component: {fileID: 440959514}
+  - component: {fileID: 440959515}
+  - component: {fileID: 440959516}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -803,6 +815,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &440959515
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440959512}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &440959516
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440959512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &459213562
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +965,8 @@ GameObject:
   m_Component:
   - component: {fileID: 464862554}
   - component: {fileID: 464862555}
+  - component: {fileID: 464862556}
+  - component: {fileID: 464862557}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -991,6 +1038,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &464862556
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464862553}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &464862557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 464862553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &515941312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1001,6 +1081,8 @@ GameObject:
   m_Component:
   - component: {fileID: 515941313}
   - component: {fileID: 515941314}
+  - component: {fileID: 515941315}
+  - component: {fileID: 515941316}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -1072,6 +1154,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &515941315
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515941312}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &515941316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515941312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &518536893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1082,6 +1197,8 @@ GameObject:
   m_Component:
   - component: {fileID: 518536894}
   - component: {fileID: 518536895}
+  - component: {fileID: 518536896}
+  - component: {fileID: 518536897}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -1153,6 +1270,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &518536896
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518536893}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &518536897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518536893}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1315,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1265,6 +1416,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &532154146
 GameObject:
   m_ObjectHideFlags: 0
@@ -1377,6 +1542,8 @@ GameObject:
   m_Component:
   - component: {fileID: 582068585}
   - component: {fileID: 582068586}
+  - component: {fileID: 582068587}
+  - component: {fileID: 582068588}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -1448,6 +1615,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &582068587
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582068584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &582068588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582068584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &632165959
 GameObject:
   m_ObjectHideFlags: 0
@@ -1458,6 +1658,8 @@ GameObject:
   m_Component:
   - component: {fileID: 632165960}
   - component: {fileID: 632165961}
+  - component: {fileID: 632165962}
+  - component: {fileID: 632165963}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -1529,6 +1731,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &632165962
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632165959}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &632165963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632165959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &661667689
 GameObject:
   m_ObjectHideFlags: 0
@@ -1539,6 +1774,8 @@ GameObject:
   m_Component:
   - component: {fileID: 661667690}
   - component: {fileID: 661667691}
+  - component: {fileID: 661667692}
+  - component: {fileID: 661667693}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -1610,6 +1847,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &661667692
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661667689}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &661667693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661667689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &698334021
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,6 +1997,8 @@ GameObject:
   m_Component:
   - component: {fileID: 704311607}
   - component: {fileID: 704311608}
+  - component: {fileID: 704311609}
+  - component: {fileID: 704311610}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -1798,6 +2070,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &704311609
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704311606}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &704311610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 704311606}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &712676710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1808,6 +2113,8 @@ GameObject:
   m_Component:
   - component: {fileID: 712676711}
   - component: {fileID: 712676712}
+  - component: {fileID: 712676713}
+  - component: {fileID: 712676714}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -1879,6 +2186,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &712676713
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712676710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &712676714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 712676710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &749588209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,7 +2228,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749588210}
-  - component: {fileID: 749588213}
   m_Layer: 0
   m_Name: Zom Boy (7)
   m_TagString: Untagged
@@ -1909,27 +2248,8 @@ Transform:
   m_Children:
   - {fileID: 632165960}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 14
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &749588213
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 749588209}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &776124804
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,6 +2260,8 @@ GameObject:
   m_Component:
   - component: {fileID: 776124805}
   - component: {fileID: 776124806}
+  - component: {fileID: 776124807}
+  - component: {fileID: 776124808}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -2011,6 +2333,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &776124807
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776124804}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &776124808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 776124804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &826246198
 GameObject:
   m_ObjectHideFlags: 0
@@ -2021,6 +2376,8 @@ GameObject:
   m_Component:
   - component: {fileID: 826246199}
   - component: {fileID: 826246200}
+  - component: {fileID: 826246201}
+  - component: {fileID: 826246202}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -2092,6 +2449,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &826246201
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826246198}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &826246202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 826246198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &994515629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2209,6 +2599,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1044577471}
   - component: {fileID: 1044577472}
+  - component: {fileID: 1044577473}
+  - component: {fileID: 1044577474}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -2280,6 +2672,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1044577473
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044577470}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1044577474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1044577470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &1062703377
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,6 +2715,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1062703378}
   - component: {fileID: 1062703379}
+  - component: {fileID: 1062703380}
+  - component: {fileID: 1062703381}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -2361,6 +2788,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1062703380
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062703377}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1062703381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062703377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &1074302029
 GameObject:
   m_ObjectHideFlags: 0
@@ -2370,7 +2830,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1074302030}
-  - component: {fileID: 1074302033}
   m_Layer: 0
   m_Name: Zom Girl (5)
   m_TagString: Untagged
@@ -2391,27 +2850,802 @@ Transform:
   m_Children:
   - {fileID: 518536894}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 11
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1074302033
-Animator:
-  serializedVersion: 3
+--- !u!1001 &1107755102
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1074302029}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6835180352816760614, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352816760614, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352816760614, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352816760614, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352816760614, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352826996407, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352826996407, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352826996407, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352826996407, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352826996407, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352951710800, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352951710800, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352951710800, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352951710800, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180352951710800, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353111792890, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353111792890, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353111792890, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353111792890, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353114540266, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353114540266, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353114540266, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353114540266, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353285102069, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353285102069, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353285102069, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353285102069, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353285102069, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353726013343, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353726013343, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353726013343, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353726013343, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353838705665, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353838705665, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353838705665, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353838705665, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180353838705665, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354106861874, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354106861874, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354106861874, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354106861874, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354275989282, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354275989282, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354275989282, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354275989282, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354304747259, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354304747259, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354304747259, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354304747259, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354304747259, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354331632435, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354331632435, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354331632435, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354331632435, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354331632435, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354577510593, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354577510593, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354577510593, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354577510593, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354596258613, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354596258613, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354596258613, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354596258613, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354596258613, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354605041525, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354605041525, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354605041525, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354605041525, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354605041525, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354688674664, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354688674664, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354688674664, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354688674664, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354705019676, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354705019676, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354705019676, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354705019676, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354705019676, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354731344277, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354731344277, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354731344277, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354731344277, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354748936997, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354748936997, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354748936997, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354748936997, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6835180354748936997, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736209541515, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736209541515, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736209541515, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736209541515, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736676150954, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736676150954, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736676150954, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736676150954, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736692156356, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736692156356, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736692156356, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736692156356, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736727692844, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736727692844, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736727692844, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736727692844, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736727692844, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736884382151, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736884382151, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736884382151, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736884382151, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737110684159, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737110684159, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737110684159, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737110684159, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737141807862, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737141807862, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737141807862, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737141807862, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737272853218, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737272853218, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737272853218, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737272853218, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737272853218, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737277468649, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737277468649, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737277468649, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737277468649, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737451541357, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737451541357, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737451541357, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737451541357, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737451541357, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674553, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_Name
+      value: GUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738031774510, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738031774510, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.spaceCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738031774510, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738031774510, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738031774510, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b6a547baf39dc3f41b3e795a6914ad58, type: 3}
 --- !u!1 &1181283310
 GameObject:
   m_ObjectHideFlags: 0
@@ -2421,7 +3655,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181283311}
-  - component: {fileID: 1181283314}
   m_Layer: 0
   m_Name: Zom Girl (1)
   m_TagString: Untagged
@@ -2442,27 +3675,8 @@ Transform:
   m_Children:
   - {fileID: 826246199}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 3
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1181283314
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181283310}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1186466887
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +3686,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1186466888}
-  - component: {fileID: 1186466891}
   m_Layer: 0
   m_Name: Zom Girl (8)
   m_TagString: Untagged
@@ -2495,25 +3708,6 @@ Transform:
   m_Father: {fileID: 1963071041}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1186466891
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1186466887}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1273010210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +3717,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1273010211}
-  - component: {fileID: 1273010214}
   m_Layer: 0
   m_Name: Zom Girl (7)
   m_TagString: Untagged
@@ -2544,27 +3737,8 @@ Transform:
   m_Children:
   - {fileID: 712676711}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1273010214
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1273010210}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1275520438
 GameObject:
   m_ObjectHideFlags: 0
@@ -2575,6 +3749,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1275520439}
   - component: {fileID: 1275520440}
+  - component: {fileID: 1275520441}
+  - component: {fileID: 1275520442}
   m_Layer: 0
   m_Name: Zom Girl Sprite
   m_TagString: Untagged
@@ -2646,6 +3822,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1275520441
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275520438}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1275520442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275520438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &1300645049
 GameObject:
   m_ObjectHideFlags: 0
@@ -2655,7 +3864,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300645050}
-  - component: {fileID: 1300645053}
   m_Layer: 0
   m_Name: Zom Boy (3)
   m_TagString: Untagged
@@ -2676,27 +3884,8 @@ Transform:
   m_Children:
   - {fileID: 1412433402}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1300645053
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300645049}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1377660264
 GameObject:
   m_ObjectHideFlags: 0
@@ -2706,7 +3895,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1377660265}
-  - component: {fileID: 1377660268}
   m_Layer: 0
   m_Name: Zom Boy (5)
   m_TagString: Untagged
@@ -2727,27 +3915,8 @@ Transform:
   m_Children:
   - {fileID: 661667690}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 10
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1377660268
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1377660264}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1388623235
 GameObject:
   m_ObjectHideFlags: 0
@@ -2757,7 +3926,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1388623236}
-  - component: {fileID: 1388623239}
   m_Layer: 0
   m_Name: Zom Boy (8)
   m_TagString: Untagged
@@ -2778,27 +3946,8 @@ Transform:
   m_Children:
   - {fileID: 440959513}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 16
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1388623239
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1388623235}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1399800217
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,7 +3957,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1399800218}
-  - component: {fileID: 1399800221}
   m_Layer: 0
   m_Name: Zom Girl (3)
   m_TagString: Untagged
@@ -2829,27 +3977,8 @@ Transform:
   m_Children:
   - {fileID: 1044577471}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 7
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1399800221
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1399800217}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1412433401
 GameObject:
   m_ObjectHideFlags: 0
@@ -2860,6 +3989,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1412433402}
   - component: {fileID: 1412433403}
+  - component: {fileID: 1412433404}
+  - component: {fileID: 1412433405}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -2931,6 +4062,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1412433404
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412433401}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1412433405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1412433401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &1436539212
 GameObject:
   m_ObjectHideFlags: 0
@@ -3254,7 +4418,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1639275150}
-  - component: {fileID: 1639275153}
   m_Layer: 0
   m_Name: Zom Boy (4)
   m_TagString: Untagged
@@ -3275,27 +4438,8 @@ Transform:
   m_Children:
   - {fileID: 582068585}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 8
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1639275153
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639275149}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1700916599
 GameObject:
   m_ObjectHideFlags: 0
@@ -3306,6 +4450,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1700916600}
   - component: {fileID: 1700916601}
+  - component: {fileID: 1700916602}
+  - component: {fileID: 1700916603}
   m_Layer: 0
   m_Name: Zom Boy Sprite
   m_TagString: Untagged
@@ -3377,6 +4523,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1700916602
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700916599}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1700916603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700916599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 034ab7c446ecb6c49aede4664b4f9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  root: {fileID: 0}
+  animationType: 6
 --- !u!1 &1736261132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,7 +4672,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801669160}
-  - component: {fileID: 1801669163}
   m_Layer: 0
   m_Name: Zom Boy (1)
   m_TagString: Untagged
@@ -3509,32 +4687,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801669159}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.9999995, y: 1.9, z: 0}
+  m_LocalPosition: {x: 4, y: 1.9, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 776124805}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1801669163
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1801669159}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1804129724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3544,7 +4703,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1804129725}
-  - component: {fileID: 1804129728}
   m_Layer: 0
   m_Name: Zom Girl (4)
   m_TagString: Untagged
@@ -3565,27 +4723,8 @@ Transform:
   m_Children:
   - {fileID: 464862554}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 9
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1804129728
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804129724}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1869915947
 GameObject:
   m_ObjectHideFlags: 0
@@ -3595,7 +4734,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1869915948}
-  - component: {fileID: 1869915951}
   m_Layer: 0
   m_Name: Zom Girl (2)
   m_TagString: Untagged
@@ -3616,27 +4754,8 @@ Transform:
   m_Children:
   - {fileID: 292845368}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 5
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1869915951
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1869915947}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c790403219fd0d24da14bf9d7240e82a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1926896679
 GameObject:
   m_ObjectHideFlags: 0
@@ -3772,22 +4891,22 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1972827909}
-  - {fileID: 232404823}
   - {fileID: 1801669160}
-  - {fileID: 1181283311}
   - {fileID: 2068479984}
-  - {fileID: 1869915948}
   - {fileID: 1300645050}
-  - {fileID: 1399800218}
   - {fileID: 1639275150}
-  - {fileID: 1804129725}
   - {fileID: 1377660265}
-  - {fileID: 1074302030}
   - {fileID: 160496704}
-  - {fileID: 327191502}
   - {fileID: 749588210}
-  - {fileID: 1273010211}
   - {fileID: 1388623236}
+  - {fileID: 232404823}
+  - {fileID: 1181283311}
+  - {fileID: 1869915948}
+  - {fileID: 1399800218}
+  - {fileID: 1804129725}
+  - {fileID: 1074302030}
+  - {fileID: 327191502}
+  - {fileID: 1273010211}
   - {fileID: 1186466888}
   m_Father: {fileID: 519420032}
   m_RootOrder: 8
@@ -3801,7 +4920,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1972827909}
-  - component: {fileID: 1972827912}
   m_Layer: 0
   m_Name: Zom Boy
   m_TagString: Untagged
@@ -3824,25 +4942,6 @@ Transform:
   m_Father: {fileID: 1963071041}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1972827912
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1972827908}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2068479983
 GameObject:
   m_ObjectHideFlags: 0
@@ -3852,7 +4951,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2068479984}
-  - component: {fileID: 2068479987}
   m_Layer: 0
   m_Name: Zom Boy (2)
   m_TagString: Untagged
@@ -3873,24 +4971,5 @@ Transform:
   m_Children:
   - {fileID: 1700916600}
   m_Father: {fileID: 1963071041}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2068479987
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2068479983}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 072cec7d9afc1d34ca01f595e572ee01, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0

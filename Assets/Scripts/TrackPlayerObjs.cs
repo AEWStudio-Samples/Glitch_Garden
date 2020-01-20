@@ -23,25 +23,36 @@ public class TrackPlayerObjs : MonoBehaviour
     private void Start()
     {
         gridPos = transform.position;
+        CheckUsedLocations(true);
     }
 
-    private bool CheckUsedLocations()
+    private bool CheckUsedLocations(bool init)
     {
         Vector2 testPos = GetGridPos();
 
         // restrict grid movement and avoid used locations
-        if (testPos.x > 6 || testPos.x < 1) return false;
-        if (testPos.y > 5 || testPos.y < 1) return false;
-        if (usedLocations.Contains(testPos)) return false;
+        if (!init)
+        {
+            if (testPos.x > 6)
+                return false;
+            else if (testPos.x < 1)
+                return false;
+            else if (testPos.y > 5)
+                return false;
+            else if (testPos.y < 1)
+                return false;
+            else if (usedLocations.Contains(testPos))
+                return false;
+        }
 
         // remove old location from usedLocations
-        if (gridPos != null && usedLocations.Contains(gridPos))
+        if (usedLocations.Contains(gridPos))
         {
             usedLocations.Remove(gridPos);
         }
 
         // set new location
-        gridPos = testPos;
+        if (!init) gridPos = testPos;
         usedLocations.Add(gridPos);
         return true;
     }
@@ -63,7 +74,7 @@ public class TrackPlayerObjs : MonoBehaviour
     {
         if (isBeingHeld)
         {
-            if(!CheckUsedLocations()) return;
+            if(!CheckUsedLocations(false)) return;
             this.gameObject.transform.position = gridPos;
         }
     }
@@ -96,18 +107,19 @@ public class TrackPlayerObjs : MonoBehaviour
 
     void ButtonPressed()
     {
-        if (objSpawnRef)
+        if (objSpawnRef && !objSpawn)
         {
             objToSpawn = objSpawnRef;
             objSpawn = true;
         }
+        else { objSpawn = false; }
     }
 
     void SpawnObj()
     {
         if (objSpawn)
         {
-            if(!CheckUsedLocations()) return;
+            if(!CheckUsedLocations(false)) return;
             Instantiate(objToSpawn, gridPos, Quaternion.identity);
             objSpawn = false;
         }

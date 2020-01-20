@@ -22,13 +22,15 @@ public class CoinControll : MonoBehaviour
     int coinHash = Animator.StringToHash("Coin Type");
     int heartHash = Animator.StringToHash("Heart");
     Rigidbody2D myRigidbody;
-    Canvas gui; // change to GUIControll
+    GUIControll guiControll;
+    string[] coinNames = { "", "Bronze Coin", "Silver Coin", "Gold Coin", "Heart" };
 
     // state vars for collecting the coin
     int coinType;
     bool coinCollected = false;
     Vector3 moveFallBack = new Vector3(1, 1, 0);
     Vector3 coinCollector;
+    bool isHeart = false;
     Vector3 heartCollector;
     int moveX, moveY;
 
@@ -53,10 +55,13 @@ public class CoinControll : MonoBehaviour
         anim = GetComponent<Animator>();
         anim.SetInteger(coinHash, coinType);
 
+        gameObject.name = coinNames[coinType];
+
         if (RandInt(100) > 90)
         {
-            coinType = 4;
+            isHeart = true;
             anim.SetTrigger(heartHash);
+            gameObject.name = coinNames[4];
         }
     }
 
@@ -77,28 +82,24 @@ public class CoinControll : MonoBehaviour
 
     private void LinkGUI()
     {
-        Canvas[] canvasList = FindObjectsOfType<Canvas>();
+        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
 
-        foreach (Canvas canvas in canvasList)
+        foreach (GUIControll guiTest in guiList)
         {
-            if (canvas.CompareTag("GUI")) gui = canvas;
+            if (guiTest.CompareTag("GUI")) guiControll = guiTest;
         }
 
-        /*  TODO Update after getting the GUIControll.cs code done
-        if (gui)
+        if (guiControll)
         {
-            coinCollector = gui.GetCoinCollector().position;
-            heartCollector = gui.GetHeartCollector().position;
+            coinCollector = guiControll.GetCoinCollector().position;
+            heartCollector = guiControll.GetHeartCollector().position;
         }
         else
         {
             coinCollector = moveFallBack;
             heartCollector = moveFallBack;
         }
-        */
-
-        coinCollector = moveFallBack; // remove after GUI is setup
-        heartCollector = moveFallBack; // remove after GUI is setup
+        
     }
 
     private void PlayFX()
@@ -111,18 +112,22 @@ public class CoinControll : MonoBehaviour
         if (initialize) { myRigidbody.velocity = Vector2.down * fallSpeed; return; }
 
         Vector3 collector = coinCollector;
-        if (coinType == 4) collector = heartCollector;
+        if (isHeart) collector = heartCollector;
+        collector = Camera.main.ScreenToWorldPoint(collector);
 
         Vector3 moveDirection = (collector - transform.position);
         moveDirection.z = 0;
+
         myRigidbody.velocity = moveDirection;
 
         if (moveDirection.magnitude <= 0.2f)
         {
-            /*
-            if (coinType == 4) { gui.AddHeart(); }
-            else { gui.AddCoins(coinValues[coinType - 1]); }
-            */Destroy(gameObject);
+            if (guiControll)
+            {
+                if (isHeart) { guiControll.AddHeart(coinValues[coinType - 1]); }
+                else { guiControll.AddCoins(coinValues[coinType - 1]); }
+            }
+            Destroy(gameObject);
         }
     }
 
