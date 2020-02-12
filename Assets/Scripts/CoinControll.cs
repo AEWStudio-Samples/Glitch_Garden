@@ -77,7 +77,7 @@ public class CoinControll : MonoBehaviour
         myRender.enabled = true;
         yield return new WaitForSeconds(spawnDelay);
         PlayFX();
-        MoveCoin(true);
+        MoveCoin();
     }
 
     private void LinkGUI()
@@ -107,28 +107,9 @@ public class CoinControll : MonoBehaviour
         spawnFX.Play();
     }
 
-    private void MoveCoin(bool initialize)
+    private void MoveCoin()
     {
-        if (initialize) { myRigidbody.velocity = Vector2.down * fallSpeed; return; }
-
-        Vector3 collector = coinCollector;
-        if (isHeart) collector = heartCollector;
-        collector = Camera.main.ScreenToWorldPoint(collector);
-
-        Vector3 moveDirection = (collector - transform.position);
-        moveDirection.z = 0;
-
-        myRigidbody.velocity = moveDirection;
-
-        if (moveDirection.magnitude <= 0.2f)
-        {
-            if (guiControll)
-            {
-                if (isHeart) { guiControll.AddHeart(coinValues[coinType - 1]); }
-                else { guiControll.AddCoins(coinValues[coinType - 1]); }
-            }
-            Destroy(gameObject);
-        }
+        myRigidbody.velocity = Vector2.down * fallSpeed;
     }
 
     void Update()
@@ -142,7 +123,12 @@ public class CoinControll : MonoBehaviour
 
         if (coinCollected)
         {
-            MoveCoin(false);
+            if (guiControll)
+            {
+                if (isHeart) { guiControll.AddHeart(coinValues[coinType - 1]); }
+                else { guiControll.AddCoins(coinValues[coinType - 1]); }
+            }
+            Destroy(gameObject);    
         }
     }
 

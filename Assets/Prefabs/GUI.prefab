@@ -141,8 +141,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284181743
+  m_fontColor: {r: 0.9372549, g: 0.42543077, b: 0.35686275, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1205,7 +1205,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6835180353285102075}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1214,8 +1214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 312.4}
-  m_SizeDelta: {x: 1349, y: 387.3}
+  m_AnchoredPosition: {x: 1.7000122, y: 184.1}
+  m_SizeDelta: {x: 1349, y: 616.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6835180353285102070
 CanvasRenderer:
@@ -1249,8 +1249,8 @@ MonoBehaviour:
 
     Zombies'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 41bccfcfbae986f43878c27f3a716eed, type: 2}
-  m_sharedMaterial: {fileID: 783515734143573838, guid: 41bccfcfbae986f43878c27f3a716eed,
+  m_fontAsset: {fileID: 11400000, guid: 21dfad66dd8ffda4893598250a5cd377, type: 2}
+  m_sharedMaterial: {fileID: -8981456009303234796, guid: 21dfad66dd8ffda4893598250a5cd377,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1259,13 +1259,13 @@ MonoBehaviour:
     serializedVersion: 2
     rgba: 4294967295
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
-  m_enableVertexGradient: 0
+  m_enableVertexGradient: 1
   m_colorMode: 3
   m_fontColorGradient:
-    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topLeft: {r: 0.4433962, g: 0.4433962, b: 0.4433962, a: 1}
     topRight: {r: 1, g: 1, b: 1, a: 1}
     bottomLeft: {r: 1, g: 1, b: 1, a: 1}
-    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 0.44313726, g: 0.44313726, b: 0.44313726, a: 1}
   m_fontColorGradientPreset: {fileID: 0}
   m_spriteAsset: {fileID: 0}
   m_tintAllSprites: 0
@@ -1276,12 +1276,12 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 87.9
+  m_fontSize: 181.85
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
-  m_fontSizeMax: 100
+  m_fontSizeMax: 200
   m_fontStyle: 0
   m_textAlignment: 514
   m_characterSpacing: 18.34
@@ -2349,8 +2349,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4284214876
+  m_fontColor: {r: 0.3589683, g: 0.9339623, b: 0.3568441, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -6142,7 +6142,7 @@ GameObject:
   - component: {fileID: 7975139736679523708}
   - component: {fileID: 7975139736679523709}
   m_Layer: 5
-  m_Name: Coin Collector
+  m_Name: Round Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6548,7 +6548,7 @@ GameObject:
   - component: {fileID: 7975139736884382150}
   - component: {fileID: 7975139736884382151}
   m_Layer: 5
-  m_Name: Coin Counter
+  m_Name: Round Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7396,7 +7396,7 @@ GameObject:
   - component: {fileID: 7975139737277468648}
   - component: {fileID: 7975139737277468649}
   m_Layer: 5
-  m_Name: Heart Counter
+  m_Name: Zombie Counter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7697,7 +7697,7 @@ RectTransform:
   m_GameObject: {fileID: 7975139737390744781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7096, y: 1.7096, z: 1.7096}
   m_Children:
   - {fileID: 6835180353838705664}
   m_Father: {fileID: 7975139737916674550}
@@ -7705,7 +7705,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 2.5, y: -230}
   m_SizeDelta: {x: 229, y: 101.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7975139737390744777
@@ -8355,7 +8355,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -57.799927}
+  m_AnchoredPosition: {x: 0, y: -57.799805}
   m_SizeDelta: {x: 224, y: 49}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7975139737501738127
@@ -8739,7 +8739,7 @@ GameObject:
   - component: {fileID: 7975139737672075844}
   - component: {fileID: 7975139737672075845}
   m_Layer: 5
-  m_Name: Heart Collector
+  m_Name: Zombie Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8909,7 +8909,7 @@ GameObject:
   - component: {fileID: 7975139737701264080}
   - component: {fileID: 7975139737701264083}
   m_Layer: 5
-  m_Name: GUI Ninjas
+  m_Name: Ninja Tracker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9278,7 +9278,7 @@ RectTransform:
   m_GameObject: {fileID: 7975139737811404700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.7096, y: 1.7096, z: 1.7096}
   m_Children:
   - {fileID: 6835180352816760613}
   m_Father: {fileID: 7975139737916674550}
@@ -9286,7 +9286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -114.20003}
+  m_AnchoredPosition: {x: 2.5, y: -400.25}
   m_SizeDelta: {x: 229, y: 101.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7975139737811404696
@@ -9637,7 +9637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}

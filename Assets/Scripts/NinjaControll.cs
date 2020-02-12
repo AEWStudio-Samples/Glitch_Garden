@@ -107,6 +107,11 @@ public class NinjaControll : MonoBehaviour
 
     void Update()
     {
+        
+    }
+
+    public void CheckLane()
+    {
         float distX = 9 - attackPoint.transform.position.x;
 
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.right, distX, enemyLayers);
