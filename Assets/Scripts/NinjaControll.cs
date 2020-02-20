@@ -8,20 +8,34 @@ public class NinjaControll : MonoBehaviour
 {
     // con fig vars
     [SerializeField, Space(10)]
+    int baseHP = 6;
+
+    [SerializeField, Space(10)]
+    public int damage = 2;
+    
+    [SerializeField, Space(10)]
     GameObject[] ninjas = { };
+
     [SerializeField, Space(10)]
     GameObject attackPoint = null;
+
     [SerializeField, Space(10)]
     GameObject rankInsignia = null;
+
     [SerializeField, Space(10)]
     GameObject kunai = null;
+
     [SerializeField, Space(10)]
-    LayerMask enemyLayers = 9;
+    LayerMask enemyLayer = 9;
 
     // state vars
+    public int hitPoints;
     GameObject activeNinja;
     GUIControll guiControll;
     PriceManager priceManager;
+    Material myMaterial;
+    bool spawning = true;
+    Collider2D target;
 
     // state vars for the animator
     Animator anim;
@@ -42,6 +56,8 @@ public class NinjaControll : MonoBehaviour
         }
         attackPoint.SetActive(false);
         rankInsignia.SetActive(false);
+
+        hitPoints = baseHP;
     }
 
     private void LinkGUI()
@@ -85,9 +101,14 @@ public class NinjaControll : MonoBehaviour
     void SpawnNinja()
     {
         activeNinja = ninjas[RandInt(1)];
+        myMaterial = activeNinja.GetComponent<SpriteRenderer>().material;
+        myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_SpawnColor"));
+        myMaterial.SetFloat("_Fade", 1f);
+        myMaterial.SetFloat("_UpgradeVFX", 0f);
         anim = activeNinja.GetComponent<Animator>();
         attackPoint.SetActive(true);
         activeNinja.SetActive(true);
+        StartCoroutine(Dissolve(1));
         SetSortingOrder();
     }
 
@@ -105,41 +126,64 @@ public class NinjaControll : MonoBehaviour
         rankInsignia.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
     }
 
-    void Update()
+    public void FinishSpawn()
     {
-        
+        rankInsignia.SetActive(true);
+        SetStats(0);
+    }
+
+    public void SetStats(int rank)
+    {
+        if (!spawning) { StartCoroutine(UpgradeVFX()); }
+        if (rank > 3) { rank = 3; }
+        hitPoints = baseHP + (baseHP * rank);
+        anim.SetInteger(rankHash, rank);
+        rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
+    }
+
+    public int GetRank()
+    {
+        return anim.GetInteger(rankHash);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetBool(deathHash, true);
+        }
     }
 
     public void CheckLane()
     {
         float distX = 9 - attackPoint.transform.position.x;
 
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.right, distX, enemyLayers);
+        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.right, distX, enemyLayer);
 
         if (hit)
         {
             if (hit.distance <= 1)
             {
-                Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.red);
                 anim.SetBool(meleeHash, true);
                 anim.SetTrigger(attackHash);
+                target = hit.collider;
             }
             else
             {
-                Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * hit.distance, Color.yellow);
                 anim.SetBool(meleeHash, false);
                 anim.SetTrigger(attackHash);
             }
         }
-        else
-        {
-            Debug.DrawRay(attackPoint.transform.position, transform.TransformDirection(Vector3.right) * distX, Color.white);
-        }
     }
 
-    public void FinishSpawn()
+    public void Attack()
     {
-        rankInsignia.SetActive(true);
+        switch (target.tag)
+        {
+            case "Zombie":
+                target.GetComponent<ZombieControll>().HandleHit(damage);
+                break;
+        }
     }
 
     public void ThrowKunai()
@@ -147,6 +191,110 @@ public class NinjaControll : MonoBehaviour
         if (kunai)
         {
             GameObject newKunai = Instantiate(kunai, attackPoint.transform.position, Quaternion.identity);
+        }
+    }
+
+    public void HandleHit(int damage)
+    {
+        anim.SetTrigger(hitHash);
+        hitPoints -= damage;
+        if (hitPoints <= 0)
+        {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            myMaterial.SetInt("_Upgradeable", 0);
+            anim.SetBool(deathHash, true);
+        }
+    }
+
+    public void HandleDeath()
+    {
+        GetComponent<TrackPlayerObjs>().HandleDeath();
+        UpdateNinjas(false);
+        StartCoroutine(Dissolve(0));
+    }
+
+    IEnumerator Dissolve(float fade)
+    {
+        yield return new WaitForSeconds(.3f);
+
+        if (spawning)
+        {
+            while (spawning)
+            {
+                fade -= Time.deltaTime;
+
+                if (fade <= 0)
+                {
+                    fade = 0;
+                    spawning = false;
+                }
+
+                myMaterial.SetFloat("_Fade", fade);
+
+                yield return null;
+            }
+
+            myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_FadeColor"));
+        }
+        else
+        {
+            while (anim.GetBool(deathHash))
+            {
+                fade += Time.deltaTime;
+
+                if (fade >= 1)
+                {
+                    fade = 1;
+                    anim.SetBool(deathHash, false);
+                }
+
+                myMaterial.SetFloat("_Fade", fade);
+
+                yield return null;
+            }
+
+            Destroy(gameObject);
+        }
+    }
+
+    IEnumerator UpgradeVFX()
+    {
+        bool ug = true;
+        float ugv = 0;
+        float speed = myMaterial.GetFloat("_UpgradeSpeed");
+
+        Debug.Log(speed);
+
+        while (ug)
+        {
+            ugv += Time.deltaTime * speed;
+
+            if (ugv >= 1)
+            {
+                ugv = 1;
+                ug = false;
+            }
+
+            myMaterial.SetFloat("_UpgradeVFX", ugv);
+
+            yield return null;
+        }
+
+        ug = true;
+
+        while (ug)
+        {
+            ugv -= Time.deltaTime * speed;
+
+            if (ugv <= 0)
+            {
+                ugv = 0;
+                ug = false;
+            }
+
+            myMaterial.SetFloat("_UpgradeVFX", ugv);
+
+            yield return null;
         }
     }
 }

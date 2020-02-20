@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - GUI
+  - Ninja
+  - Wall
+  - Pit
+  - Mine
+  - Zombie
+  - Kunai
   layers:
   - Default
   - TransparentFX

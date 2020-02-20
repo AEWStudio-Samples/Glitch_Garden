@@ -8,17 +8,20 @@ public class TrackPlayerObjs : MonoBehaviour
     // con fig vars
     [SerializeField, Space(10)]
     TrackType type = TrackType.Token;
+
     [SerializeField, Space(10)]
     GameObject objSpawnRef = null;
 
     // state vars
-    static List<Vector2> usedLocations = new List<Vector2> { };
-    Vector2 gridPos;
-    bool isBeingHeld = false;
-    static bool objSpawn = false;
-    static GameObject objToSpawn;
+    static List<Vector2> usedLocations = new List<Vector2>();
 
-    enum TrackType { Button, Spawn, Token }
+    public Vector2 gridPos;
+    bool isBeingHeld;
+    static bool objSpawn;
+    static GameObject objToSpawn;
+    static bool objUpgrade;
+
+    enum TrackType { Button, Spawn, Token, Upgrade, Delete }
 
     private void Start()
     {
@@ -100,7 +103,14 @@ public class TrackPlayerObjs : MonoBehaviour
                 SpawnObj();
                 break;
             case TrackType.Token:
+                if (objUpgrade)
+                {
+                    ObjUpgrade();
+                }
                 isBeingHeld = true;
+                break;
+            case TrackType.Upgrade:
+                UpgradeDef();
                 break;
         }
     }
@@ -124,9 +134,44 @@ public class TrackPlayerObjs : MonoBehaviour
             objSpawn = false;
         }
     }
-    
-    void HandleDeath() // Called by string ref using SendMessage("HandleDeath");
+
+    void UpgradeDef()
     {
-        
+        Debug.Log("Checking objUpgrade.");
+        if (!objUpgrade)
+        {
+            Debug.Log("Select defender to upgrade.");
+            objUpgrade = true;
+        }
+        else
+        {
+            Debug.Log("Defender upgrade canceled.");
+            objUpgrade = false;
+        }
+    }
+
+    private void ObjUpgrade()
+    {
+        switch(gameObject.tag)
+        {
+            case "Ninja":
+                Debug.Log("Upgrading Ninja.");
+                var nCon = GetComponent<NinjaControll>();
+                var rank = nCon.GetRank();
+                nCon.SetStats(rank + 1);
+                objUpgrade = false;
+                break;
+            case "Wall":
+                break;
+            case "Pit":
+                break;
+            case "Mine":
+                break;
+        }
+    }
+    
+    public void HandleDeath()
+    {
+        usedLocations.Remove(gridPos);
     }
 }

@@ -81,6 +81,56 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    private void CheckLane()
+    {
+        switch (animationType)
+        {
+            case AnimType.Mine:
+                //mineControll.CheckLane();
+                break;
+            case AnimType.Ninja:
+                ninjaControll.CheckLane();
+                break;
+            case AnimType.Phantom:
+                //phantomControll.CheckLane();
+                break;
+            case AnimType.Pit:
+                //pitControll.CheckLane();
+                break;
+            case AnimType.Wall:
+                //wallControll.CheckLane();
+                break;
+            case AnimType.Zombie:
+                zombieControll.CheckLane();
+                break;
+        }
+    }
+
+    private void Attack()
+    {
+        switch (animationType)
+        {
+            case AnimType.Mine:
+                //mineControll.Attack();
+                break;
+            case AnimType.Ninja:
+                ninjaControll.Attack();
+                break;
+            case AnimType.Phantom:
+                //phantomControll.Attack();
+                break;
+            case AnimType.Pit:
+                //pitControll.Attack();
+                break;
+            case AnimType.Wall:
+                //wallControll.Attack();
+                break;
+            case AnimType.Zombie:
+                zombieControll.Attack();
+                break;
+        }
+    }
+
     private void ThrowKunai()
     {
         ninjaControll.ThrowKunai();
@@ -90,6 +140,31 @@ public class AnimationTriggerLink : MonoBehaviour
     {
         if (animationType == AnimType.Title) { return; }
         zombieControll.Walk();
+    }
+
+    private void HandleDeath()
+    {
+        switch (animationType)
+        {
+            case AnimType.Mine:
+                //mineControll.HandleDeath();
+                break;
+            case AnimType.Ninja:
+                ninjaControll.HandleDeath();
+                break;
+            case AnimType.Phantom:
+                //phantomControll.HandleDeath();
+                break;
+            case AnimType.Pit:
+                //pitControll.HandleDeath();
+                break;
+            case AnimType.Wall:
+                //wallControll.HandleDeath();
+                break;
+            case AnimType.Zombie:
+                zombieControll.HandleDeath();
+                break;
+        }
     }
 
 

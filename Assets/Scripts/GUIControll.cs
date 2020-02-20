@@ -15,31 +15,32 @@ public class GUIControll : MonoBehaviour
     [Header("Ninja Limit")]
     [SerializeField]
     int maxNinjasBase = 2;
+
     public int maxNinjas;
     public int ninjaCount;
 
-    [Header("Resource Collectors")]
-    [SerializeField]
-    Transform coinCollector = null;
-    [SerializeField]
-    Transform heartCollector = null;
-
-    [Header("Resource Counters")]
+    [Header("Round Information")]
     [SerializeField]
     TextMeshProUGUI ninjaCounter = null;
+
+    [SerializeField]
+    TextMeshProUGUI roundCounter = null;
+
+    [SerializeField]
+    TextMeshProUGUI zombieCounter = null;
+
+    [Header("Resource Counters")]
     [SerializeField]
     TextMeshProUGUI coinCounter = null;
     [SerializeField]
     int startingCoinCount = 100;
-    [SerializeField]
-    TextMeshProUGUI heartCounter = null;
     [SerializeField]
     PriceManager priceManager = null;
 
     // state vars for tracking game progress
     TutControll tutCon;
     MasterSpawner spawner;
-    int curRound;
+    public int curRound;
     int curCoinCount;
     int curHeartCount;
 
@@ -97,7 +98,6 @@ public class GUIControll : MonoBehaviour
 
         UpdateMaxNinjas();
         UpdateCoinCount(curCoinCount);
-        UpdateHeartCount(curHeartCount);
     }
 
     void Update()
@@ -137,7 +137,6 @@ public class GUIControll : MonoBehaviour
         tutCon.ToggleWall(priceManager.curWallCost <= curCoinCount);
         tutCon.TogglePit(priceManager.curPitCost <= curCoinCount);
         tutCon.ToggleMine(priceManager.curMineCost <= curCoinCount);
-        tutCon.TogglePhantom(priceManager.curPhantomCost <= curHeartCount);
     }
 
     private IEnumerator CheckScene()
@@ -260,10 +259,6 @@ public class GUIControll : MonoBehaviour
         if (anim.GetBool(newWaveHash)) { curRound++; }
     }
 
-    public Transform GetCoinCollector() { return coinCollector; }
-
-    public Transform GetHeartCollector() { return heartCollector; }
-
     public void UpdateMaxNinjas()
     {
         if (maxNinjasBase + curRound < 15) { maxNinjas = maxNinjasBase + curRound; }
@@ -281,13 +276,6 @@ public class GUIControll : MonoBehaviour
         coinCounter.text = count.ToString("000000");
     }
 
-    public void UpdateHeartCount(int count)
-    {
-        if (count > 30) { count = 30; }
-
-        heartCounter.text = $"{count.ToString()}/30";
-    }
-
     public void AddCoins(int count)
     {
         curCoinCount += count;
@@ -298,7 +286,6 @@ public class GUIControll : MonoBehaviour
     {
         count /= 10;
         curHeartCount += count;
-        UpdateHeartCount(curHeartCount);
     }
 
     public bool BuyNinja()

@@ -11,13 +11,15 @@ public class RankManager : MonoBehaviour
     // state vars
     SpriteRenderer myRenderer;
 
-    private void Start()
+    private void Awake()
     {
         myRenderer = GetComponent<SpriteRenderer>();
     }
 
     public void SetInsignia(int rank)
     {
+        if (rank > 3) { rank = 3; }
+
         myRenderer.sprite = rankInsignias[rank];
     }
 }

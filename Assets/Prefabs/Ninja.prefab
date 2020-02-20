@@ -52,10 +52,11 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: edee44ed131af1d439e3569ac7b2baa7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -203,10 +204,11 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: edee44ed131af1d439e3569ac7b2baa7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -318,6 +320,7 @@ SpriteRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -384,7 +387,7 @@ GameObject:
   - component: {fileID: 6363081741319215261}
   m_Layer: 8
   m_Name: Ninja
-  m_TagString: Untagged
+  m_TagString: Ninja
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -446,13 +449,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc87f810f11ae534a8db370d95513b2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseHP: 6
+  damage: 2
   ninjas:
   - {fileID: 6363081739523092086}
   - {fileID: 6363081740384495131}
   attackPoint: {fileID: 6363081739603176681}
   rankInsignia: {fileID: 6363081741236698449}
   kunai: {fileID: 1448446313182916841, guid: acacc7017f069d947899e2f6a65098ab, type: 3}
-  enemyLayers:
+  enemyLayer:
     serializedVersion: 2
     m_Bits: 512
 --- !u!114 &6363081741319215261
@@ -469,6 +474,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 2
   objSpawnRef: {fileID: 0}
+  gridPos: {x: 0, y: 0}
 --- !u!1001 &6363081740924292304
 PrefabInstance:
   m_ObjectHideFlags: 0

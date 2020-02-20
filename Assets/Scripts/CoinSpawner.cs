@@ -1,0 +1,45 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CoinSpawner : MonoBehaviour
+{
+    // con fig vars
+    [SerializeField]
+    GameObject coin = null;
+
+    public void StartCoinSpawn(int coinMax)
+    {
+        StartCoroutine(SpawnNewCoin(coinMax));
+    }
+
+    // gets a random int between 0 and max
+    private static int RandInt(int max)
+    {
+        max += 1;
+        return Random.Range(0, max);
+    }
+
+    private IEnumerator SpawnNewCoin(int max)
+    {
+        int coinCount = RandInt(max);
+        while (coinCount > 0)
+        {
+            GameObject newCoin = Instantiate(coin);
+            newCoin.transform.position = RandSpawnLocation();
+            coinCount--;
+            yield return null;
+        }
+    }
+
+    // Update is called once per frame
+    Vector3 RandSpawnLocation()
+    {
+        float randX = Random.Range(-.5f, .5f);
+        float randY = Random.Range(-.5f, .5f);
+
+        Vector3 spawnOffSet = new Vector3(randX, randY, 0);
+
+        return transform.position - spawnOffSet;
+    }
+}

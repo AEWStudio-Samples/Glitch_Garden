@@ -28,11 +28,7 @@ public class CoinControll : MonoBehaviour
     // state vars for collecting the coin
     int coinType;
     bool coinCollected = false;
-    Vector3 moveFallBack = new Vector3(1, 1, 0);
-    Vector3 coinCollector;
     bool isHeart = false;
-    Vector3 heartCollector;
-    int moveX, moveY;
 
     private void Awake()
     {
@@ -56,13 +52,6 @@ public class CoinControll : MonoBehaviour
         anim.SetInteger(coinHash, coinType);
 
         gameObject.name = coinNames[coinType];
-
-        if (RandInt(100) > 90)
-        {
-            isHeart = true;
-            anim.SetTrigger(heartHash);
-            gameObject.name = coinNames[4];
-        }
     }
 
     // gets a random int between 1 and max
@@ -88,18 +77,6 @@ public class CoinControll : MonoBehaviour
         {
             if (guiTest.CompareTag("GUI")) guiControll = guiTest;
         }
-
-        if (guiControll)
-        {
-            coinCollector = guiControll.GetCoinCollector().position;
-            heartCollector = guiControll.GetHeartCollector().position;
-        }
-        else
-        {
-            coinCollector = moveFallBack;
-            heartCollector = moveFallBack;
-        }
-        
     }
 
     private void PlayFX()

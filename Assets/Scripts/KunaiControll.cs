@@ -6,6 +6,9 @@ public class KunaiControll : MonoBehaviour
 {
     // con fig vars
     [SerializeField, Space(10)]
+    public int damage = 1;
+
+    [SerializeField, Space(10)]
     Vector2 velocityVector = new Vector2();
 
     // state vars
@@ -34,10 +37,5 @@ public class KunaiControll : MonoBehaviour
     private void Update()
     {
         if (transform.position.x > 9.5f) { Destroy(gameObject); }
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
     }
 }

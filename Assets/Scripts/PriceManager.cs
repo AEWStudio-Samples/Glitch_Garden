@@ -18,15 +18,12 @@ public class PriceManager : MonoBehaviour
     TextMeshProUGUI pitPrice = null;
     [SerializeField]
     TextMeshProUGUI minePrice = null;
-    [SerializeField]
-    TextMeshProUGUI phantomPrice = null;
 
     [Header("Base Price")]
     public int ninjaBasePrice = 75;
     public int wallBasePrice = 50;
     public int pitBasePrice = 25;
     public int mineBasePrice = 100;
-    public int phantomBasePrice = 10;
 
     // state vars
     [Header("DO NOT TOUTCH")]
@@ -34,7 +31,6 @@ public class PriceManager : MonoBehaviour
     public int curWallCost;
     public int curPitCost;
     public int curMineCost;
-    public int curPhantomCost;
 
     public bool BuyNinja(int curCoinCount)
     {
@@ -58,12 +54,10 @@ public class PriceManager : MonoBehaviour
         curWallCost = wallBasePrice;
         curPitCost = pitBasePrice;
         curMineCost = mineBasePrice;
-        curPhantomCost = phantomBasePrice;
         UpdateNinjaPrice(curNinjaCost);
         UpdateWallPrice(curWallCost);
         UpdatePitPrice(curPitCost);
         UpdateMinePrice(curMineCost);
-        UpdatePhantomPrice(curPhantomCost);
     }
 
     public void UpdateNinjaPrice(int cost)
@@ -84,10 +78,5 @@ public class PriceManager : MonoBehaviour
     private void UpdateMinePrice(int cost)
     {
         minePrice.text = cost.ToString();
-    }
-
-    private void UpdatePhantomPrice(int cost)
-    {
-        phantomPrice.text = cost.ToString();
     }
 }

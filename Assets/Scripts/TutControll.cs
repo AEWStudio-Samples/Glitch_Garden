@@ -10,14 +10,15 @@ public class TutControll : MonoBehaviour
     [Header("Tool Box Buttons")]
     [SerializeField]
     Button ninjaButton = null;
+
     [SerializeField]
     Button wallButton = null;
+
     [SerializeField]
     Button pitButton = null;
+
     [SerializeField]
     Button mineButton = null;
-    [SerializeField]
-    Button phantomButton = null;
 
     // state vars
 
@@ -37,7 +38,6 @@ public class TutControll : MonoBehaviour
         ToggleWall(false);
         TogglePit(false);
         ToggleMine(false);
-        TogglePhantom(false);
     }
 
     public void ToggleNinja(bool tgl)
@@ -58,11 +58,6 @@ public class TutControll : MonoBehaviour
     public void ToggleMine(bool tgl)
     {
         mineButton.interactable = tgl;
-    }
-
-    public void TogglePhantom(bool tgl)
-    {
-        phantomButton.interactable = tgl;
     }
 
     internal void StartRound()
