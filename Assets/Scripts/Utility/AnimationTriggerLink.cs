@@ -7,11 +7,13 @@ public class AnimationTriggerLink : MonoBehaviour
     // con fig vars
     [SerializeField, Space(10)]
     GameObject root = null;
+
     [SerializeField, Space(10)]
     AnimType animationType = AnimType.Mine;
 
     // state vars
     enum AnimType { Mine, Ninja, Phantom, Pit, Wall, Zombie, Title}
+
     MineControll mineControll;
     NinjaControll ninjaControll;
     PhantomControll phantomControll;
@@ -67,7 +69,7 @@ public class AnimationTriggerLink : MonoBehaviour
                 ninjaControll.FinishSpawn();
                 break;
             case AnimType.Phantom:
-                //phantomControll.FinishSpawn();
+                phantomControll.FinishSpawn();
                 break;
             case AnimType.Pit:
                 //pitControll.FinishSpawn();
@@ -85,20 +87,11 @@ public class AnimationTriggerLink : MonoBehaviour
     {
         switch (animationType)
         {
-            case AnimType.Mine:
-                //mineControll.CheckLane();
-                break;
             case AnimType.Ninja:
                 ninjaControll.CheckLane();
                 break;
             case AnimType.Phantom:
-                //phantomControll.CheckLane();
-                break;
-            case AnimType.Pit:
-                //pitControll.CheckLane();
-                break;
-            case AnimType.Wall:
-                //wallControll.CheckLane();
+                phantomControll.CheckLane();
                 break;
             case AnimType.Zombie:
                 zombieControll.CheckLane();
@@ -117,13 +110,10 @@ public class AnimationTriggerLink : MonoBehaviour
                 ninjaControll.Attack();
                 break;
             case AnimType.Phantom:
-                //phantomControll.Attack();
+                phantomControll.Attack();
                 break;
             case AnimType.Pit:
                 //pitControll.Attack();
-                break;
-            case AnimType.Wall:
-                //wallControll.Attack();
                 break;
             case AnimType.Zombie:
                 zombieControll.Attack();
@@ -139,7 +129,15 @@ public class AnimationTriggerLink : MonoBehaviour
     private void Walk()
     {
         if (animationType == AnimType.Title) { return; }
-        zombieControll.Walk();
+        switch (animationType)
+        {
+            case AnimType.Phantom:
+                phantomControll.Walk();
+                break;
+            case AnimType.Zombie:
+                zombieControll.Walk();
+                break;
+        }
     }
 
     private void HandleDeath()
@@ -153,7 +151,7 @@ public class AnimationTriggerLink : MonoBehaviour
                 ninjaControll.HandleDeath();
                 break;
             case AnimType.Phantom:
-                //phantomControll.HandleDeath();
+                phantomControll.HandleDeath(true);
                 break;
             case AnimType.Pit:
                 //pitControll.HandleDeath();

@@ -459,7 +459,8 @@ MonoBehaviour:
   kunai: {fileID: 1448446313182916841, guid: acacc7017f069d947899e2f6a65098ab, type: 3}
   enemyLayer:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 4608
+  hitPoints: 0
 --- !u!114 &6363081741319215261
 MonoBehaviour:
   m_ObjectHideFlags: 0

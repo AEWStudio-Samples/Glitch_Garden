@@ -32,15 +32,14 @@ public class NinjaControll : MonoBehaviour
     public int hitPoints;
     GameObject activeNinja;
     GUIControll guiControll;
-    PriceManager priceManager;
     Material myMaterial;
     bool spawning = true;
+    int rank;
     Collider2D target;
 
     // state vars for the animator
     Animator anim;
     int rankHash = Animator.StringToHash("Rank");
-    int rankUpHash = Animator.StringToHash("Rank Up");
     int hitHash = Animator.StringToHash("Hit");
     int attackHash = Animator.StringToHash("Attack");
     int meleeHash = Animator.StringToHash("Melee");
@@ -58,6 +57,7 @@ public class NinjaControll : MonoBehaviour
         rankInsignia.SetActive(false);
 
         hitPoints = baseHP;
+        rank = 0;
     }
 
     private void LinkGUI()
@@ -89,11 +89,15 @@ public class NinjaControll : MonoBehaviour
             }
             else if (!spawn)
             {
-                priceManager = FindObjectOfType<PriceManager>();
+                var priceManager = guiControll.GetComponent<PriceManager>();
+                var tutCon = guiControll.GetComponent<TutControll>();
 
                 guiControll.ninjaCount--;
+                int newPrice = priceManager.curNinjaCost -= priceManager.ninjaBasePrice;
 
-                priceManager.curNinjaCost -= priceManager.ninjaBasePrice;
+                guiControll.UpdateMaxNinjas();
+                priceManager.UpdateNinjaPrice(newPrice);
+                tutCon.ToggleNinja(priceManager.curNinjaCost <= guiControll.curCoinCount && guiControll.ninjaCount < guiControll.maxNinjas);
             }
         }
     }
@@ -143,7 +147,7 @@ public class NinjaControll : MonoBehaviour
 
     public int GetRank()
     {
-        return anim.GetInteger(rankHash);
+        return rank;
     }
 
     private void Update()
@@ -182,6 +186,9 @@ public class NinjaControll : MonoBehaviour
         {
             case "Zombie":
                 target.GetComponent<ZombieControll>().HandleHit(damage);
+                break;
+            case "Phantom":
+                target.GetComponent<PhantomControll>().HandleHit(damage);
                 break;
         }
     }

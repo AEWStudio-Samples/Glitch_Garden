@@ -11,6 +11,7 @@ TagManager:
   - Mine
   - Zombie
   - Kunai
+  - Phantom
   layers:
   - Default
   - TransparentFX
@@ -24,8 +25,8 @@ TagManager:
   - Enemies
   - Projectiles
   - Coins
-  - 
-  - 
+  - Phantom
+  - ExtraDef
   - 
   - 
   - 

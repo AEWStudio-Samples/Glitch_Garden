@@ -13,11 +13,11 @@ public class CoinSpawner : MonoBehaviour
         StartCoroutine(SpawnNewCoin(coinMax));
     }
 
-    // gets a random int between 0 and max
+    // gets a random int between 1 and max
     private static int RandInt(int max)
     {
         max += 1;
-        return Random.Range(0, max);
+        return Random.Range(1, max);
     }
 
     private IEnumerator SpawnNewCoin(int max)

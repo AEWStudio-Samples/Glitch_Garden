@@ -41,8 +41,7 @@ public class GUIControll : MonoBehaviour
     TutControll tutCon;
     MasterSpawner spawner;
     public int curRound;
-    int curCoinCount;
-    int curHeartCount;
+    public int curCoinCount;
 
     // state vars for the animator
     Animator anim;
@@ -93,11 +92,11 @@ public class GUIControll : MonoBehaviour
     {
         curRound = 1;
         ninjaCount = 0;
-        curHeartCount = 0;
         curCoinCount = startingCoinCount;
 
         UpdateMaxNinjas();
         UpdateCoinCount(curCoinCount);
+        UpdateCurRound(curRound);
     }
 
     void Update()
@@ -127,7 +126,7 @@ public class GUIControll : MonoBehaviour
         }
     }
 
-    private void UpdateButtons()
+    public void UpdateButtons()
     {
         if (anim.GetBool(tutHash)) { return; }
 
@@ -276,16 +275,19 @@ public class GUIControll : MonoBehaviour
         coinCounter.text = count.ToString("000000");
     }
 
+    public void UpdateCurRound(int round)
+    {
+        if (round > 99) { round = 99; }
+
+        curRound = round;
+
+        roundCounter.text = round.ToString("Round : 00");
+    }
+
     public void AddCoins(int count)
     {
         curCoinCount += count;
         UpdateCoinCount(curCoinCount);
-    }
-
-    public void AddHeart(int count)
-    {
-        count /= 10;
-        curHeartCount += count;
     }
 
     public bool BuyNinja()

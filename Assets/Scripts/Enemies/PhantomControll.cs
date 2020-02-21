@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZombieControll : MonoBehaviour
+public class PhantomControll : MonoBehaviour
 {
     // con fig vars
     [SerializeField, Space(10)]
-    int hitPoints = 6;
+    int hitPoints = 10;
 
     [SerializeField, Space(10)]
     int damage = 6;
 
     [SerializeField, Space(10)]
-    GameObject[] zombies = { };
+    GameObject[] phantoms = { };
 
     [SerializeField, Space(10)]
     GameObject attackPoint = null;
@@ -24,15 +24,16 @@ public class ZombieControll : MonoBehaviour
     LayerMask playerLayer = 8;
 
     [SerializeField, Space(10)]
-    LayerMask enemyLayer = 9;
+    LayerMask phantomLayer = 9;
 
     // state vars
     Rigidbody2D myBody;
-    GameObject activeZomb;
+    GameObject activePhant;
     GUIControll guiControll;
     Material myMaterial;
     bool spawning = true;
     float speed = .5f;
+    int rank;
 
     Collider2D target;
 
@@ -52,7 +53,7 @@ public class ZombieControll : MonoBehaviour
 
         LinkGUI();
 
-        foreach (GameObject zombie in zombies)
+        foreach (GameObject zombie in phantoms)
         {
             zombie.SetActive(false);
         }
@@ -83,7 +84,7 @@ public class ZombieControll : MonoBehaviour
             {
                 //guiControll.ninjaCount++;
 
-                SpawnZombie();
+                SpawnPhantom();
             }
             else if (!spawn)
             {
@@ -92,17 +93,18 @@ public class ZombieControll : MonoBehaviour
         }
     }
 
-    void SpawnZombie()
+    void SpawnPhantom()
     {
-        activeZomb = zombies[RandInt(1)];
-        myMaterial = activeZomb.GetComponent<SpriteRenderer>().material;
+        activePhant = phantoms[RandInt(1)];
+        myMaterial = activePhant.GetComponent<SpriteRenderer>().material;
+        myMaterial.SetInt("_Phantom", 1);
         myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_SpawnColor"));
         myMaterial.SetFloat("_Fade", 1f);
         myMaterial.SetFloat("_UpgradeVFX", 0f);
         myMaterial.SetInt("_Upgradeable", 0);
-        anim = activeZomb.GetComponent<Animator>();
+        anim = activePhant.GetComponent<Animator>();
         attackPoint.SetActive(true);
-        activeZomb.SetActive(true);
+        activePhant.SetActive(true);
         StartCoroutine(Dissolve(1));
         SetSortingOrder();
     }
@@ -117,7 +119,7 @@ public class ZombieControll : MonoBehaviour
     private void SetSortingOrder()
     {
         int sortOrder = 6 - Mathf.FloorToInt(transform.position.y);
-        activeZomb.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
+        activePhant.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
         rankInsignia.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
     }
 
@@ -139,9 +141,20 @@ public class ZombieControll : MonoBehaviour
 
     private void SetStats()
     {
-        int rank = RandInt(guiControll.curRound - 1);
+        if (guiControll.curRound > 4)
+        {
+            rank = RandInt(3) + guiControll.curRound - 4;
+        }
+        else
+        {
+            rank = RandInt(guiControll.curRound - 1);
+        }
+
         hitPoints += hitPoints * rank;
+        damage += (damage / 2) * rank;
+
         anim.SetInteger(rankHash, rank);
+
         rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
     }
 
@@ -156,20 +169,6 @@ public class ZombieControll : MonoBehaviour
         else
         {
             anim.SetBool(blockHash, false);
-        }
-
-        RaycastHit2D freeze = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, enemyLayer);
-        if (freeze)
-        {
-            if (!anim.GetBool(frozenHash))
-            {
-                anim.SetTrigger(frezeHash);
-            }
-            anim.SetBool(frozenHash, true);
-        }
-        else
-        {
-            anim.SetBool(frozenHash, false);
         }
 
         if (anim.GetBool(blockHash) || anim.GetBool(frozenHash))
@@ -189,25 +188,15 @@ public class ZombieControll : MonoBehaviour
             case "Ninja":
                 target.GetComponent<NinjaControll>().HandleHit(damage);
                 break;
-            case "Wall":
-                target.GetComponent<WallControll>().HandleHit(damage);
-                break;
         }
+
+        anim.SetBool(deathHash, true);
+        HandleDeath(false);
     }
 
     public void Walk()
     {
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Kunai")
-        {
-            KunaiControll kunai = collision.collider.GetComponent<KunaiControll>();
-            HandleHit(kunai.damage);
-            Destroy(kunai.gameObject);
-        }
     }
 
     public void HandleHit(int damage)
@@ -221,8 +210,9 @@ public class ZombieControll : MonoBehaviour
         }
     }
 
-    public void HandleDeath()
+    public void HandleDeath(bool killed)
     {
+        if (killed) { GetComponent<CoinSpawner>().StartCoinSpawn(rank); }
         myBody.velocity = Vector2.left * 0;
         StartCoroutine(Dissolve(0));
     }
@@ -271,3 +261,4 @@ public class ZombieControll : MonoBehaviour
         }
     }
 }
+

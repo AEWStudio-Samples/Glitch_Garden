@@ -28,7 +28,6 @@ public class CoinControll : MonoBehaviour
     // state vars for collecting the coin
     int coinType;
     bool coinCollected = false;
-    bool isHeart = false;
 
     private void Awake()
     {
@@ -102,10 +101,10 @@ public class CoinControll : MonoBehaviour
         {
             if (guiControll)
             {
-                if (isHeart) { guiControll.AddHeart(coinValues[coinType - 1]); }
-                else { guiControll.AddCoins(coinValues[coinType - 1]); }
+                guiControll.AddCoins(coinValues[coinType - 1]);
             }
-            Destroy(gameObject);    
+
+            Destroy(gameObject);
         }
     }
 
