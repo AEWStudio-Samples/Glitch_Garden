@@ -9,9 +9,12 @@ using UnityEngine.UI;
 using UnityEditor;
 #endif
 
+/// <summary>
+/// This script is used to control the GUI.
+/// </summary>
 public class GUIControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [Header("Ninja Limit")]
     [SerializeField]
     int maxNinjasBase = 2;
@@ -37,32 +40,29 @@ public class GUIControll : MonoBehaviour
     [SerializeField]
     PriceManager priceManager = null;
 
-    // state vars for tracking game progress
+    // state vars //
     TutControll tutCon;
     MasterSpawner spawner;
     public int curRound;
     public int curCoinCount;
 
-    // state vars for the animator
+    // state vars for the animator //
     Animator anim;
     int showMainMenuHash = Animator.StringToHash("Show Main Menu");
     int startGameHash = Animator.StringToHash("Start Game");
     int roundOneHash = Animator.StringToHash("Round One");
     int quitGameHash = Animator.StringToHash("Quit Game");
-    int exitHash = Animator.StringToHash("EXIT");
-    int showPauseScreenHash = Animator.StringToHash("Show Pause Screen");
-    int hidePauseScreenHash = Animator.StringToHash("Hide Pause Screen");
     int startPlayHash = Animator.StringToHash("Start Play");
     int pauseGameHash = Animator.StringToHash("Pause Game");
-    int waveClearHash = Animator.StringToHash("Wave Clear");
+    int newWaveHash = Animator.StringToHash("New Wave");
     int mainMenuHash = Animator.StringToHash("Main Menu");
     int mainGameHash = Animator.StringToHash("Main Game");
     int tutHash = Animator.StringToHash("Tutorial");
     int pauseHash = Animator.StringToHash("Pause");
     int quitChkHash = Animator.StringToHash("Quit Chk");
-    int newWaveHash = Animator.StringToHash("New Wave");
+    int roundClearHash = Animator.StringToHash("Round Clear");
 
-    // state vars tracking the active scene
+    // state vars tracking the active scene //
     string curSceneName;
 
     AtScene curScene = AtScene.Title;
@@ -71,6 +71,7 @@ public class GUIControll : MonoBehaviour
 
     void Awake()
     {
+        // Make it so there is only one //
         int numGUIControlls = FindObjectsOfType<GUIControll>().Length;
 
         if (numGUIControlls > 1)
@@ -78,16 +79,22 @@ public class GUIControll : MonoBehaviour
             Destroy(this.gameObject);
         }
 
+        // One to rule them all //
         DontDestroyOnLoad(this.gameObject);
 
+        // Get key components //
         anim = GetComponent<Animator>();
         tutCon = GetComponent<TutControll>();
+
+        // Just setting things up for first play //
         ResetCounters();
         priceManager.ResetPrice();
 
+        // What scene are we on //
         StartCoroutine(CheckScene());
     }
 
+    // Set the counters to there default state for starting a new game //
     private void ResetCounters()
     {
         curRound = 1;
@@ -107,6 +114,14 @@ public class GUIControll : MonoBehaviour
 
     private void CheckInput()
     {
+        // Increase the current round by 1 while playing in the editor //
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            UpdateCurRound(curRound + 1);
+        }
+        #endif
+
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (curScene == AtScene.MainMenu)
@@ -126,11 +141,12 @@ public class GUIControll : MonoBehaviour
         }
     }
 
+    // Disable the buttons if the player can't afford the object, the round is cleared, or the tutorial is active //
     public void UpdateButtons()
     {
         if (anim.GetBool(tutHash)) { return; }
 
-        if (anim.GetBool(waveClearHash)) { tutCon.DisableAllButtons(); return; }
+        if (anim.GetBool(roundClearHash)) { tutCon.DisableAllButtons(); return; }
 
         tutCon.ToggleNinja(priceManager.curNinjaCost <= curCoinCount && ninjaCount < maxNinjas);
         tutCon.ToggleWall(priceManager.curWallCost <= curCoinCount);
@@ -138,6 +154,7 @@ public class GUIControll : MonoBehaviour
         tutCon.ToggleMine(priceManager.curMineCost <= curCoinCount);
     }
 
+    // Check what scene we are on so that we know what we are doing //
     private IEnumerator CheckScene()
     {
         yield return SceneManager.GetActiveScene().isLoaded;
@@ -148,7 +165,7 @@ public class GUIControll : MonoBehaviour
         anim.SetBool(mainGameHash, false);
         anim.SetBool(pauseHash, false);
         anim.SetBool(quitChkHash, false);
-        anim.SetBool(newWaveHash, false);
+        anim.SetBool(roundClearHash, false);
 
         if (curSceneName == "MainMenu")
         {
@@ -163,6 +180,7 @@ public class GUIControll : MonoBehaviour
         SetSceneGUI();
     }
 
+    // Set the GUI up for the current scene //
     void SetSceneGUI()
     {
         switch(curScene)
@@ -176,6 +194,7 @@ public class GUIControll : MonoBehaviour
         }
     }
 
+    // Goes to a scene with the given name //
     public void GoToScene(string name)
     {
         ResetCounters();
@@ -184,12 +203,21 @@ public class GUIControll : MonoBehaviour
         StartCoroutine(CheckScene());
     }
 
+    // Show the main menu GUI //
     public void ShowMainMenu()
     {
         anim.SetTrigger(showMainMenuHash);
         if (curScene == AtScene.MainMenu) { anim.SetBool(mainMenuHash, true); }
     }
 
+    // Set things up to run the tutorial //
+    public void StartWithTut(bool chk)
+    {
+        anim.SetBool(tutHash, chk);
+        StartGame(true);
+    }
+
+    // Show the GUI for playing the game //
     public void ShowGameMenu()
     {
         Time.timeScale = 1;
@@ -201,18 +229,14 @@ public class GUIControll : MonoBehaviour
         }
     }
 
-    public void StartWithTut(bool chk)
-    {
-        anim.SetBool(tutHash, chk);
-        StartGame(true);
-    }
-
+    // Start the actual game //
     public void StartGame(bool start)
     {
         if (!start) { anim.SetTrigger(startGameHash); }
         else if (start) { anim.SetTrigger(roundOneHash); }
     }
 
+    // Pause the game to give the player a break, restart, or quit to the main menu //
     public void PauseGame(bool chk)
     {
         if (chk)
@@ -222,20 +246,24 @@ public class GUIControll : MonoBehaviour
             anim.SetTrigger(pauseGameHash);
         }
         else if (!chk)
-        { 
+        {
+            Time.timeScale = 1;
             anim.SetBool(pauseHash, chk);
             anim.SetTrigger(pauseGameHash);
         }
     }
 
+    // Start the process of quiting the game //
     public void QuitGame(bool chk)
     {
         anim.SetBool(quitChkHash, chk);
         anim.SetTrigger(quitGameHash);
     }
 
+    // Close the game down completely //
     public void ExitGame()
     {
+        // If in the editor stop playing otherwise quit the application //
         #if UNITY_EDITOR
         EditorApplication.isPlaying = false;
         #else
@@ -243,6 +271,7 @@ public class GUIControll : MonoBehaviour
         #endif
     }
 
+    // Start a round of game play //
     public void StartRound()
     {
         if (!spawner) { return; }
@@ -251,19 +280,29 @@ public class GUIControll : MonoBehaviour
         else { spawner.StartRound(); }
     }
 
+    // Show the round clear menu when the last attacker is killed //
     public void ClearRound()
     {
-        anim.SetBool(newWaveHash, !anim.GetBool(newWaveHash));
-        anim.SetTrigger(waveClearHash);
-        if (anim.GetBool(newWaveHash)) { curRound++; }
+        anim.SetBool(roundClearHash, !anim.GetBool(roundClearHash));
+        anim.SetTrigger(newWaveHash);
+        if (anim.GetBool(roundClearHash)) { curRound++; }
     }
 
-    public void UpdateMaxNinjas()
+    // Add some coins to the coin counter //
+    public void AddCoins(int count)
     {
-        if (maxNinjasBase + curRound < 15) { maxNinjas = maxNinjasBase + curRound; }
-        else { maxNinjas = 15; }
+        curCoinCount += count;
+        UpdateCoinCount(curCoinCount);
+    }
 
-        ninjaCounter.text = $"{ninjaCount}/{maxNinjas.ToString()}";
+    // Begin update functions //
+    public void UpdateCurRound(int round)
+    {
+        if (round > 99) { round = 99; }
+
+        curRound = round;
+
+        roundCounter.text = round.ToString("Round : 00");
     }
 
     public void UpdateCoinCount(int count)
@@ -275,28 +314,40 @@ public class GUIControll : MonoBehaviour
         coinCounter.text = count.ToString("000000");
     }
 
-    public void UpdateCurRound(int round)
+    public void UpdateMaxNinjas()
     {
-        if (round > 99) { round = 99; }
+        if (maxNinjasBase + curRound < 15) { maxNinjas = maxNinjasBase + curRound; }
+        else { maxNinjas = 15; }
 
-        curRound = round;
-
-        roundCounter.text = round.ToString("Round : 00");
+        ninjaCounter.text = $"{ninjaCount}/{maxNinjas.ToString()}";
     }
+    // End update functions //
 
-    public void AddCoins(int count)
-    {
-        curCoinCount += count;
-        UpdateCoinCount(curCoinCount);
-    }
-
+    // Begin unit buy functions //
     public bool BuyNinja()
     {
-        // run some checks to see if the ninja can be bought
+        // run some checks to see if the ninja can be bought //
         if (ninjaCount > maxNinjas) { return false; }
 
-        if (!priceManager.BuyNinja(curCoinCount)) { return false; }
-
-        return true;
+        return priceManager.BuyNinja(curCoinCount);
     }
+
+    public bool BuyWall()
+    {
+        // run some checks to see if the wall can be bought //
+        return priceManager.BuyWall(curCoinCount);
+    }
+
+    public bool BuyPit()
+    {
+        // run some checks to see if the wall can be bought //
+        return priceManager.BuyPit(curCoinCount);
+    }
+
+    public bool BuyMine()
+    {
+        // run some checks to see if the wall can be bought //
+        return priceManager.BuyMine(curCoinCount);
+    }
+    // End unit buy functions //
 }

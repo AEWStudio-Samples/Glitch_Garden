@@ -430,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f799df35629f36f48ac115b20eeebc19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 10
+  hitPoints: 12
   damage: 6
   phantoms:
   - {fileID: 4026852555169039250}

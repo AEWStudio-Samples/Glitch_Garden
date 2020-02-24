@@ -2,26 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the script that controls the kunai.
+/// </summary>
 public class KunaiControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField, Space(10)]
     public int damage = 1;
+    public float spnOffset = .05f;
 
     [SerializeField, Space(10)]
     Vector2 velocityVector = new Vector2();
 
-    // state vars
+    // state vars //
     Rigidbody2D myBody;
-
-    // state vars for the animator
-    Animator anim;
-    int hitHash = Animator.StringToHash("Hit");
 
     private void Awake()
     {
         myBody = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
     }
 
     private void Start()
@@ -29,6 +28,7 @@ public class KunaiControll : MonoBehaviour
         SetVelocity();
     }
 
+    // Make the kunai move to the zombies //
     private void SetVelocity()
     {
         myBody.velocity = velocityVector;

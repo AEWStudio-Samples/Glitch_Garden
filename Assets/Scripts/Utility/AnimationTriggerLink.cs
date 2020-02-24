@@ -2,16 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script lets the animator send commands
+/// to the controller script attached to the parent.
+/// </summary>
 public class AnimationTriggerLink : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField, Space(10)]
     GameObject root = null;
 
     [SerializeField, Space(10)]
     AnimType animationType = AnimType.Mine;
 
-    // state vars
+    // state vars //
     enum AnimType { Mine, Ninja, Phantom, Pit, Wall, Zombie, Title}
 
     MineControll mineControll;
@@ -26,6 +30,7 @@ public class AnimationTriggerLink : MonoBehaviour
         SetController();
     }
 
+    // Set the correct controller for the animator //
     void SetController()
     {
         switch(animationType)
@@ -51,6 +56,7 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    // Move to the main menu after the title animation is done //
     private void FinishTitle()
     {
         if (animationType != AnimType.Title) { return; }
@@ -58,6 +64,7 @@ public class AnimationTriggerLink : MonoBehaviour
         guiCon.GoToScene("MainMenu");
     }
 
+    // Tell the controller that spawning has finished //
     private void FinishSpawn()
     {
         switch (animationType)
@@ -83,6 +90,7 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    // Tell the controller to check the lane for a valid target //
     private void CheckLane()
     {
         switch (animationType)
@@ -99,6 +107,7 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    // Tell the controller to attack //
     private void Attack()
     {
         switch (animationType)
@@ -121,11 +130,13 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    // Tell the controller to throw a kunai //
     private void ThrowKunai()
     {
         ninjaControll.ThrowKunai();
     }
 
+    // Tell the controller to walk //
     private void Walk()
     {
         if (animationType == AnimType.Title) { return; }
@@ -140,6 +151,7 @@ public class AnimationTriggerLink : MonoBehaviour
         }
     }
 
+    // Tell the controller that it has just died //
     private void HandleDeath()
     {
         switch (animationType)

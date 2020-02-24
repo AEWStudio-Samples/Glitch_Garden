@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the script that controls the phantom.
+/// </summary>
 public class PhantomControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField, Space(10)]
     int hitPoints = 10;
 
@@ -23,13 +26,10 @@ public class PhantomControll : MonoBehaviour
     [SerializeField, Space(10)]
     LayerMask playerLayer = 8;
 
-    [SerializeField, Space(10)]
-    LayerMask phantomLayer = 9;
-
-    // state vars
+    // state vars //
     Rigidbody2D myBody;
     GameObject activePhant;
-    GUIControll guiControll;
+    GUIControll guiCon;
     Material myMaterial;
     bool spawning = true;
     float speed = .5f;
@@ -37,22 +37,37 @@ public class PhantomControll : MonoBehaviour
 
     Collider2D target;
 
-    // state vars for the animator
+    // state vars for the animator //
     Animator anim;
     int speedHash = Animator.StringToHash("Speed");
-    int rankHash = Animator.StringToHash("Rank");
     int blockHash = Animator.StringToHash("Blocked");
-    int frezeHash = Animator.StringToHash("Freeze");
-    int frozenHash = Animator.StringToHash("Frozen");
     int killHash = Animator.StringToHash("Kill");
     int deathHash = Animator.StringToHash("Dead");
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Find out what we walked in to //
+        switch (collision.tag)
+        {
+            // Hit by a kunai //
+            case "Kunai":
+                KunaiControll kunai = collision.GetComponent<KunaiControll>();
+                HandleHit(kunai.damage);
+                break;
+            // Walked in to a mine //
+            case "Mine":
+                MineControll mine = collision.GetComponent<MineControll>();
+                break;
+        }
+    }
+
     private void Awake()
     {
-        myBody = GetComponent<Rigidbody2D>();
-
+        // Get GUI //
         LinkGUI();
 
+        // Initialize For Spawning //
+        myBody = GetComponent<Rigidbody2D>();
         foreach (GameObject zombie in phantoms)
         {
             zombie.SetActive(false);
@@ -70,66 +85,69 @@ public class PhantomControll : MonoBehaviour
     {
         GUIControll[] guiList = FindObjectsOfType<GUIControll>();
 
+        // Sanity Check //
         foreach (GUIControll guiTest in guiList)
         {
-            if (guiTest.CompareTag("GUI")) guiControll = guiTest;
+            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
     }
 
     public void UpdateZombies(bool spawn)
     {
-        if (guiControll)
+        if (guiCon)
         {
             if (spawn)
             {
-                //guiControll.ninjaCount++;
+                // Run some fun checks to see if a zombie can be spawned //
 
                 SpawnPhantom();
             }
             else if (!spawn)
             {
-                //guiControll.ninjaCount--;
+                // Update everything to account for the zombies death //
             }
         }
     }
 
     void SpawnPhantom()
     {
+        // Set Active Phantom //
         activePhant = phantoms[RandInt(1)];
+
+        // Get My Material //
         myMaterial = activePhant.GetComponent<SpriteRenderer>().material;
+
+        // Set For Spawning //
         myMaterial.SetInt("_Phantom", 1);
         myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_SpawnColor"));
         myMaterial.SetFloat("_Fade", 1f);
         myMaterial.SetFloat("_UpgradeVFX", 0f);
         myMaterial.SetInt("_Upgradeable", 0);
+
+        // Get Active Animator //
         anim = activePhant.GetComponent<Animator>();
+
+        // Activate Phantom //
         attackPoint.SetActive(true);
         activePhant.SetActive(true);
         StartCoroutine(Dissolve(1));
         SetSortingOrder();
     }
 
-    // gets a random int between 0 and max
+    // Gets a random int between 0 and max //
     private static int RandInt(int max)
     {
-        max += 1;
+        // Add 1 to max so that it is in the range of possible outputs //
+        max++;
         return Random.Range(0, max);
     }
 
     private void SetSortingOrder()
     {
+        // This makes it so objects layer properly //
         int sortOrder = 6 - Mathf.FloorToInt(transform.position.y);
         activePhant.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
         rankInsignia.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            anim.SetBool(killHash, true);
-            anim.SetBool(deathHash, true);
-        }
     }
 
     public void FinishSpawn()
@@ -141,23 +159,36 @@ public class PhantomControll : MonoBehaviour
 
     private void SetStats()
     {
-        if (guiControll.curRound > 4)
+        if (guiCon.curRound > 4)
         {
-            rank = RandInt(3) + guiControll.curRound - 4;
+            rank = RandInt(3) + guiCon.curRound - 4;
         }
         else
         {
-            rank = RandInt(guiControll.curRound - 1);
+            rank = RandInt(guiCon.curRound - 1);
         }
 
+        // Set the phantom's health //
         hitPoints += hitPoints * rank;
         damage += (damage / 2) * rank;
 
-        anim.SetInteger(rankHash, rank);
-
+        // Update the rank insignia //
         rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
     }
 
+    void Update()
+    {
+        // Kills all phantoms while playing in the editor //
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetBool(killHash, true);
+            anim.SetBool(deathHash, true);
+        }
+        #endif
+    }
+
+    // Checks the lane for a valid target //
     public void CheckLane()
     {
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
@@ -171,7 +202,7 @@ public class PhantomControll : MonoBehaviour
             anim.SetBool(blockHash, false);
         }
 
-        if (anim.GetBool(blockHash) || anim.GetBool(frozenHash))
+        if (anim.GetBool(blockHash))
         {
             myBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
@@ -181,6 +212,7 @@ public class PhantomControll : MonoBehaviour
         }
     }
 
+    // Applies damage to target from a melee attack //
     public void Attack()
     {
         switch (target.tag)
@@ -194,11 +226,13 @@ public class PhantomControll : MonoBehaviour
         HandleDeath(false);
     }
 
+    // Makes the phantom move //
     public void Walk()
     {
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
     }
 
+    // Applies damage when phantom gets hit //
     public void HandleHit(int damage)
     {
         hitPoints -= damage;
@@ -210,6 +244,7 @@ public class PhantomControll : MonoBehaviour
         }
     }
 
+    // The phantom has died //
     public void HandleDeath(bool killed)
     {
         if (killed) { GetComponent<CoinSpawner>().StartCoinSpawn(rank); }
@@ -217,12 +252,14 @@ public class PhantomControll : MonoBehaviour
         StartCoroutine(Dissolve(0));
     }
 
+    // Applies VFX for spawning and death //
     IEnumerator Dissolve(float fade)
     {
         yield return new WaitForSeconds(.3f);
 
         if (spawning)
         {
+            // Spawn into the scene //
             while (spawning)
             {
                 fade -= Time.deltaTime;
@@ -239,9 +276,11 @@ public class PhantomControll : MonoBehaviour
             }
 
             myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_FadeColor"));
+            FinishSpawn();
         }
         else
         {
+            // Destroy the corps //
             while (anim.GetBool(deathHash))
             {
                 fade += Time.deltaTime;

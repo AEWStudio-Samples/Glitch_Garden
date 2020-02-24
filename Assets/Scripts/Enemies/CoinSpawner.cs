@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This script is for spawning coins.
+/// </summary>
 public class CoinSpawner : MonoBehaviour
 {
     // con fig vars
@@ -16,7 +19,7 @@ public class CoinSpawner : MonoBehaviour
     // gets a random int between 1 and max
     private static int RandInt(int max)
     {
-        max += 1;
+        max++;
         return Random.Range(1, max);
     }
 

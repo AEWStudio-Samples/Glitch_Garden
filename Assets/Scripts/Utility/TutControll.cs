@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// This script is used to control the tutorial
+/// and to manage access to the buttons for
+/// buying new units.
+/// </summary>
 public class TutControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [Header("Tool Box Buttons")]
     [SerializeField]
     Button ninjaButton = null;
@@ -20,7 +25,7 @@ public class TutControll : MonoBehaviour
     [SerializeField]
     Button mineButton = null;
 
-    // state vars
+    // state vars //
 
     void Start()
     {
@@ -32,6 +37,7 @@ public class TutControll : MonoBehaviour
 
     }
 
+    // Disables the buttons for buying new units //
     public void DisableAllButtons()
     {
         ToggleNinja(false);
@@ -40,6 +46,7 @@ public class TutControll : MonoBehaviour
         ToggleMine(false);
     }
 
+    // Begin button toggle functions //
     public void ToggleNinja(bool tgl)
     {
         ninjaButton.interactable = tgl;
@@ -59,7 +66,9 @@ public class TutControll : MonoBehaviour
     {
         mineButton.interactable = tgl;
     }
+    // End button toggle functions //
 
+    // Start a tutorial round //
     internal void StartRound()
     {
 

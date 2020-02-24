@@ -3,23 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the script that tracks the player units.
+/// </summary>
 public class TrackPlayerObjs : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField, Space(10)]
     TrackType type = TrackType.Token;
 
     [SerializeField, Space(10)]
     GameObject objSpawnRef = null;
 
-    // state vars
+    // state vars //
     static List<Vector2> usedLocations = new List<Vector2>();
 
     public Vector2 gridPos;
     bool isBeingHeld;
     static bool objSpawn;
     static GameObject objToSpawn;
-    static bool objUpgrade;
+    static bool objUpgrade = false;
 
     enum TrackType { Button, Spawn, Token, Upgrade, Delete }
 
@@ -33,7 +36,7 @@ public class TrackPlayerObjs : MonoBehaviour
     {
         Vector2 testPos = GetGridPos();
 
-        // restrict grid movement and avoid used locations
+        // Restrict grid movement and avoid used locations //
         if (!init)
         {
             if (testPos.x > 6)
@@ -48,18 +51,19 @@ public class TrackPlayerObjs : MonoBehaviour
                 return false;
         }
 
-        // remove old location from usedLocations
+        // Remove old location from usedLocations //
         if (usedLocations.Contains(gridPos))
         {
             usedLocations.Remove(gridPos);
         }
 
-        // set new location
+        // Set new location //
         if (!init) gridPos = testPos;
         usedLocations.Add(gridPos);
         return true;
     }
 
+    // Gets the grid position that is being used //
     private Vector2 GetGridPos()
     {
         float newX, newY;
@@ -92,6 +96,7 @@ public class TrackPlayerObjs : MonoBehaviour
         isBeingHeld = false;
     }
 
+    // Determines what to do when gameObject is clicked on //
     public void ObjInterface()
     {
         switch(type)
@@ -106,15 +111,17 @@ public class TrackPlayerObjs : MonoBehaviour
                 if (objUpgrade)
                 {
                     ObjUpgrade();
+                    break;
                 }
                 isBeingHeld = true;
                 break;
             case TrackType.Upgrade:
-                UpgradeDef();
+                ToggleUpgrade();
                 break;
         }
     }
 
+    // Used when pressing the Ninja, Wall, Pit or Mine buttons //
     void ButtonPressed()
     {
         if (objSpawnRef && !objSpawn)
@@ -125,6 +132,7 @@ public class TrackPlayerObjs : MonoBehaviour
         else { objSpawn = false; }
     }
 
+    // Tries to spawn the object associated with the button pressed //
     void SpawnObj()
     {
         if (objSpawn)
@@ -135,43 +143,98 @@ public class TrackPlayerObjs : MonoBehaviour
         }
     }
 
-    void UpgradeDef()
+    // Toggles upgrade on and off //
+    void ToggleUpgrade()
     {
-        Debug.Log("Checking objUpgrade.");
-        if (!objUpgrade)
+        objUpgrade = !objUpgrade;
+
+        TogglePriceTag();
+    }
+
+    // Toggles the upgrade price tags for upgrades that can be bought //
+    private void TogglePriceTag()
+    {
+        var upgradables = FindObjectsOfType<UpgradeManager>();
+
+        if (objUpgrade)
         {
-            Debug.Log("Select defender to upgrade.");
-            objUpgrade = true;
+            // Turn price tag on //
+            foreach (var upgrade in upgradables)
+            {
+                if (upgrade.CheckCoinCount())
+                {
+                    upgrade.TogglePlate(true);
+                    upgrade.upgradable = true;
+                }
+            }
         }
         else
         {
-            Debug.Log("Defender upgrade canceled.");
-            objUpgrade = false;
+            // Turn price tag off //
+            foreach (var upgrade in upgradables)
+            {
+                upgrade.TogglePlate(false);
+                upgrade.upgradable = false;
+            }
         }
+
     }
 
+    // Upgrades the object that is clicked on //
     private void ObjUpgrade()
     {
         switch(gameObject.tag)
         {
+            // Upgrade Ninja //
             case "Ninja":
-                Debug.Log("Upgrading Ninja.");
-                var nCon = GetComponent<NinjaControll>();
-                var rank = nCon.GetRank();
-                nCon.SetStats(rank + 1);
-                objUpgrade = false;
+                if (GetComponent<UpgradeManager>().upgradable)
+                {
+                    var controll = GetComponent<NinjaControll>();
+                    var rank = controll.GetRank();
+                    controll.SetStats(rank + 1);
+                    objUpgrade = false;
+                    TogglePriceTag();
+                }
                 break;
+            // Upgrade Wall //
             case "Wall":
+                if (GetComponent<UpgradeManager>().upgradable)
+                {
+                    var controll = GetComponent<WallControll>();
+                    var rank = controll.GetRank();
+                    controll.SetStats(rank + 1);
+                    objUpgrade = false;
+                    TogglePriceTag();
+                }
                 break;
+            // Upgrade Pit //
             case "Pit":
+                if (GetComponent<UpgradeManager>().upgradable)
+                {
+                    var controll = GetComponent<PitControll>();
+                    var rank = controll.GetRank();
+                    controll.SetStats(rank + 1);
+                    objUpgrade = false;
+                    TogglePriceTag();
+                }
                 break;
+            // Upgrade Mine //
             case "Mine":
+                if (GetComponent<UpgradeManager>().upgradable)
+                {
+                    var controll = GetComponent<MineControll>();
+                    var rank = controll.GetRank();
+                    controll.SetStats(rank + 1);
+                    objUpgrade = false;
+                    TogglePriceTag();
+                }
                 break;
         }
     }
     
     public void HandleDeath()
     {
+        // Remove from used location list //
         usedLocations.Remove(gridPos);
     }
 }

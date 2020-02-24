@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class CoinControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [Header("Collect")]
     [SerializeField]
     int[] coinValues = { 10, 20, 30 };
@@ -15,22 +15,22 @@ public class CoinControll : MonoBehaviour
     [SerializeField]
     ParticleSystem spawnFX = null;
 
-    // state vars
+    // state vars //
     float spawnDelay = .1f;
     SpriteRenderer myRender;
     Animator anim;
     int coinHash = Animator.StringToHash("Coin Type");
-    int heartHash = Animator.StringToHash("Heart");
     Rigidbody2D myRigidbody;
-    GUIControll guiControll;
-    string[] coinNames = { "", "Bronze Coin", "Silver Coin", "Gold Coin", "Heart" };
-
-    // state vars for collecting the coin
     int coinType;
+    GUIControll guiCon;
+    string[] coinNames = { "", "Bronze Coin", "Silver Coin", "Gold Coin" };
+
+    // state vars for collecting the coin //
     bool coinCollected = false;
 
     private void Awake()
     {
+        // Initialize the coin //
         myRender = GetComponent<SpriteRenderer>();
         myRender.enabled = false;
         myRigidbody = GetComponent<Rigidbody2D>();
@@ -43,6 +43,7 @@ public class CoinControll : MonoBehaviour
         LinkGUI();
     }
 
+    // Determine weather the coin is gold, silver, or bronze //
     private void SetCoinType()
     {
         coinType = RandInt(3);
@@ -53,39 +54,32 @@ public class CoinControll : MonoBehaviour
         gameObject.name = coinNames[coinType];
     }
 
-    // gets a random int between 1 and max
+    // Gets a random int between 1 and max //
     private static int RandInt(int max)
     {
+        // Add 1 to max so that it is in the range of possible outputs //
         max += 1;
         return Random.Range(1, max);
     }
 
+    // Activate a VFX for spawning //
     IEnumerator SpawnFX()
     {
         myRender.enabled = true;
         yield return new WaitForSeconds(spawnDelay);
-        PlayFX();
-        MoveCoin();
+        spawnFX.Play();
+        myRigidbody.velocity = Vector2.down * fallSpeed;
     }
 
     private void LinkGUI()
     {
         GUIControll[] guiList = FindObjectsOfType<GUIControll>();
 
+        // Sanity Check //
         foreach (GUIControll guiTest in guiList)
         {
-            if (guiTest.CompareTag("GUI")) guiControll = guiTest;
+            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
-    }
-
-    private void PlayFX()
-    {
-        spawnFX.Play();
-    }
-
-    private void MoveCoin()
-    {
-        myRigidbody.velocity = Vector2.down * fallSpeed;
     }
 
     void Update()
@@ -93,15 +87,16 @@ public class CoinControll : MonoBehaviour
         CollectCoin();
     }
 
+    // Collect the coin and add its value to the player's current coin count //
     void CollectCoin()
     {
-        if (transform.position.y <= 0.5f && coinType != 4) coinCollected = true;
+        if (transform.position.y <= 0.5f) coinCollected = true;
 
         if (coinCollected)
         {
-            if (guiControll)
+            if (guiCon)
             {
-                guiControll.AddCoins(coinValues[coinType - 1]);
+                guiCon.AddCoins(coinValues[coinType - 1]);
             }
 
             Destroy(gameObject);

@@ -31,7 +31,9 @@ Material:
     - _Fade: 0
     - _NoiseScale: 40
     - _Phantom: 0
-    - _PhantomSlider: -0.2
+    - _PhantomScale: 6
+    - _PhantomSlider: 0.15
+    - _PhantomTime: 100
     - _Scale: 40
     - _Upgrade: 1
     - _UpgradeHeight: 0.05
@@ -43,4 +45,4 @@ Material:
     - _FadeColor: {r: 2.345071, g: 0.4052089, b: 0.1880482, a: 1}
     - _PhantomColor: {r: 0.19607843, g: 1.4980392, b: 1.427451, a: 1}
     - _SpawnColor: {r: 0.3945416, g: 2.345071, b: 0.1964457, a: 1}
-    - _UpgradeColor: {r: 0.3372549, g: 1.286275, b: 1.796078, a: 0}
+    - _UpgradeColor: {r: 0.5568628, g: 1.9058824, b: 1.8117647, a: 0}

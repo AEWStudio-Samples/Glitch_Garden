@@ -2,9 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// This is the script that controls the zombie.
+/// </summary>
 public class ZombieControll : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField, Space(10)]
     int hitPoints = 6;
 
@@ -26,10 +29,10 @@ public class ZombieControll : MonoBehaviour
     [SerializeField, Space(10)]
     LayerMask enemyLayer = 9;
 
-    // state vars
+    // state vars //
     Rigidbody2D myBody;
     GameObject activeZomb;
-    GUIControll guiControll;
+    GUIControll guiCon;
     Material myMaterial;
     bool spawning = true;
     float speed = .5f;
@@ -37,22 +40,44 @@ public class ZombieControll : MonoBehaviour
 
     Collider2D target;
 
-    // state vars for the animator
+    // state vars for the animator //
     Animator anim;
     int speedHash = Animator.StringToHash("Speed");
-    int rankHash = Animator.StringToHash("Rank");
     int blockHash = Animator.StringToHash("Blocked");
     int frezeHash = Animator.StringToHash("Freeze");
     int frozenHash = Animator.StringToHash("Frozen");
     int killHash = Animator.StringToHash("Kill");
     int deathHash = Animator.StringToHash("Dead");
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Find out what we walked in to //
+        switch(collision.tag)
+        {
+            // Hit by a kunai //
+            case "Kunai":
+                KunaiControll kunai = collision.GetComponent<KunaiControll>();
+                HandleHit(kunai.damage);
+                Destroy(kunai.gameObject);
+                break;
+            // Walked in to a pit //
+            case "Pit":
+                PitControll pit = collision.GetComponent<PitControll>();
+                break;
+            // Walked in to a mine //
+            case "Mine":
+                MineControll mine = collision.GetComponent<MineControll>();
+                break;
+        }
+    }
+
     private void Awake()
     {
-        myBody = GetComponent<Rigidbody2D>();
-
+        // Get GUI //
         LinkGUI();
 
+        // Initialize For Spawning //
+        myBody = GetComponent<Rigidbody2D>();
         foreach (GameObject zombie in zombies)
         {
             zombie.SetActive(false);
@@ -61,74 +86,77 @@ public class ZombieControll : MonoBehaviour
         rankInsignia.SetActive(false);
     }
 
+    private void LinkGUI()
+    {
+        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
+
+        // Sanity Check //
+        foreach (GUIControll guiTest in guiList)
+        {
+            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
+        }
+    }
+
     void Start()
     {
         UpdateZombies(true);
     }
 
-    private void LinkGUI()
-    {
-        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
-
-        foreach (GUIControll guiTest in guiList)
-        {
-            if (guiTest.CompareTag("GUI")) guiControll = guiTest;
-        }
-    }
-
     public void UpdateZombies(bool spawn)
     {
-        if (guiControll)
+        if (guiCon)
         {
             if (spawn)
             {
-                //guiControll.ninjaCount++;
+                // Run some fun checks to see if a zombie can be spawned //
 
                 SpawnZombie();
             }
             else if (!spawn)
             {
-                //guiControll.ninjaCount--;
+                // Update everything to account for the zombies death //
             }
         }
     }
 
     void SpawnZombie()
     {
+        // Set Active Zombie //
         activeZomb = zombies[RandInt(1)];
+
+        // Get My Material //
         myMaterial = activeZomb.GetComponent<SpriteRenderer>().material;
+
+        // Set For Spawning //
         myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_SpawnColor"));
         myMaterial.SetFloat("_Fade", 1f);
         myMaterial.SetFloat("_UpgradeVFX", 0f);
         myMaterial.SetInt("_Upgradeable", 0);
+
+        // Get Active Animator //
         anim = activeZomb.GetComponent<Animator>();
+
+        // Activate Zombie //
         attackPoint.SetActive(true);
         activeZomb.SetActive(true);
         StartCoroutine(Dissolve(1));
         SetSortingOrder();
     }
 
-    // gets a random int between 0 and max
+    // Gets a random int between 0 and max //
     private static int RandInt(int max)
     {
-        max += 1;
+        // Add 1 to max so that it is in the range of possible outputs //
+        max++;
         return Random.Range(0, max);
     }
 
     private void SetSortingOrder()
     {
+        // This makes it so objects layer properly //
         int sortOrder = 6 - Mathf.FloorToInt(transform.position.y);
         activeZomb.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
         rankInsignia.GetComponent<SpriteRenderer>().sortingOrder = sortOrder;
-    }
-
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            anim.SetBool(killHash, true);
-            anim.SetBool(deathHash, true);
-        }
     }
 
     public void FinishSpawn()
@@ -140,23 +168,36 @@ public class ZombieControll : MonoBehaviour
 
     private void SetStats()
     {
-        if (guiControll.curRound > 4)
+        if (guiCon.curRound > 4)
         {
-            rank = RandInt(3) + guiControll.curRound - 4;
+            rank = RandInt(3) + guiCon.curRound - 4;
         }
         else
         {
-            rank = RandInt(guiControll.curRound - 1);
+            rank = RandInt(guiCon.curRound - 1);
         }
 
+        // Set the zombie's health //
         hitPoints += hitPoints * rank;
         damage += (damage / 2) * rank;
 
-        anim.SetInteger(rankHash, rank);
-
+        // Update the rank insignia //
         rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
     }
 
+    void Update()
+    {
+        // Kills all zombies while playing in the editor //
+        #if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            anim.SetBool(killHash, true);
+            anim.SetBool(deathHash, true);
+        }
+        #endif
+    }
+
+    // Checks the lane for a valid target //
     public void CheckLane()
     {
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
@@ -194,6 +235,7 @@ public class ZombieControll : MonoBehaviour
         }
     }
 
+    // Applies damage to target from a melee attack //
     public void Attack()
     {
         switch (target.tag)
@@ -207,21 +249,13 @@ public class ZombieControll : MonoBehaviour
         }
     }
 
+    // Makes the zombie move //
     public void Walk()
     {
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.tag == "Kunai")
-        {
-            KunaiControll kunai = collision.collider.GetComponent<KunaiControll>();
-            HandleHit(kunai.damage);
-            Destroy(kunai.gameObject);
-        }
-    }
-
+    // Applies damage when zombie gets hit //
     public void HandleHit(int damage)
     {
         hitPoints -= damage;
@@ -233,6 +267,7 @@ public class ZombieControll : MonoBehaviour
         }
     }
 
+    // The zombie has died //
     public void HandleDeath()
     {
         GetComponent<CoinSpawner>().StartCoinSpawn(rank);
@@ -240,12 +275,14 @@ public class ZombieControll : MonoBehaviour
         StartCoroutine(Dissolve(0));
     }
 
+    // Applies VFX for spawning and death //
     IEnumerator Dissolve(float fade)
     {
         yield return new WaitForSeconds(.3f);
 
         if (spawning)
         {
+            // Spawn into the scene //
             while (spawning)
             {
                 fade -= Time.deltaTime;
@@ -262,9 +299,11 @@ public class ZombieControll : MonoBehaviour
             }
 
             myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_FadeColor"));
+            FinishSpawn();
         }
         else
         {
+            // Destroy the corps //
             while (anim.GetBool(deathHash))
             {
                 fade += Time.deltaTime;
