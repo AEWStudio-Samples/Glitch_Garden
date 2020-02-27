@@ -18,12 +18,12 @@ public class WallControll : MonoBehaviour
     GameObject rankInsignia = null;
 
     [SerializeField, Space(10)]
-    GameObject heart = null;
+    GameObject cracks = null;
 
     // state vars //
     GUIControll guiCon;
     Material myMaterial;
-    Material heartMaterial;
+    Material crackMaterial;
 
     int hitPoints;
     bool spawning = true;
@@ -37,7 +37,7 @@ public class WallControll : MonoBehaviour
         // Initialize For Spawning //
         wall.SetActive(false);
         rankInsignia.SetActive(false);
-        heart.SetActive(false);
+        cracks.SetActive(false);
 
         hitPoints = baseHP;
         rank = 0;
@@ -66,7 +66,7 @@ public class WallControll : MonoBehaviour
             if (spawn)
             {
                 // Run some fun checks to see if a wall can be spawned //
-                if (!guiCon.BuyWall()) { Destroy(gameObject); return; }
+                if (!guiCon.BuyWall() && !guiCon.debugging) { Destroy(gameObject); return; }
 
                 SpawnWall();
             }
@@ -74,7 +74,6 @@ public class WallControll : MonoBehaviour
             {
                 // Update everything to account for the walls death //
                 rankInsignia.SetActive(false);
-                heart.SetActive(false);
 
                 var priceManager = guiCon.GetComponent<PriceManager>();
 
@@ -121,8 +120,8 @@ public class WallControll : MonoBehaviour
     public void FinishSpawn()
     {
         rankInsignia.SetActive(true);
-        heart.SetActive(true);
-        heartMaterial = heart.GetComponent<SpriteRenderer>().material;
+        cracks.SetActive(true);
+        crackMaterial = cracks.GetComponent<SpriteRenderer>().material;
         SetStats(0);
     }
 
@@ -144,8 +143,8 @@ public class WallControll : MonoBehaviour
         addHP = (baseHP * rank) + roundHP;
         hitPoints = baseHP + addHP;
 
-        // Update Heart //
-        UpdateHeart(true);
+        // Update Cracks //
+        UpdateCracks(true);
 
         // Update the rank insignia //
         if (rank > 3) { rank = 3; }
@@ -163,7 +162,9 @@ public class WallControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             myMaterial.SetInt("_Upgradeable", 0);
+            DestroyWall();
         }
         #endif
     }
@@ -173,8 +174,8 @@ public class WallControll : MonoBehaviour
     {
         hitPoints -= damage;
 
-        // Update Heart //
-        UpdateHeart(false);
+        // Update Cracks //
+        UpdateCracks(false);
 
         if (hitPoints <= 0)
         {
@@ -185,14 +186,14 @@ public class WallControll : MonoBehaviour
     }
 
     // Update the heart sprite //
-    private void UpdateHeart(bool refresh)
+    private void UpdateCracks(bool refresh)
     {
         if (refresh)
         {
-            heartMaterial.SetInt("_MaxHP", hitPoints);
+            crackMaterial.SetInt("_MaxHP", hitPoints);
         }
 
-        heartMaterial.SetInt("_CurrentHP", hitPoints);
+        crackMaterial.SetInt("_CurrentHP", hitPoints);
     }
 
     // The wall has died //
@@ -233,9 +234,11 @@ public class WallControll : MonoBehaviour
         {
             // Destroy the wall //
             bool death = true;
+            float crackFade;
             while (death)
             {
                 fade += Time.deltaTime;
+                crackFade = fade * crackMaterial.GetFloat("_MaxHP");
 
                 if (fade >= 1)
                 {
@@ -244,6 +247,7 @@ public class WallControll : MonoBehaviour
                 }
 
                 myMaterial.SetFloat("_Fade", fade);
+                crackMaterial.SetFloat("_CurrentHP", crackFade);
 
                 yield return null;
             }

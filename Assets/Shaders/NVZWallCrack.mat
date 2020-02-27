@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: NVZMineBlast
-  m_Shader: {fileID: -6465566751694194690, guid: fd71c764457e8394687373cdf2a81900,
+  m_Name: NVZWallCrack
+  m_Shader: {fileID: -6465566751694194690, guid: 2bb974067d543ec44a43bd5b79d673a0,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -37,15 +37,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BlastSpeed: 3
-    - _BlastTime: 0
-    - _BurstSize: 1
+    - _CrackOpasity: 0
+    - _CurrentHP: 10
     - _EnableExternalAlpha: 0
+    - _MaxHP: 10
     m_Colors:
-    - Color_94B74551: {r: 1.584314, g: 0.09411765, b: 0.09411765, a: 0}
-    - Color_DDD4F23C: {r: 2, g: 0.9882353, b: 0.1019608, a: 0}
-    - _BlastColor1: {r: 1.4980392, g: 0.09411765, b: 0.09411765, a: 0}
-    - _BlastColor2: {r: 2.9960785, g: 1.4901961, b: 0.15686275, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

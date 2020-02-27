@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 /// <summary>
 /// This is the script that controls the mine.
@@ -11,6 +12,12 @@ public class MineControll : MonoBehaviour
     // con fig vars //
     [SerializeField, Space(10)]
     int baseCharge = 5;
+
+    [SerializeField, Space(10)]
+    int damage = 10;
+
+    [SerializeField, Space(10)]
+    float resetTime = 3;
 
     [SerializeField, Space(10)]
     GameObject mine = null;
@@ -24,10 +31,12 @@ public class MineControll : MonoBehaviour
     // state vars //
     GUIControll guiCon;
     Material myMaterial;
+    Material blastMaterial;
     TextMeshPro counter;
 
     int maxCharge;
     int curCharge;
+    bool primed = true;
     bool spawning = true;
     int rank;
 
@@ -69,9 +78,9 @@ public class MineControll : MonoBehaviour
                 guiCon.ninjaCount++;
 
                 // Run some fun checks to see if a mine can be spawned //
-                if (!guiCon.BuyMine()) { Destroy(gameObject); return; }
+                if (!guiCon.BuyMine() && !guiCon.debugging) { Destroy(gameObject); return; }
 
-                SpawnPit();
+                SpawnMine();
             }
             else if (!spawn)
             {
@@ -87,10 +96,11 @@ public class MineControll : MonoBehaviour
         }
     }
 
-    void SpawnPit()
+    void SpawnMine()
     {
-        // Get My Material //
+        // Get Materials //
         myMaterial = mine.GetComponent<SpriteRenderer>().material;
+        blastMaterial = blast.GetComponent<SpriteRenderer>().material;
 
         // Set For Spawning //
         myMaterial.SetColor("_EdgeColor", myMaterial.GetColor("_SpawnColor"));
@@ -154,9 +164,92 @@ public class MineControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             myMaterial.SetInt("_Upgradeable", 0);
+            DestroyMine();
         }
-        #endif
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            StartCoroutine(MineBlast(null));
+        }
+#endif
+    }
+
+    // Activates the mine when it gets triggered //
+    public void Detonate(GameObject target)
+    {
+        if (primed)
+        {
+            primed = false;
+            curCharge--;
+            SetCounterText(curCharge);
+            StartCoroutine(MineBlast(target));
+        }
+    }
+
+    // Apply VFX for mine blast //
+    IEnumerator MineBlast(GameObject target)
+    {
+        float radious = 0;
+        float speed = blastMaterial.GetFloat("_BlastSpeed");
+
+        while (radious < 1)
+        {
+            radious += Time.deltaTime * speed;
+
+            if (radious >= 1)
+            {
+                radious = 1;
+            }
+
+            blastMaterial.SetFloat("_BlastTime", radious);
+
+            yield return null;
+        }
+
+        if (target)
+        {
+            //yield return new WaitForSeconds(0.5f);
+            HandleTarget(target);
+        }
+
+        while (radious > 0)
+        {
+            radious -= Time.deltaTime * speed;
+
+            if (radious <= 0)
+            {
+                radious = 0;
+            }
+
+            blastMaterial.SetFloat("_BlastTime", radious);
+
+            yield return null;
+        }
+
+        if (curCharge <= 0)
+        {
+            gameObject.GetComponent<Collider2D>().enabled = false;
+            myMaterial.SetInt("_Upgradeable", 0);
+            DestroyMine();
+        }
+
+        yield return new WaitForSeconds(resetTime);
+
+        primed = true;
+    }
+
+    private void HandleTarget(GameObject target)
+    {
+        switch(target.tag)
+        {
+            case "Zombie":
+                target.GetComponent<ZombieControll>().HandleHit(damage);
+                break;
+            case "Phantom":
+                target.GetComponent<PhantomControll>().HandleHit(damage / 2);
+                break;
+        }
     }
 
     // The pit has died //

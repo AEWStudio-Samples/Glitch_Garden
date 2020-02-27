@@ -57,6 +57,7 @@ public class PhantomControll : MonoBehaviour
             // Walked in to a mine //
             case "Mine":
                 MineControll mine = collision.GetComponent<MineControll>();
+                mine.Detonate(gameObject);
                 break;
         }
     }
@@ -182,6 +183,7 @@ public class PhantomControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.K))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetBool(killHash, true);
             anim.SetBool(deathHash, true);
         }

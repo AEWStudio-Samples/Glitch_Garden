@@ -67,6 +67,7 @@ public class ZombieControll : MonoBehaviour
             // Walked in to a mine //
             case "Mine":
                 MineControll mine = collision.GetComponent<MineControll>();
+                mine.Detonate(gameObject);
                 break;
         }
     }
@@ -191,6 +192,7 @@ public class ZombieControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.K))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetBool(killHash, true);
             anim.SetBool(deathHash, true);
         }
@@ -203,6 +205,7 @@ public class ZombieControll : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
         if (hit)
         {
+            // Attack ninjas and walls //
             anim.SetBool(blockHash, true);
             target = hit.collider;
         }

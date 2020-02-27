@@ -67,7 +67,7 @@ public class PitControll : MonoBehaviour
                 guiCon.ninjaCount++;
 
                 // Run some fun checks to see if a pit can be spawned //
-                if (!guiCon.BuyPit()) { Destroy(gameObject); return; }
+                if (!guiCon.BuyPit() && !guiCon.debugging) { Destroy(gameObject); return; }
 
                 SpawnPit();
             }
@@ -151,7 +151,9 @@ public class PitControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             myMaterial.SetInt("_Upgradeable", 0);
+            DestroyPit();
         }
         #endif
     }

@@ -15,6 +15,8 @@ using UnityEditor;
 public class GUIControll : MonoBehaviour
 {
     // con fig vars //
+    public bool debugging;
+
     [Header("Ninja Limit")]
     [SerializeField]
     int maxNinjasBase = 2;
@@ -71,6 +73,10 @@ public class GUIControll : MonoBehaviour
 
     void Awake()
     {
+        #if UNITY_EDITOR
+        #else
+        debugging = false;
+        #endif
         // Make it so there is only one //
         int numGUIControlls = FindObjectsOfType<GUIControll>().Length;
 

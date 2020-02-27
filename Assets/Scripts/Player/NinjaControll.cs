@@ -97,7 +97,7 @@ public class NinjaControll : MonoBehaviour
                 guiCon.ninjaCount++;
 
                 // Run some fun checks to see if a ninja can be spawned //
-                if (!guiCon.BuyNinja()) { Destroy(gameObject); guiCon.ninjaCount--; return; }
+                if (!guiCon.BuyNinja() && !guiCon.debugging) { Destroy(gameObject); guiCon.ninjaCount--; return; }
 
                 SpawnNinja();
             }
@@ -169,7 +169,9 @@ public class NinjaControll : MonoBehaviour
     {
         this.rank = rank;
         int roundHP = 0;
-        int addHP;
+        int roundDMG = 0;
+        int addHP = baseHP * rank;
+        int addDMG = damage * rank;
 
         // Set Upgrade Cost //
         var upgradeCost = guiCon.GetComponent<PriceManager>().ninjaUpPrice;
@@ -178,10 +180,16 @@ public class NinjaControll : MonoBehaviour
         // Trigger the upgrade VFX if this method is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
-        // Set the ninja's health //
-        if (guiCon.curRound > 4) { roundHP = baseHP * (guiCon.curRound - 4); }
-        addHP = (baseHP * rank) + roundHP;
+        // Set the ninja's health and damage //
+        if (guiCon.curRound > 4)
+        {
+            roundHP = baseHP * (guiCon.curRound - 4);
+            roundDMG = (damage / 2) * (guiCon.curRound - 4);
+         }
+        addHP += roundHP;
+        addDMG += roundDMG;
         hitPoints = baseHP + addHP;
+        damage += addDMG;
 
         // Update Heart //
         UpdateHeart(true);
@@ -203,6 +211,7 @@ public class NinjaControll : MonoBehaviour
         #if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.L))
         {
+            gameObject.GetComponent<Collider2D>().enabled = false;
             myMaterial.SetInt("_Upgradeable", 0);
             anim.SetBool(deathHash, true);
         }
