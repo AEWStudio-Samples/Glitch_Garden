@@ -12,6 +12,27 @@ EditorBuildSettings:
     path: Assets/Scenes/MainGame.unity
     guid: 2b46b9adb5e444640b2127b66858b81e
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: 5177905d42f0baa469b8ca5ad755cb7f
+    path: Assets/Scenes/StartScene.unity
+    guid: 2a9cdc409aaf35d4d930d501e3a104ec
+  - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: 7dd41956c167c36438ce20ad21da05f9
+  - enabled: 1
+    path: Assets/Scenes/Menus/StartMenu.unity
+    guid: 3df338a1f1ad0984abeb152f53322872
+  - enabled: 1
+    path: Assets/Scenes/Menus/QuitMenu.unity
+    guid: 813f59051eb97de4d84b382e3374ed04
+  - enabled: 1
+    path: Assets/Scenes/Menus/HUD.unity
+    guid: dd890d52de531e34cbab9ecf91a36424
+  - enabled: 1
+    path: Assets/Scenes/Menus/PauseMenu.unity
+    guid: 009346ebfcbaa6441b236b660693503e
+  - enabled: 1
+    path: Assets/Scenes/Menus/ClearMenu.unity
+    guid: 3b01e366933df7641b21cc6ccf4edb7f
+  - enabled: 1
+    path: Assets/Scenes/Menus/MenuTest.unity
+    guid: 092254de305171240bfa4ed6a5f8c659
   m_configObjects: {}

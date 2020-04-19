@@ -61,7 +61,7 @@ public class AnimationTriggerLink : MonoBehaviour
     {
         if (animationType != AnimType.Title) { return; }
         GUIControll guiCon = FindObjectOfType<GUIControll>();
-        guiCon.GoToScene("MainMenu");
+        guiCon.GoToScene("StartScene");
     }
 
     // Tell the controller that spawning has finished //

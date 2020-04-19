@@ -7,14 +7,10 @@ public class PriceManager : MonoBehaviour
 {
     // con fig vars //
     [Header("Price Tags")]
-    [SerializeField]
-    TextMeshProUGUI ninjaPrice = null;
-    [SerializeField]
-    TextMeshProUGUI wallPrice = null;
-    [SerializeField]
-    TextMeshProUGUI pitPrice = null;
-    [SerializeField]
-    TextMeshProUGUI minePrice = null;
+    public TextMeshProUGUI ninjaPrice = null;
+    public TextMeshProUGUI wallPrice = null;
+    public TextMeshProUGUI pitPrice = null;
+    public TextMeshProUGUI minePrice = null;
 
     [Header("Base Price")]
     public int ninjaBasePrice = 70;

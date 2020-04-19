@@ -686,6 +686,56 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6835180353285102075, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736231709247, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736359615078, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736509355754, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139736950719146, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737390744781, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737501738130, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737672143216, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737811404700, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737899932564, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -795,6 +845,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139738126153104, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6a547baf39dc3f41b3e795a6914ad58, type: 3}
