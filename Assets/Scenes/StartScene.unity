@@ -736,6 +736,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674545, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: ninjaButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674545, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: wallButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674545, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: pitButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674545, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: mineButton
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7975139737916674550, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -841,10 +861,50 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674552, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: ninjaPrice
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674552, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: wallPrice
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674552, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: pitPrice
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674552, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: minePrice
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7975139737916674553, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}
       propertyPath: m_Name
       value: GUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674555, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: ninjaCounter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674555, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: roundCounter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674555, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: zombieCounter
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737916674555, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: coinCounter
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7975139738126153104, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}

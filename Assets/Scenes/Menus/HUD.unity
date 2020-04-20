@@ -608,14 +608,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba1fb9a8e203c51478b07d121deb79bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ninjaCounter: {fileID: 0}
-  zombieCounter: {fileID: 0}
-  roundCounter: {fileID: 0}
-  coinCounter: {fileID: 0}
-  ninjaPrice: {fileID: 0}
-  wallPrice: {fileID: 0}
-  pitPrice: {fileID: 0}
-  minePrice: {fileID: 0}
+  ninjaCounter: {fileID: 594482836}
+  zombieCounter: {fileID: 1078649078}
+  roundCounter: {fileID: 2081592271}
+  coinCounter: {fileID: 233759127}
+  ninjaPrice: {fileID: 588695950}
+  wallPrice: {fileID: 1380757544}
+  pitPrice: {fileID: 446180958}
+  minePrice: {fileID: 1033836194}
+  ninjaButton: {fileID: 1742186734}
+  wallButton: {fileID: 1127552946}
+  pitButton: {fileID: 406283998}
+  mineButtton: {fileID: 1819724523}
+  upgButton: {fileID: 1341571658}
+  delButton: {fileID: 578295700}
 --- !u!114 &313150286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -628,7 +634,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 351d2dd273a0b444c8d30c1744c639bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuType: 1
 --- !u!4 &313150287
 Transform:
   m_ObjectHideFlags: 0

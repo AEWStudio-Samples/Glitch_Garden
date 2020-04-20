@@ -16,7 +16,6 @@ public class GUIControll : MonoBehaviour
 {
     // con fig vars //
     public bool debugging;
-    bool testMenu, testLoaded;
 
     [Header("Ninja Limit")]
     public int maxNinjasBase = 2;
@@ -38,7 +37,9 @@ public class GUIControll : MonoBehaviour
     // state vars //
     TutControll tutCon;
     MasterSpawner spawner;
-    bool runTut = false;
+    public bool loading = false;
+    public bool runTut = false;
+    bool startGame = false;
     bool roundClear = false;
     bool quitChk = false;
     bool paused = false;
@@ -70,10 +71,6 @@ public class GUIControll : MonoBehaviour
         // Get key components //
         tutCon = GetComponent<TutControll>();
 
-        // Just setting things up for first play //
-        ResetCounters();
-        priceManager.ResetPrice();
-
         // What scene are we on //
         StartCoroutine(CheckScene());
     }
@@ -84,7 +81,10 @@ public class GUIControll : MonoBehaviour
         curRound = 1;
         ninjaCount = 0;
         curCoinCount = startingCoinCount;
+    }
 
+    public void UpdateCounters()
+    {
         UpdateMaxNinjas();
         UpdateCoinCount(curCoinCount);
         UpdateCurRound(curRound);
@@ -93,7 +93,7 @@ public class GUIControll : MonoBehaviour
     void Update()
     {
         CheckInput();
-        if (curScene == AtScene.MainGame)
+        if (curScene == AtScene.MainGame && !loading)
         {
             UpdateButtons();
         }
@@ -107,25 +107,12 @@ public class GUIControll : MonoBehaviour
         {
             UpdateCurRound(curRound + 1);
         }
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            if (!testMenu && !testLoaded)
-            {
-                Time.timeScale = 1;
-                testMenu = true;
-                StartCoroutine(ToggleMenu("MenuTest", true));
-            }
-            else if (testMenu && testLoaded)
-            {
-                StartCoroutine(ToggleMenu("MenuTest", false));
-                testMenu = false;
-                Time.timeScale = 1;
-            }
-        }
 #endif
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            if (startGame) { StartGame(false); return; }
+
             if (curScene == AtScene.Start)
             {
                 QuitGame(!quitChk);
@@ -166,6 +153,7 @@ public class GUIControll : MonoBehaviour
         if (curSceneName == "StartScene")
         {
             curScene = AtScene.Start;
+            loading = false;
         }
         else if (curSceneName == "MainGame")
         {
@@ -186,7 +174,6 @@ public class GUIControll : MonoBehaviour
         {
             yield return SceneManager.UnloadSceneAsync(menu).isDone;
         }
-        testLoaded = load;
     }
 
     // Set the GUI up for the current scene //
@@ -206,6 +193,10 @@ public class GUIControll : MonoBehaviour
     // Goes to a scene with the given name //
     public void GoToScene(string name)
     {
+        startGame = false;
+        paused = false;
+        quitChk = false;
+        loading = true;
         ResetCounters();
         priceManager.ResetPrice();
         SceneManager.LoadScene(name);
@@ -226,21 +217,42 @@ public class GUIControll : MonoBehaviour
     {
         Time.timeScale = 1;
         StartCoroutine(ToggleMenu("HUD", true));
-        if (runTut)
-        {
-            tutCon.DisableAllButtons();
-        }
     }
 
     // Start the actual game //
     public void StartGame(bool start)
     {
-        if (!start)
+        if (!start && !startGame)
         {
-            StartCoroutine(ToggleMenu("MainMenu", false));
+            startGame = true;
+
+            if (curScene == AtScene.Start)
+            {
+                StartCoroutine(ToggleMenu("MainMenu", false));
+            }
+            else if (curScene == AtScene.MainGame)
+            {
+                StartCoroutine(ToggleMenu("PauseMenu", false));
+            }
+
             StartCoroutine(ToggleMenu("StartMenu", true));
         }
-        else if (start)
+        else if (!start && startGame)
+        {
+            StartCoroutine(ToggleMenu("StartMenu", false));
+
+            if (curScene == AtScene.Start)
+            {
+                StartCoroutine(ToggleMenu("MainMenu", true));
+            }
+            else if (curScene == AtScene.MainGame)
+            {
+                StartCoroutine(ToggleMenu("PauseMenu", true));
+            }
+
+            startGame = false;
+        }
+        else if (start && startGame)
         {
             StartCoroutine(ToggleMenu("StartMenu", false));
             GoToScene("MainGame");
@@ -309,12 +321,19 @@ public class GUIControll : MonoBehaviour
     // Close the game down completely //
     public void ExitGame()
     {
-        // If in the editor stop playing otherwise quit the application //
+        // If in the editor stop playing otherwise quit the application when at the main menu //
+        if (curScene == AtScene.Start)
+        {
 #if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
+            EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
+        }
+        else if (curScene == AtScene.MainGame)
+        {
+            GoToScene("StartScene");
+        }
     }
 
     // Start a round of game play //

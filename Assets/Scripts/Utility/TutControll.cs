@@ -13,37 +13,24 @@ public class TutControll : MonoBehaviour
 {
     // con fig vars //
     [Header("Tool Box Buttons")]
-    [SerializeField]
-    Button ninjaButton = null;
-
-    [SerializeField]
-    Button wallButton = null;
-
-    [SerializeField]
-    Button pitButton = null;
-
-    [SerializeField]
-    Button mineButton = null;
+    public Button ninjaButton = null;
+    public Button wallButton = null;
+    public Button pitButton = null;
+    public Button mineButton = null;
+    public Button upgButton = null;
+    public Button delButton = null;
 
     // state vars //
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
-
-    // Disables the buttons for buying new units //
+    // Disables the buttons for buying, upgrading or deleting units //
     public void DisableAllButtons()
     {
         ToggleNinja(false);
         ToggleWall(false);
         TogglePit(false);
         ToggleMine(false);
+        ToggleUpgBtn(false);
+        ToggleDelBtn(false);
     }
 
     // Begin button toggle functions //
@@ -65,6 +52,16 @@ public class TutControll : MonoBehaviour
     public void ToggleMine(bool tgl)
     {
         mineButton.interactable = tgl;
+    }
+
+    public void ToggleUpgBtn(bool tgl)
+    {
+        upgButton.interactable = tgl;
+    }
+
+    public void ToggleDelBtn(bool tgl)
+    {
+        delButton.interactable = tgl;
     }
     // End button toggle functions //
 

@@ -53,18 +53,22 @@ public class PriceManager : MonoBehaviour
     {
         // Reset Ninja Price //
         curNinjaCost = ninjaBasePrice;
-        UpdateNinjaPrice(curNinjaCost);
 
         // Reset Wall Price //
         curWallCost = wallBasePrice;
-        UpdateWallPrice(curWallCost);
 
         // Reset Pit Price //
         curPitCost = pitBasePrice;
-        UpdatePitPrice(curPitCost);
 
         // Reset Mine Price //
         curMineCost = mineBasePrice;
+    }
+
+    public void UpdatePrice()
+    {
+        UpdateNinjaPrice(curNinjaCost);
+        UpdateWallPrice(curWallCost);
+        UpdatePitPrice(curPitCost);
         UpdateMinePrice(curMineCost);
     }
 

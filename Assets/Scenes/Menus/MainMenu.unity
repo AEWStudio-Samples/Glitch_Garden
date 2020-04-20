@@ -709,8 +709,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 121240829}
-        m_MethodName: 
+      - m_Target: {fileID: 121240830}
+        m_MethodName: QuitGame
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

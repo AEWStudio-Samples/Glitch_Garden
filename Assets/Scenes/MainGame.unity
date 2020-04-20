@@ -603,6 +603,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Phantom
       objectReference: {fileID: 0}
+    - target: {fileID: 4026852555342188167, guid: 36e4f2afa52b96448af15646e7347bcf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 36e4f2afa52b96448af15646e7347bcf, type: 3}
 --- !u!1001 &2560173061687236443
@@ -677,6 +682,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mine
       objectReference: {fileID: 0}
+    - target: {fileID: 2560173061085307046, guid: 7e77f0a9cd777f647bbae7d0885e5868,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2560173061403826000, guid: 7e77f0a9cd777f647bbae7d0885e5868,
         type: 3}
       propertyPath: m_Mesh
@@ -695,6 +705,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Zombie
+      objectReference: {fileID: 0}
+    - target: {fileID: 2673722956317373666, guid: 4595b847cbce95e44a3b6e05d0daba03,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2673722956317373667, guid: 4595b847cbce95e44a3b6e05d0daba03,
         type: 3}
@@ -769,6 +784,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3080132773470281592, guid: facf5b9852ac1184485b7cb9a14da360,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3080132773470281595, guid: facf5b9852ac1184485b7cb9a14da360,
         type: 3}
@@ -894,6 +914,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pit
       objectReference: {fileID: 0}
+    - target: {fileID: 4879526819773887494, guid: 03c78d98dec54b14a838b45ae1fcbe74,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4879526819780955053, guid: 03c78d98dec54b14a838b45ae1fcbe74,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -927,6 +952,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ninja
+      objectReference: {fileID: 0}
+    - target: {fileID: 6363081741319215257, guid: 04a46230f35f5fe439606f0d6a8999ab,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6363081741319215262, guid: 04a46230f35f5fe439606f0d6a8999ab,
         type: 3}
@@ -1121,6 +1151,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7975139736231709247, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7975139736359615078, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}
       propertyPath: m_IsActive
@@ -1137,6 +1172,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7975139737390744781, guid: b6a547baf39dc3f41b3e795a6914ad58,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7975139737501738130, guid: b6a547baf39dc3f41b3e795a6914ad58,
         type: 3}
       propertyPath: m_IsActive
       value: 0
