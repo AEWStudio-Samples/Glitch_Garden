@@ -338,7 +338,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.23145604, y: 0.000000059604645}
+  m_Offset: {x: 0.0009982586, y: 0.000000059604645}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -349,7 +349,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.47615576, y: 0.96793044}
+  m_Size: {x: 0.94106436, y: 0.96793044}
   m_EdgeRadius: 0
 --- !u!114 &2560173061085307044
 MonoBehaviour:
@@ -363,6 +363,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5abc539a212e16d4492f5a7b5fb67a72, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerDelay: 1
   baseCharge: 5
   damage: 12
   resetTime: 3
@@ -383,7 +384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradePlate: {fileID: 2560173062189928992}
   upgradeText: {fileID: 2560173061403826002}
-  upgradable: 0
 --- !u!114 &2560173061085310809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +396,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 2
   objSpawnRef: {fileID: 0}
   gridPos: {x: 0, y: 0}

@@ -361,7 +361,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2074771233
-  m_SortingLayer: -3
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 6976529535514352629, guid: 2353f8151b578ee44b219f2a43df129f,
     type: 3}
@@ -513,7 +513,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2074771233
-  m_SortingLayer: -3
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 6976529535514352629, guid: 3d0d33fcb751fff43a49b5cb785eb8f7,
     type: 3}
@@ -629,7 +629,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2074771233
-  m_SortingLayer: -3
+  m_SortingLayer: -5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bb87ec89987f65d4e9ea65f5241cd0e0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -764,7 +764,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradePlate: {fileID: 9134278281198622498}
   upgradeText: {fileID: 7150852653514331001}
-  upgradable: 0
 --- !u!114 &6363081741319215261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -777,6 +776,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 1
   type: 2
   objSpawnRef: {fileID: 0}
   gridPos: {x: 0, y: 0}

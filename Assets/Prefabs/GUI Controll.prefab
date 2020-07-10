@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9080855812980427094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9080855812980427097}
+  - component: {fileID: 9080855812980427092}
+  - component: {fileID: 9080855812980427095}
+  - component: {fileID: 9080855812980427102}
+  m_Layer: 5
+  m_Name: GUI Controll
+  m_TagString: GUI
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9080855812980427097
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080855812980427094}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9080855812980427092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080855812980427094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a0677089fd0e25449e0f0abad75d7db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugging: 0
+  maxNinjasBase: 2
+  curMaxNinjas: 0
+  ninjaCount: 0
+  ninjaCounter: {fileID: 0}
+  zombieCounter: {fileID: 0}
+  roundCounter: {fileID: 0}
+  curRound: 0
+  coinCounter: {fileID: 0}
+  curCoinCount: 0
+  startingCoinCount: 100
+  priceManager: {fileID: 9080855812980427095}
+  loading: 0
+  runTut: 0
+--- !u!114 &9080855812980427095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080855812980427094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ff4729f5e7016419f2f0472a58dced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaPrice: {fileID: 0}
+  wallPrice: {fileID: 0}
+  pitPrice: {fileID: 0}
+  minePrice: {fileID: 0}
+  ninjaBasePrice: 70
+  wallBasePrice: 50
+  pitBasePrice: 20
+  mineBasePrice: 100
+  ninjaUpPrice: 50
+  wallUpPrice: 25
+  pitUpPrice: 10
+  mineUpPrice: 80
+  curNinjaCost: 0
+  curWallCost: 0
+  curPitCost: 0
+  curMineCost: 0
+--- !u!114 &9080855812980427102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080855812980427094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34c68d622f3e5b449b36ae0b453b6db1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ninjaButton: {fileID: 0}
+  wallButton: {fileID: 0}
+  pitButton: {fileID: 0}
+  mineButton: {fileID: 0}
+  upgButton: {fileID: 0}
+  delButton: {fileID: 0}

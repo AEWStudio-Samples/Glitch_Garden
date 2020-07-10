@@ -6,26 +6,17 @@ public class MenuLink : MonoBehaviour
 {
     // state vars //
     GUIControll guiCon;
-    PriceManager priceManager;
-    TutControll tutCon;
-    HUDLink hudLink;
-
-    /*[SerializeField]
-    MenuType menuType = MenuType.Main;
-
-    enum MenuType { Main, Sub }*/
 
     void Awake()
     {
-        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
-
         // Sanity Check //
-        foreach (GUIControll guiTest in guiList)
+        foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
         {
             if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
     }
 
+    // Begin Code for sending commands to GUIControll.cs //
     public void StartGame(bool chk)
     {
         guiCon.StartGame(chk);
@@ -50,4 +41,5 @@ public class MenuLink : MonoBehaviour
     {
         guiCon.ExitGame();
     }
+    // End Code for sending commands to GUIControll.cs //
 }

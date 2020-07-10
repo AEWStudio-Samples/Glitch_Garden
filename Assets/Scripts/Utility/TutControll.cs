@@ -7,7 +7,7 @@ using UnityEngine.UI;
 /// <summary>
 /// This script is used to control the tutorial
 /// and to manage access to the buttons for
-/// buying new units.
+/// buying and upgrading units.
 /// </summary>
 public class TutControll : MonoBehaviour
 {
@@ -21,7 +21,17 @@ public class TutControll : MonoBehaviour
     public Button delButton = null;
 
     // state vars //
+    GUIControll guiCon;
+    PriceManager priceManager;
 
+    private void Awake()
+    {
+        guiCon = GetComponent<GUIControll>();
+        priceManager = GetComponent<PriceManager>();
+    }
+
+    // HUD button control put here so I don't have to make a new .cs //
+    // Begin Code for managing the buttons on the Game HUD //
     // Disables the buttons for buying, upgrading or deleting units //
     public void DisableAllButtons()
     {
@@ -64,9 +74,17 @@ public class TutControll : MonoBehaviour
         delButton.interactable = tgl;
     }
     // End button toggle functions //
+    // End Code for managing the buttons on the Game HUD //
 
+    // Begin Code for managing the tutorial //
     // Start a tutorial round //
-    internal void StartRound()
+    public void StartRound()
+    {
+
+    }
+
+    // End a tutorial round //
+    private void EndRound()
     {
 
     }

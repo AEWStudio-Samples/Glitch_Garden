@@ -36,25 +36,14 @@ public class HUDLink : MonoBehaviour
 
     void Awake()
     {
-        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
-        PriceManager[] priceList = FindObjectsOfType<PriceManager>();
-        TutControll[] tutList = FindObjectsOfType<TutControll>();
-
         // Sanity Check //
-        foreach (GUIControll guiTest in guiList)
+        foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
         {
             if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
 
-        foreach (PriceManager priceTest in priceList)
-        {
-            if (priceTest.CompareTag("GUI")) priceManager = priceTest;
-        }
-
-        foreach (TutControll tutTest in tutList)
-        {
-            if (tutTest.CompareTag("GUI")) tutCon = tutTest;
-        }
+        priceManager = guiCon.GetComponent<PriceManager>();
+        tutCon = guiCon.GetComponent<TutControll>();
     }
 
     private void Start()

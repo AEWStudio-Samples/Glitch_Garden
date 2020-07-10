@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4031,104 +4031,72 @@ Transform:
   m_Father: {fileID: 1963071041}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7975139736876945829
-MonoBehaviour:
+--- !u!1001 &1200435155703585009
+PrefabInstance:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7975139736876945831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a0677089fd0e25449e0f0abad75d7db, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debugging: 0
-  maxNinjasBase: 2
-  curMaxNinjas: 0
-  ninjaCount: 0
-  ninjaCounter: {fileID: 0}
-  zombieCounter: {fileID: 0}
-  roundCounter: {fileID: 0}
-  curRound: 0
-  coinCounter: {fileID: 0}
-  curCoinCount: 0
-  startingCoinCount: 100
-  priceManager: {fileID: 7975139736876945830}
---- !u!114 &7975139736876945830
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7975139736876945831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50ff4729f5e7016419f2f0472a58dced, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ninjaPrice: {fileID: 0}
-  wallPrice: {fileID: 0}
-  pitPrice: {fileID: 0}
-  minePrice: {fileID: 0}
-  ninjaBasePrice: 70
-  wallBasePrice: 50
-  pitBasePrice: 20
-  mineBasePrice: 100
-  ninjaUpPrice: 50
-  wallUpPrice: 25
-  pitUpPrice: 10
-  mineUpPrice: 80
-  curNinjaCost: 0
-  curWallCost: 0
-  curPitCost: 0
-  curMineCost: 0
---- !u!1 &7975139736876945831
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7975139736876945832}
-  - component: {fileID: 7975139736876945829}
-  - component: {fileID: 7975139736876945830}
-  - component: {fileID: 7975139736876945839}
-  m_Layer: 5
-  m_Name: GUI
-  m_TagString: GUI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &7975139736876945832
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7975139736876945831}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7975139736876945839
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7975139736876945831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34c68d622f3e5b449b36ae0b453b6db1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ninjaButton: {fileID: 0}
-  wallButton: {fileID: 0}
-  pitButton: {fileID: 0}
-  mineButton: {fileID: 0}
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 9080855812980427094, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_Name
+      value: GUI Controll
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9080855812980427097, guid: 6c5aaa03b802e7f42ac3786c67598440,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6c5aaa03b802e7f42ac3786c67598440, type: 3}

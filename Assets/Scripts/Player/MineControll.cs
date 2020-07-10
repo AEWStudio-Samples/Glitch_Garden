@@ -11,6 +11,9 @@ public class MineControll : MonoBehaviour
 {
     // con fig vars //
     [SerializeField, Space(10)]
+    float triggerDelay = 1f;
+
+    [SerializeField, Space(10)]
     int baseCharge = 5;
 
     [SerializeField, Space(10)]
@@ -190,6 +193,8 @@ public class MineControll : MonoBehaviour
     // Apply VFX for mine blast //
     IEnumerator MineBlast(GameObject target)
     {
+        yield return new WaitForSeconds(triggerDelay);
+
         float radious = 0;
         float speed = blastMaterial.GetFloat("_BlastSpeed");
 

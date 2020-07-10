@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+/// <summary>
+/// This script is used to manage the cost of buying and upgrading units.
+/// </summary>
 public class PriceManager : MonoBehaviour
 {
     // con fig vars //
@@ -35,18 +38,7 @@ public class PriceManager : MonoBehaviour
 
     private void Awake()
     {
-        LinkGUI();
-    }
-
-    private void LinkGUI()
-    {
-        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
-
-        // Sanity Check //
-        foreach (GUIControll guiTest in guiList)
-        {
-            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
-        }
+        guiCon = GetComponent<GUIControll>();
     }
 
     public void ResetPrice()

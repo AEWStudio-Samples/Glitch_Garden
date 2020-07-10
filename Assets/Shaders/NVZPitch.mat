@@ -46,7 +46,7 @@ Material:
     - _EnableExternalAlpha: 0
     - _FogInt: 0.374
     - _FogScale: 0.414
-    - _FogTime: 30
+    - _FogTime: 15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DeadzoneColor: {r: 0.7529412, g: 0.13333334, b: 1.7333333, a: 0}

@@ -13,14 +13,18 @@ public class UpgradeManager : MonoBehaviour
     TextMeshPro upgradeText = null;
 
     // state vars //
-    int upgradeCost;
-    public bool upgradable;
+    internal int upgradeCost;
+    internal bool upgradable;
     GUIControll guiCon;
 
     private void Awake()
     {
         // Get GUI //
-        LinkGUI();
+        // Sanity Check //
+        foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
+        {
+            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
+        }
 
         // Initialize Plate //
         TogglePlate(false);
@@ -29,17 +33,6 @@ public class UpgradeManager : MonoBehaviour
     public void TogglePlate(bool togl)
     {
         upgradePlate.SetActive(togl);
-    }
-
-    private void LinkGUI()
-    {
-        GUIControll[] guiList = FindObjectsOfType<GUIControll>();
-
-        // Sanity Check //
-        foreach (GUIControll guiTest in guiList)
-        {
-            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
-        }
     }
 
     public void SetUpgradeCost(int cost, int rank)

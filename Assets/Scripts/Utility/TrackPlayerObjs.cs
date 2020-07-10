@@ -10,12 +10,16 @@ public class TrackPlayerObjs : MonoBehaviour
 {
     // con fig vars //
     [SerializeField, Space(10)]
+    bool isMovable = false;
+
+    [SerializeField, Space(10)]
     TrackType type = TrackType.Token;
 
     [SerializeField, Space(10)]
     GameObject objSpawnRef = null;
 
     // state vars //
+    GUIControll guiCon;
     static List<Vector2> usedLocations = new List<Vector2>();
 
     public Vector2 gridPos;
@@ -25,6 +29,14 @@ public class TrackPlayerObjs : MonoBehaviour
     static bool objUpgrade = false;
 
     enum TrackType { Button, Spawn, Token, Upgrade, Delete }
+
+    private void Awake()
+    {
+        foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
+        {
+            if (guiTest.CompareTag("GUI")) guiCon = guiTest;
+        }
+    }
 
     private void Start()
     {
@@ -113,7 +125,10 @@ public class TrackPlayerObjs : MonoBehaviour
                     ObjUpgrade();
                     break;
                 }
-                isBeingHeld = true;
+                if (isMovable)
+                {
+                    isBeingHeld = true;
+                }
                 break;
             case TrackType.Upgrade:
                 ToggleUpgrade();
@@ -183,12 +198,17 @@ public class TrackPlayerObjs : MonoBehaviour
     // Upgrades the object that is clicked on //
     private void ObjUpgrade()
     {
+        // Get current coin count //
+        int curCoinCount = guiCon.curCoinCount;
+
+        int coinAdj = 0;
         switch(gameObject.tag)
         {
             // Upgrade Ninja //
             case "Ninja":
                 if (GetComponent<UpgradeManager>().upgradable)
                 {
+                    coinAdj = GetComponent<UpgradeManager>().upgradeCost;
                     var controll = GetComponent<NinjaControll>();
                     var rank = controll.GetRank();
                     controll.SetStats(rank + 1);
@@ -200,6 +220,7 @@ public class TrackPlayerObjs : MonoBehaviour
             case "Wall":
                 if (GetComponent<UpgradeManager>().upgradable)
                 {
+                    coinAdj = GetComponent<UpgradeManager>().upgradeCost;
                     var controll = GetComponent<WallControll>();
                     var rank = controll.GetRank();
                     controll.SetStats(rank + 1);
@@ -211,6 +232,7 @@ public class TrackPlayerObjs : MonoBehaviour
             case "Pit":
                 if (GetComponent<UpgradeManager>().upgradable)
                 {
+                    coinAdj = GetComponent<UpgradeManager>().upgradeCost;
                     var controll = GetComponent<PitControll>();
                     var rank = controll.GetRank();
                     controll.SetStats(rank + 1);
@@ -222,6 +244,7 @@ public class TrackPlayerObjs : MonoBehaviour
             case "Mine":
                 if (GetComponent<UpgradeManager>().upgradable)
                 {
+                    coinAdj = GetComponent<UpgradeManager>().upgradeCost;
                     var controll = GetComponent<MineControll>();
                     var rank = controll.GetRank();
                     controll.SetStats(rank + 1);
@@ -230,6 +253,10 @@ public class TrackPlayerObjs : MonoBehaviour
                 }
                 break;
         }
+
+        // Update coin count //
+        curCoinCount -= coinAdj;
+        guiCon.UpdateCoinCount(curCoinCount);
     }
     
     public void HandleDeath()
