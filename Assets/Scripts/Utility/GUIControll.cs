@@ -326,7 +326,7 @@ public class GUIControll : MonoBehaviour
         if (!spawner) { return; }
 
         if (runTut) { tutCon.StartRound(); }
-        else { spawner.StartRound(); }
+        else { spawner.StartRound(5); }
     }
 
     // Show the round clear menu when the last attacker is killed //

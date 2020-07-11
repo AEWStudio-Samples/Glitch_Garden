@@ -51,7 +51,7 @@ public class TrackPlayerObjs : MonoBehaviour
         // Restrict grid movement and avoid used locations //
         if (!init)
         {
-            if (testPos.x > 6)
+            if (testPos.x > 7)
                 return false;
             else if (testPos.x < 1)
                 return false;

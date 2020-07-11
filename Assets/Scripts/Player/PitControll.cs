@@ -155,7 +155,30 @@ public class PitControll : MonoBehaviour
             myMaterial.SetInt("_Upgradeable", 0);
             DestroyPit();
         }
-        #endif
+#endif
+    }
+
+    // Activates the mine when it gets triggered //
+    public void Fall(GameObject target)
+    {
+        if (curCharge < maxCharge)
+        {
+            curCharge++;
+            SetCounterText(curCharge);
+            HandleTarget(target);
+        }
+    }
+
+    private void HandleTarget(GameObject target)
+    {
+        switch (target.tag)
+        {
+            case "Zombie":
+                ZombieControll zombie = target.GetComponent<ZombieControll>();
+                zombie.HandleHit(zombie.GetHP());
+                StartCoroutine(zombie.Dissolve(0, true));
+                break;
+        }
     }
 
     // The pit has died //

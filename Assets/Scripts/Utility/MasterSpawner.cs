@@ -12,11 +12,9 @@ public class MasterSpawner : MonoBehaviour
     // con fig vars //
     [Header("Spawn Parameters")]
     [SerializeField]
-    float roundStartDelay = 10f;
-    [SerializeField]
     int spawnCount = 30;
-    [SerializeField, Tooltip("Delay between spawns in seconds: min = x; max = y")]
-    Vector2 spawnDelay = new Vector2 { x = 1.0f, y = 3.0f };
+    [SerializeField, Tooltip("Delay between spawns in seconds: min add = x; max add = y; z = start delay; w = min time for a round")]
+    Vector3 spawnDelay = new Vector3 { x = 2.0f , y = 10f, z = 60f};
     [SerializeField]
     GameObject[] spawnPoints = { };
     [SerializeField]
@@ -42,15 +40,26 @@ public class MasterSpawner : MonoBehaviour
         
     }
 
-    public void StartRound()
+    public void StartRound(int cnt)
     {
-        StartCoroutine(SetSpawnList());
+        spawnCount = cnt;
+        SetSpawnList();
+        StartCoroutine(SpawnMobs());
     }
 
-    IEnumerator SetSpawnList()
+    private void SetSpawnList()
     {
-        yield return new WaitForSeconds(roundStartDelay);
+        SetSpawnChance();
 
+        for (int i = 0; i < spawnCount; i++)
+        {
+            spawnMobList.Add(CheckMobSpawn(Random.Range(0, mobs.Length)));
+            spawnPointList.Add(Random.Range(0, spawnPoints.Length));
+        }
+    }
+
+    private void SetSpawnChance()
+    {
         for (int i = 0; i < spawnChance.Length; i++)
         {
             if (spawnChance[i] < 100)
@@ -62,18 +71,31 @@ public class MasterSpawner : MonoBehaviour
                 }
             }
         }
-
-        for (int i = 0; i < spawnCount; i++)
-        {
-            spawnMobList.Add(CheckMobSpawn(Random.Range( 0, mobs.Length)));
-            spawnPointList.Add(Random.Range(0, spawnPoints.Length));
-            print(spawnPointList[i]);
-        }
     }
 
     private int CheckMobSpawn(int type)
     {
         if (Random.Range(1, 101) < spawnChance[type]) { return type; }
         return 0;
+    }
+
+    IEnumerator SpawnMobs()
+    {
+        int i = 0;
+        float stMaxAdd = spawnDelay.x;          // spawn time max add //
+        float sd = spawnDelay.y;                // delay before start //
+        float st = spawnDelay.z / spawnCount;   // time between spawn //
+
+        yield return new WaitForSeconds(sd);
+
+        while (i < spawnCount)
+        {
+            GameObject mob = mobs[spawnMobList[i]];
+            GameObject spm = spawnPoints[spawnPointList[i]];
+            Vector3 sp = new Vector3(spm.transform.position.x, spm.transform.position.y, spm.transform.position.z);
+            Instantiate<GameObject>(mob, sp, Quaternion.identity);
+            i++;
+            yield return new WaitForSeconds(Random.Range(st, st + stMaxAdd));
+        }
     }
 }

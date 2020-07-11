@@ -63,6 +63,7 @@ public class ZombieControll : MonoBehaviour
             // Walked in to a pit //
             case "Pit":
                 PitControll pit = collision.GetComponent<PitControll>();
+                pit.Fall(gameObject);
                 break;
             // Walked in to a mine //
             case "Mine":
@@ -140,7 +141,7 @@ public class ZombieControll : MonoBehaviour
         // Activate Zombie //
         attackPoint.SetActive(true);
         activeZomb.SetActive(true);
-        StartCoroutine(Dissolve(1));
+        StartCoroutine(Dissolve(1, false));
         SetSortingOrder();
     }
 
@@ -202,6 +203,8 @@ public class ZombieControll : MonoBehaviour
     // Checks the lane for a valid target //
     public void CheckLane()
     {
+        if (transform.position.x < -1f) { Destroy(gameObject); return; }
+
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
         if (hit)
         {
@@ -214,7 +217,7 @@ public class ZombieControll : MonoBehaviour
             anim.SetBool(blockHash, false);
         }
 
-        RaycastHit2D freeze = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, enemyLayer);
+        /*RaycastHit2D freeze = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, enemyLayer);
         if (freeze)
         {
             if (!anim.GetBool(frozenHash))
@@ -226,9 +229,9 @@ public class ZombieControll : MonoBehaviour
         else
         {
             anim.SetBool(frozenHash, false);
-        }
+        }*/
 
-        if (anim.GetBool(blockHash) || anim.GetBool(frozenHash))
+        if (anim.GetBool(blockHash) /*|| anim.GetBool(frozenHash)*/)
         {
             myBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
@@ -275,13 +278,13 @@ public class ZombieControll : MonoBehaviour
     {
         GetComponent<CoinSpawner>().StartCoinSpawn(rank);
         myBody.velocity = Vector2.left * 0;
-        StartCoroutine(Dissolve(0));
+        StartCoroutine(Dissolve(0, false));
     }
 
     // Applies VFX for spawning and death //
-    IEnumerator Dissolve(float fade)
+    public IEnumerator Dissolve(float fade, bool pit)
     {
-        yield return new WaitForSeconds(.3f);
+        if (!pit) { yield return new WaitForSeconds(.3f); }
 
         if (spawning)
         {
@@ -324,5 +327,10 @@ public class ZombieControll : MonoBehaviour
 
             Destroy(gameObject);
         }
+    }
+
+    public int GetHP()
+    {
+        return hitPoints;
     }
 }
