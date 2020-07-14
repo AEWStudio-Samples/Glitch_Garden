@@ -12,6 +12,8 @@ using UnityEngine.UI;
 public class TutControll : MonoBehaviour
 {
     // con fig vars //
+    public GUIControll guiCon = null;
+
     [Header("Tool Box Buttons")]
     public Button ninjaButton = null;
     public Button wallButton = null;
@@ -21,14 +23,6 @@ public class TutControll : MonoBehaviour
     public Button delButton = null;
 
     // state vars //
-    GUIControll guiCon;
-    PriceManager priceManager;
-
-    private void Awake()
-    {
-        guiCon = GetComponent<GUIControll>();
-        priceManager = GetComponent<PriceManager>();
-    }
 
     // HUD button control put here so I don't have to make a new .cs //
     // Begin Code for managing the buttons on the Game HUD //

@@ -38,6 +38,11 @@ public class TrackPlayerObjs : MonoBehaviour
         }
     }
 
+    public void ResetTracker()
+    {
+        usedLocations = new List<Vector2>();
+    }
+
     private void Start()
     {
         gridPos = transform.position;
@@ -199,7 +204,7 @@ public class TrackPlayerObjs : MonoBehaviour
     private void ObjUpgrade()
     {
         // Get current coin count //
-        int curCoinCount = guiCon.curCoinCount;
+        int curCoinCount = guiCon.conTrack.curCoinCount;
 
         int coinAdj = 0;
         switch(gameObject.tag)

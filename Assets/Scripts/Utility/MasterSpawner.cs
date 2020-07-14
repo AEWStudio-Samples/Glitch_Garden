@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,36 +14,59 @@ public class MasterSpawner : MonoBehaviour
     [Header("Spawn Parameters")]
     [SerializeField]
     int spawnCount = 30;
-    [SerializeField, Tooltip("Delay between spawns in seconds: min add = x; max add = y; z = start delay; w = min time for a round")]
-    Vector3 spawnDelay = new Vector3 { x = 2.0f , y = 10f, z = 60f};
+    [SerializeField, Tooltip("Timing for spawns in seconds:" +
+        "\n    X = Delay Add\n    Y = Start Delay\n    Z = Min Spawn Cycle = z")]
+    Vector3 spawnTime = new Vector3 { x = 2.0f , y = 10f, z = 60f};
     [SerializeField]
     GameObject[] spawnPoints = { };
     [SerializeField]
     GameObject[] mobs = { };
     [SerializeField]
-    int[] spawnChance = { 100, -5};
+    int[] spawnChance = { 15, -5};
     [SerializeField]
     int[] spawnChanceInc = { 0, 5 };
+    [SerializeField]
+    int[] spawnCntUsed = { 1, 1 };
 
     // state vars //
+    int cntUsed = 0;
     List<int> spawnMobList = new List<int> { };
-    List<int> spawnPointList = new List<int> { };
+    List<int[]> spawnGroups = new List<int[]> { };
+    int[] spawnGroup = new int[5];
 
-    // Start is called before the first frame update
-    void Start()
+    /*void Start()
     {
-        
-    }
+        List<int[]> testList = new List<int[]> { };
+        int[] testArray = new int[5];
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+        for (int i = 0; i < spawnCount; i++)
+        {
+            for (int a = 0; a < 5; a++)
+            {
+                testArray[a] = Random.Range(0, 2);
+            }
+
+            testList.Add(testArray);
+        }
+
+        int pass = 0;
+        print("Starting Matrix Test");
+        foreach (int[] testA in testList)
+        {
+            pass++;
+            foreach (int testB in testA)
+            {
+                print("TEST PASS " + pass + ": " + testB);
+            }
+        }
+    }*/
 
     public void StartRound(int cnt)
     {
         spawnCount = cnt;
+        cntUsed = 0;
+        spawnMobList = new List<int> { };
+        spawnGroups = new List<int[]> { };
         SetSpawnList();
         StartCoroutine(SpawnMobs());
     }
@@ -51,11 +75,17 @@ public class MasterSpawner : MonoBehaviour
     {
         SetSpawnChance();
 
-        for (int i = 0; i < spawnCount; i++)
+        int newSpawnCnt = 0;
+
+        for (int i = 0;  cntUsed < spawnCount; i++)
         {
             spawnMobList.Add(CheckMobSpawn(Random.Range(0, mobs.Length)));
-            spawnPointList.Add(Random.Range(0, spawnPoints.Length));
+            newSpawnCnt++;
         }
+
+        spawnCount = newSpawnCnt;
+
+        SetSpawnPoints();
     }
 
     private void SetSpawnChance()
@@ -75,27 +105,122 @@ public class MasterSpawner : MonoBehaviour
 
     private int CheckMobSpawn(int type)
     {
-        if (Random.Range(1, 101) < spawnChance[type]) { return type; }
-        return 0;
+        if (type == 0 || Random.Range(1, 101) > spawnChance[type]
+            || spawnCount - cntUsed < spawnCntUsed[type])
+        {
+            type = 0;
+        }
+
+        cntUsed += spawnCntUsed[type];
+        return type;
+    }
+
+    private void SetSpawnPoints()
+    {
+        spawnGroups = new List<int[]> { };
+
+        int st = 0;
+        int sp = 0;
+        int su = 0;
+
+        for (int i = 0; i < spawnMobList.Count; i += 0)
+        {
+            spawnGroup = new int[5];
+
+            while (sp < 5 && i < spawnMobList.Count)
+            {
+                int testRange = Random.Range(1, 101);
+
+                if (testRange < spawnChance[0])
+                {
+                    spawnGroup[sp] = 1;
+                    su++;
+                    i++;
+                }
+                else
+                {
+                    spawnGroup[sp] = 0;
+                }
+
+                sp++;
+            }
+
+            if (st == 0 && sp == 5 && su == 0 && i < spawnMobList.Count)
+            {
+                int temp = Random.Range(0, 5);
+                spawnGroup[temp] = 1;
+                i++;
+            }
+
+            if (i < spawnMobList.Count)
+            {
+                st = 0;
+                su = 0;
+            }
+
+            if (sp > 0 && sp < 5 && i == spawnMobList.Count)
+            {
+                while (sp < 5)
+                {
+                    spawnGroup[sp] = 0;
+                    sp++;
+                }
+            }
+
+            if (sp == 5)
+            {
+                spawnGroups.Add(spawnGroup);
+                sp = 0;
+            }
+        }
+
     }
 
     IEnumerator SpawnMobs()
     {
         int i = 0;
-        float stMaxAdd = spawnDelay.x;          // spawn time max add //
-        float sd = spawnDelay.y;                // delay before start //
-        float st = spawnDelay.z / spawnCount;   // time between spawn //
+        int m = 0;
+        int[] sg;
+        int sp = 0;
+
+        float stMaxAdd = spawnTime.x;          // spawn time max add //
+        float sd = spawnTime.y;                // delay before start //
+        float st = spawnTime.z / spawnCount;   // time between spawn //
+
+        GameObject mob;
+        GameObject spm;
+        Vector3 spl;
 
         yield return new WaitForSeconds(sd);
 
-        while (i < spawnCount)
+        while (i < spawnGroups.Count && m < spawnCount)
         {
-            GameObject mob = mobs[spawnMobList[i]];
-            GameObject spm = spawnPoints[spawnPointList[i]];
-            Vector3 sp = new Vector3(spm.transform.position.x, spm.transform.position.y, spm.transform.position.z);
-            Instantiate<GameObject>(mob, sp, Quaternion.identity);
+            sg = spawnGroups[i];
+
+            foreach (int t in sg)
+            {
+                if (t == 1)
+                {
+                    mob = mobs[spawnMobList[m]];
+                    spm = spawnPoints[sp];
+                    spl = new Vector3(spm.transform.position.x,
+                        spm.transform.position.y,
+                        spm.transform.position.z);
+
+                    Instantiate<GameObject>(mob, spl, Quaternion.identity);
+                }
+
+                sp++;
+            }
+
+            sp = 0;
             i++;
-            yield return new WaitForSeconds(Random.Range(st, st + stMaxAdd));
+
+            if (i < spawnGroups.Count)
+            {
+                yield return new WaitForSeconds(Random.Range(st, st + stMaxAdd));
+            }
         }
+
     }
 }

@@ -22,6 +22,11 @@ public class MenuLink : MonoBehaviour
         guiCon.StartGame(chk);
     }
 
+    public void StartRound()
+    {
+        guiCon.ClearRound(false);
+    }
+
     public void StartWithTut(bool chk)
     {
         guiCon.StartWithTut(chk);

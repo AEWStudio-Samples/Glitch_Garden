@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9080855812980427097}
   - component: {fileID: 9080855812980427092}
+  - component: {fileID: 2697308575009467696}
   - component: {fileID: 9080855812980427095}
   - component: {fileID: 9080855812980427102}
   m_Layer: 5
@@ -46,19 +47,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugging: 0
-  maxNinjasBase: 2
-  curMaxNinjas: 0
-  ninjaCount: 0
+  conTrack: {fileID: 2697308575009467696}
+  priceCon: {fileID: 9080855812980427095}
+  tutCon: {fileID: 9080855812980427102}
+  coinCounter: {fileID: 0}
   ninjaCounter: {fileID: 0}
   zombieCounter: {fileID: 0}
   roundCounter: {fileID: 0}
-  curRound: 0
-  coinCounter: {fileID: 0}
-  curCoinCount: 0
-  startingCoinCount: 100
-  priceManager: {fileID: 9080855812980427095}
   loading: 0
   runTut: 0
+--- !u!114 &2697308575009467696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9080855812980427094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79180220ca406bf4996132df8bd82f49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  guiCon: {fileID: 9080855812980427092}
+  curRound: 0
+  startCoinCount: 200
+  maxNinjasBase: 3
+  curCoinCount: 0
+  maxNinjas: 0
+  ninjaCount: 0
+  ninjaBasePrice: 70
+  wallBasePrice: 50
+  pitBasePrice: 25
+  mineBasePrice: 100
+  ninjaUpPrice: 50
+  wallUpPrice: 25
+  pitUpPrice: 10
+  mineUpPrice: 80
+  curNinjaCost: 70
+  curWallCost: 50
+  curPitCost: 20
+  curMineCost: 100
 --- !u!114 &9080855812980427095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ff4729f5e7016419f2f0472a58dced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guiCon: {fileID: 9080855812980427092}
   ninjaPrice: {fileID: 0}
   wallPrice: {fileID: 0}
   pitPrice: {fileID: 0}
@@ -99,6 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34c68d622f3e5b449b36ae0b453b6db1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guiCon: {fileID: 9080855812980427092}
   ninjaButton: {fileID: 0}
   wallButton: {fileID: 0}
   pitButton: {fileID: 0}

@@ -26,9 +26,6 @@ public class ZombieControll : MonoBehaviour
     [SerializeField, Space(10)]
     LayerMask playerLayer = 8;
 
-    [SerializeField, Space(10)]
-    LayerMask enemyLayer = 9;
-
     // state vars //
     Rigidbody2D myBody;
     GameObject activeZomb;
@@ -44,8 +41,6 @@ public class ZombieControll : MonoBehaviour
     Animator anim;
     int speedHash = Animator.StringToHash("Speed");
     int blockHash = Animator.StringToHash("Blocked");
-    int frezeHash = Animator.StringToHash("Freeze");
-    int frozenHash = Animator.StringToHash("Frozen");
     int killHash = Animator.StringToHash("Kill");
     int deathHash = Animator.StringToHash("Dead");
 
@@ -166,17 +161,19 @@ public class ZombieControll : MonoBehaviour
         rankInsignia.SetActive(true);
         SetStats();
         anim.SetFloat(speedHash, speed);
+        guiCon.conTrack.mobCounts.x--;
+        guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
     }
 
     private void SetStats()
     {
-        if (guiCon.curRound > 4)
+        if (guiCon.conTrack.curRound > 4)
         {
-            rank = RandInt(3) + guiCon.curRound - 4;
+            rank = RandInt(3) + guiCon.conTrack.curRound - 4;
         }
         else
         {
-            rank = RandInt(guiCon.curRound - 1);
+            rank = RandInt(guiCon.conTrack.curRound - 1);
         }
 
         // Set the zombie's health //
@@ -203,8 +200,6 @@ public class ZombieControll : MonoBehaviour
     // Checks the lane for a valid target //
     public void CheckLane()
     {
-        if (transform.position.x < -1f) { Destroy(gameObject); return; }
-
         RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
         if (hit)
         {
@@ -244,6 +239,8 @@ public class ZombieControll : MonoBehaviour
     // Applies damage to target from a melee attack //
     public void Attack()
     {
+        if (!target) { return; }
+
         switch (target.tag)
         {
             case "Ninja":
@@ -259,6 +256,13 @@ public class ZombieControll : MonoBehaviour
     public void Walk()
     {
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
+        if (transform.position.x < -1f)
+        {
+            guiCon.conTrack.mobCounts.z++;
+            guiCon.conTrack.mobsThisRound--;
+            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
+            Destroy(gameObject);
+        }
     }
 
     // Applies damage when zombie gets hit //
@@ -270,6 +274,9 @@ public class ZombieControll : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetTrigger(killHash);
             anim.SetBool(deathHash, true);
+            guiCon.conTrack.mobCounts.y++;
+            guiCon.conTrack.mobsThisRound--;
+            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
         }
     }
 

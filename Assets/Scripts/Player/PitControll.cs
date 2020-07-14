@@ -9,12 +9,16 @@ using System;
 /// </summary>
 public class PitControll : MonoBehaviour
 {
+    // TODO add code for corps decay upgrade //
     // con fig vars //
     [SerializeField, Space(10)]
     int baseCharge = 3;
 
     [SerializeField, Space(10)]
     GameObject pit = null;
+
+    [SerializeField, Space(10)]
+    Collider2D colider = null;
 
     [SerializeField, Space(10)]
     GameObject chargeCounter = null;
@@ -64,8 +68,6 @@ public class PitControll : MonoBehaviour
         {
             if (spawn)
             {
-                guiCon.ninjaCount++;
-
                 // Run some fun checks to see if a pit can be spawned //
                 if (!guiCon.BuyPit() && !guiCon.debugging) { Destroy(gameObject); return; }
 
@@ -76,11 +78,9 @@ public class PitControll : MonoBehaviour
                 // Update everything to account for the pits destruction //
                 chargeCounter.SetActive(false);
 
-                var priceManager = guiCon.GetComponent<PriceManager>();
+                int newPrice = guiCon.conTrack.curPitCost -= guiCon.conTrack.pitBasePrice;
 
-                int newPrice = priceManager.curPitCost -= priceManager.pitBasePrice;
-
-                priceManager.UpdatePitPrice(newPrice);
+                guiCon.priceCon.UpdatePitPrice(newPrice);
             }
         }
     }
@@ -111,6 +111,7 @@ public class PitControll : MonoBehaviour
     public void FinishSpawn()
     {
         chargeCounter.SetActive(true);
+        colider.enabled = true;
         SetStats(0);
     }
 
@@ -121,15 +122,15 @@ public class PitControll : MonoBehaviour
         int addCharge;
 
         // Set Upgrade Cost //
-        var upgradeCost = guiCon.GetComponent<PriceManager>().pitUpPrice;
+        var upgradeCost = guiCon.conTrack.pitUpPrice;
         GetComponent<UpgradeManager>().SetUpgradeCost(upgradeCost, rank);
 
         // Trigger the upgrade VFX if this method is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the pit's capacity //
-        if (guiCon.curRound > 4 && spawning) { roundBonus = baseCharge * (guiCon.curRound - 4); }
-        addCharge = (baseCharge * rank) + roundBonus;
+        if (guiCon.conTrack.curRound > 4 && spawning) { roundBonus = baseCharge * (guiCon.conTrack.curRound - 4); }
+        addCharge = ((baseCharge / 2) * rank) + roundBonus;
         maxCharge = baseCharge + addCharge;
         curCharge = 0;
         SetCounterText(curCharge);

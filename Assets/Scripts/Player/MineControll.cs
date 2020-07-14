@@ -9,6 +9,7 @@ using System;
 /// </summary>
 public class MineControll : MonoBehaviour
 {
+    // TODO add code for crit upgrade //
     // con fig vars //
     [SerializeField, Space(10)]
     float triggerDelay = 1f;
@@ -24,6 +25,9 @@ public class MineControll : MonoBehaviour
 
     [SerializeField, Space(10)]
     GameObject mine = null;
+
+    [SerializeField, Space(10)]
+    Collider2D colider = null;
 
     [SerializeField, Space(10)]
     GameObject chargeCounter = null;
@@ -78,8 +82,6 @@ public class MineControll : MonoBehaviour
         {
             if (spawn)
             {
-                guiCon.ninjaCount++;
-
                 // Run some fun checks to see if a mine can be spawned //
                 if (!guiCon.BuyMine() && !guiCon.debugging) { Destroy(gameObject); return; }
 
@@ -90,11 +92,9 @@ public class MineControll : MonoBehaviour
                 // Update everything to account for the mines destruction //
                 chargeCounter.SetActive(false);
 
-                var priceManager = guiCon.GetComponent<PriceManager>();
+                int newPrice = guiCon.conTrack.curMineCost -= guiCon.conTrack.mineBasePrice;
 
-                int newPrice = priceManager.curMineCost -= priceManager.mineBasePrice;
-
-                priceManager.UpdateMinePrice(newPrice);
+                guiCon.priceCon.UpdateMinePrice(newPrice);
             }
         }
     }
@@ -126,25 +126,27 @@ public class MineControll : MonoBehaviour
     public void FinishSpawn()
     {
         chargeCounter.SetActive(true);
+        colider.enabled = true;
         SetStats(0);
     }
 
     public void SetStats(int rank)
     {
+        // TODO add code for updating damage //
         this.rank = rank;
         int roundBonus = 0;
         int addCharge;
 
         // Set Upgrade Cost //
-        var upgradeCost = guiCon.GetComponent<PriceManager>().mineUpPrice;
+        var upgradeCost = guiCon.conTrack.mineUpPrice;
         GetComponent<UpgradeManager>().SetUpgradeCost(upgradeCost, rank);
 
         // Trigger the upgrade VFX if this method is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the mine's capacity //
-        if (guiCon.curRound > 4 && spawning) { roundBonus = baseCharge * (guiCon.curRound - 4); }
-        addCharge = (baseCharge * rank) + roundBonus;
+        if (guiCon.conTrack.curRound > 4 && spawning) { roundBonus = baseCharge * (guiCon.conTrack.curRound - 4); }
+        addCharge = ((baseCharge / 2) * rank) + roundBonus;
         maxCharge = baseCharge + addCharge;
         curCharge = baseCharge + addCharge;
         SetCounterText(curCharge);

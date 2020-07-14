@@ -31,8 +31,6 @@ public class HUDLink : MonoBehaviour
 
     // state vars //
     GUIControll guiCon;
-    PriceManager priceManager;
-    TutControll tutCon;
 
     void Awake()
     {
@@ -41,9 +39,6 @@ public class HUDLink : MonoBehaviour
         {
             if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
-
-        priceManager = guiCon.GetComponent<PriceManager>();
-        tutCon = guiCon.GetComponent<TutControll>();
     }
 
     private void Start()
@@ -55,30 +50,30 @@ public class HUDLink : MonoBehaviour
     {
         // Link HUD elements to GUIControll //
         guiCon.ninjaCounter = ninjaCounter;
-        guiCon.zombieCounter = zombieCounter;
+        guiCon.mobCounter = zombieCounter;
         guiCon.roundCounter = roundCounter;
         guiCon.coinCounter = coinCounter;
 
         // Link HUD elements to PriceManager //
-        priceManager.ninjaPrice = ninjaPrice;
-        priceManager.wallPrice = wallPrice;
-        priceManager.pitPrice = pitPrice;
-        priceManager.minePrice = minePrice;
+        guiCon.priceCon.ninjaPrice = ninjaPrice;
+        guiCon.priceCon.wallPrice = wallPrice;
+        guiCon.priceCon.pitPrice = pitPrice;
+        guiCon.priceCon.minePrice = minePrice;
 
         // Link HUD elements to TutControll //
-        tutCon.ninjaButton = ninjaButton;
-        tutCon.wallButton = wallButton;
-        tutCon.pitButton = pitButton;
-        tutCon.mineButton = mineButtton;
-        tutCon.upgButton = upgButton;
-        tutCon.delButton = delButton;
+        guiCon.tutCon.ninjaButton = ninjaButton;
+        guiCon.tutCon.wallButton = wallButton;
+        guiCon.tutCon.pitButton = pitButton;
+        guiCon.tutCon.mineButton = mineButtton;
+        guiCon.tutCon.upgButton = upgButton;
+        guiCon.tutCon.delButton = delButton;
 
         guiCon.UpdateCounters();
-        priceManager.UpdatePrice();
+        guiCon.priceCon.UpdatePrice();
 
         if (guiCon.runTut)
         {
-            tutCon.DisableAllButtons();
+            guiCon.tutCon.DisableAllButtons();
         }
 
         guiCon.loading = false;

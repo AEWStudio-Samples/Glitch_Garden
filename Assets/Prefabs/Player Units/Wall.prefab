@@ -333,7 +333,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3080132773470281592}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -366,6 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHP: 10
   wall: {fileID: 3080132774477871749}
+  colider: {fileID: 3080132773470281573}
   rankInsignia: {fileID: 3080132773772321603}
   cracks: {fileID: 6436934664947968345}
 --- !u!114 &3080132773470281572
@@ -382,7 +383,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradePlate: {fileID: 3080132772948705657}
   upgradeText: {fileID: 3080132773221622434}
-  upgradable: 0
 --- !u!114 &3080132773470281575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,6 +395,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 2
   objSpawnRef: {fileID: 0}
   gridPos: {x: 0, y: 0}

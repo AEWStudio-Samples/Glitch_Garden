@@ -7,12 +7,16 @@ using UnityEngine;
 /// </summary>
 public class WallControll : MonoBehaviour
 {
+    // TODO add code for thorns and crit upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
     int baseHP = 10;
 
     [SerializeField, Space(10)]
     GameObject wall = null;
+
+    [SerializeField, Space(10)]
+    Collider2D colider = null;
 
     [SerializeField, Space(10)]
     GameObject rankInsignia = null;
@@ -75,12 +79,9 @@ public class WallControll : MonoBehaviour
                 // Update everything to account for the walls death //
                 rankInsignia.SetActive(false);
 
-                var priceManager = guiCon.GetComponent<PriceManager>();
+                int newPrice = guiCon.conTrack.curWallCost -= guiCon.conTrack.wallBasePrice;
 
-                int newPrice = priceManager.curWallCost -= priceManager.wallBasePrice;
-
-                guiCon.UpdateMaxNinjas();
-                priceManager.UpdateWallPrice(newPrice);
+                guiCon.priceCon.UpdateWallPrice(newPrice);
             }
         }
     }
@@ -121,6 +122,7 @@ public class WallControll : MonoBehaviour
     {
         rankInsignia.SetActive(true);
         cracks.SetActive(true);
+        colider.enabled = true;
         crackMaterial = cracks.GetComponent<SpriteRenderer>().material;
         SetStats(0);
     }
@@ -132,14 +134,14 @@ public class WallControll : MonoBehaviour
         int addHP;
 
         // Set Upgrade Cost //
-        var upgradeCost = guiCon.GetComponent<PriceManager>().wallUpPrice;
+        var upgradeCost = guiCon.conTrack.wallUpPrice;
         GetComponent<UpgradeManager>().SetUpgradeCost(upgradeCost, rank);
 
         // Trigger the upgrade VFX if this function is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the wall's health //
-        if (guiCon.curRound > 4) { roundHP = baseHP * (guiCon.curRound - 4); }
+        if (guiCon.conTrack.curRound > 4) { roundHP = baseHP * (guiCon.conTrack.curRound - 4); }
         addHP = (baseHP * rank) + roundHP;
         hitPoints = baseHP + addHP;
 

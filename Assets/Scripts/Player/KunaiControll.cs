@@ -7,6 +7,7 @@ using UnityEngine;
 /// </summary>
 public class KunaiControll : MonoBehaviour
 {
+    // TODO add code for damage boost and crit upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
     public int damage = 1;

@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class CoinSpawner : MonoBehaviour
 {
-    // con fig vars
+    // con fig vars //
     [SerializeField]
     GameObject coin = null;
 
@@ -16,7 +16,7 @@ public class CoinSpawner : MonoBehaviour
         StartCoroutine(SpawnNewCoin(coinMax));
     }
 
-    // gets a random int between 1 and max
+    // gets a random int between 1 and max //
     private static int RandInt(int max)
     {
         max++;
@@ -35,7 +35,6 @@ public class CoinSpawner : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
     Vector3 RandSpawnLocation()
     {
         float randX = Random.Range(-.5f, .5f);

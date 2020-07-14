@@ -9,59 +9,35 @@ using TMPro;
 public class PriceManager : MonoBehaviour
 {
     // con fig vars //
+    public GUIControll guiCon = null;
+
     [Header("Price Tags")]
     public TextMeshProUGUI ninjaPrice = null;
     public TextMeshProUGUI wallPrice = null;
     public TextMeshProUGUI pitPrice = null;
     public TextMeshProUGUI minePrice = null;
 
-    [Header("Base Price")]
-    public int ninjaBasePrice = 70;
-    public int wallBasePrice = 50;
-    public int pitBasePrice = 25;
-    public int mineBasePrice = 100;
-
-    [Header("Upgrade Price")]
-    public int ninjaUpPrice = 50;
-    public int wallUpPrice = 25;
-    public int pitUpPrice = 10;
-    public int mineUpPrice = 80;
-
-    // state vars //
-    [Header("DO NOT TOUTCH")]
-    public int curNinjaCost;
-    public int curWallCost;
-    public int curPitCost;
-    public int curMineCost;
-
-    GUIControll guiCon = null;
-
-    private void Awake()
-    {
-        guiCon = GetComponent<GUIControll>();
-    }
-
     public void ResetPrice()
     {
         // Reset Ninja Price //
-        curNinjaCost = ninjaBasePrice;
+        guiCon.conTrack.curNinjaCost = guiCon.conTrack.ninjaBasePrice;
 
         // Reset Wall Price //
-        curWallCost = wallBasePrice;
+        guiCon.conTrack.curWallCost = guiCon.conTrack.wallBasePrice;
 
         // Reset Pit Price //
-        curPitCost = pitBasePrice;
+        guiCon.conTrack.curPitCost = guiCon.conTrack.pitBasePrice;
 
         // Reset Mine Price //
-        curMineCost = mineBasePrice;
+        guiCon.conTrack.curMineCost = guiCon.conTrack.mineBasePrice;
     }
 
     public void UpdatePrice()
     {
-        UpdateNinjaPrice(curNinjaCost);
-        UpdateWallPrice(curWallCost);
-        UpdatePitPrice(curPitCost);
-        UpdateMinePrice(curMineCost);
+        UpdateNinjaPrice(guiCon.conTrack.curNinjaCost);
+        UpdateWallPrice(guiCon.conTrack.curWallCost);
+        UpdatePitPrice(guiCon.conTrack.curPitCost);
+        UpdateMinePrice(guiCon.conTrack.curMineCost);
     }
 
     // Begin price update functions //
@@ -90,14 +66,14 @@ public class PriceManager : MonoBehaviour
     public bool BuyNinja(int curCoinCount)
     {
         // Run some checks to see if the ninja can be bought //
-        if (curCoinCount < curNinjaCost) { return false; }
+        if (curCoinCount < guiCon.conTrack.curNinjaCost) { return false; }
 
         // update GUI elements
-        curCoinCount -= curNinjaCost;
-        curNinjaCost += ninjaBasePrice;
+        curCoinCount -= guiCon.conTrack.curNinjaCost;
+        guiCon.conTrack.curNinjaCost += guiCon.conTrack.ninjaBasePrice;
         guiCon.UpdateMaxNinjas();
         guiCon.UpdateCoinCount(curCoinCount);
-        UpdateNinjaPrice(curNinjaCost);
+        UpdateNinjaPrice(guiCon.conTrack.curNinjaCost);
 
         return true;
     }
@@ -105,13 +81,13 @@ public class PriceManager : MonoBehaviour
     public bool BuyWall(int curCoinCount)
     {
         // Run some checks to see if the ninja can be bought //
-        if (curCoinCount < curWallCost) { return false; }
+        if (curCoinCount < guiCon.conTrack.curWallCost) { return false; }
 
         // update GUI elements
-        curCoinCount -= curWallCost;
-        curWallCost += wallBasePrice;
+        curCoinCount -= guiCon.conTrack.curWallCost;
+        guiCon.conTrack.curWallCost += guiCon.conTrack.wallBasePrice;
         guiCon.UpdateCoinCount(curCoinCount);
-        UpdateWallPrice(curWallCost);
+        UpdateWallPrice(guiCon.conTrack.curWallCost);
 
         return true;
     }
@@ -119,13 +95,13 @@ public class PriceManager : MonoBehaviour
     public bool BuyPit(int curCoinCount)
     {
         // Run some checks to see if the ninja can be bought //
-        if (curCoinCount < curPitCost) { return false; }
+        if (curCoinCount < guiCon.conTrack.curPitCost) { return false; }
 
         // update GUI elements
-        curCoinCount -= curPitCost;
-        curPitCost += pitBasePrice;
+        curCoinCount -= guiCon.conTrack.curPitCost;
+        guiCon.conTrack.curPitCost += guiCon.conTrack.pitBasePrice;
         guiCon.UpdateCoinCount(curCoinCount);
-        UpdatePitPrice(curPitCost);
+        UpdatePitPrice(guiCon.conTrack.curPitCost);
 
         return true;
     }
@@ -133,13 +109,13 @@ public class PriceManager : MonoBehaviour
     public bool BuyMine(int curCoinCount)
     {
         // Run some checks to see if the ninja can be bought //
-        if (curCoinCount < curMineCost) { return false; }
+        if (curCoinCount < guiCon.conTrack.curMineCost) { return false; }
 
         // update GUI elements
-        curCoinCount -= curMineCost;
-        curMineCost += mineBasePrice;
+        curCoinCount -= guiCon.conTrack.curMineCost;
+        guiCon.conTrack.curMineCost += guiCon.conTrack.mineBasePrice;
         guiCon.UpdateCoinCount(curCoinCount);
-        UpdateMinePrice(curMineCost);
+        UpdateMinePrice(guiCon.conTrack.curMineCost);
 
         return true;
     }

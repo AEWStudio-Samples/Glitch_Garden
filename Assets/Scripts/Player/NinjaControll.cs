@@ -9,6 +9,7 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class NinjaControll : MonoBehaviour
 {
+    // TODO add code for crit upgrade //
     // con fig vars //
     [SerializeField, Space(10)]
     int baseHP = 6;
@@ -94,10 +95,14 @@ public class NinjaControll : MonoBehaviour
         {
             if (spawn)
             {
-                guiCon.ninjaCount++;
+                guiCon.conTrack.ninjaCount++;
 
                 // Run some fun checks to see if a ninja can be spawned //
-                if (!guiCon.BuyNinja() && !guiCon.debugging) { Destroy(gameObject); guiCon.ninjaCount--; return; }
+                if (!guiCon.BuyNinja() && !guiCon.debugging)
+                {
+                    Destroy(gameObject); guiCon.conTrack.ninjaCount--;
+                    return;
+                }
 
                 SpawnNinja();
             }
@@ -107,13 +112,11 @@ public class NinjaControll : MonoBehaviour
                 rankInsignia.SetActive(false);
                 heart.SetActive(false);
 
-                var priceManager = guiCon.GetComponent<PriceManager>();
-
-                guiCon.ninjaCount--;
-                int newPrice = priceManager.curNinjaCost -= priceManager.ninjaBasePrice;
+                guiCon.conTrack.ninjaCount--;
+                int newPrice = guiCon.conTrack.curNinjaCost -= guiCon.conTrack.ninjaBasePrice;
 
                 guiCon.UpdateMaxNinjas();
-                priceManager.UpdateNinjaPrice(newPrice);
+                guiCon.priceCon.UpdateNinjaPrice(newPrice);
             }
         }
     }
@@ -174,17 +177,17 @@ public class NinjaControll : MonoBehaviour
         int addDMG = damage * rank;
 
         // Set Upgrade Cost //
-        var upgradeCost = guiCon.GetComponent<PriceManager>().ninjaUpPrice;
+        var upgradeCost = guiCon.conTrack.ninjaUpPrice;
         GetComponent<UpgradeManager>().SetUpgradeCost(upgradeCost, rank);
 
         // Trigger the upgrade VFX if this method is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the ninja's health and damage //
-        if (guiCon.curRound > 4)
+        if (guiCon.conTrack.curRound > 4)
         {
-            roundHP = baseHP * (guiCon.curRound - 4);
-            roundDMG = (damage / 2) * (guiCon.curRound - 4);
+            roundHP = baseHP * (guiCon.conTrack.curRound - 4);
+            roundDMG = (damage / 2) * (guiCon.conTrack.curRound - 4);
          }
         addHP += roundHP;
         addDMG += roundDMG;
@@ -272,7 +275,7 @@ public class NinjaControll : MonoBehaviour
         {
             Transform spawnPnt = attackPoint.transform;
 
-            var kunaiCnt = 1 + (guiCon.curRound / 5);
+            var kunaiCnt = 1 + (guiCon.conTrack.curRound / 5);
             if (kunaiCnt > 5) { kunaiCnt = 5; }
             var spawnOff = kunai.GetComponent<KunaiControll>().spnOffset;
             int subCnt = 0;

@@ -857,6 +857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 0
   objSpawnRef: {fileID: 4879526819773887494, guid: 03c78d98dec54b14a838b45ae1fcbe74,
     type: 3}
@@ -1259,6 +1260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 4
   objSpawnRef: {fileID: 0}
   gridPos: {x: 0, y: 0}
@@ -2495,7 +2497,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 666
+  m_text: 'T:K:E
+
+    (5, 0, 0)'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21dfad66dd8ffda4893598250a5cd377, type: 2}
   m_sharedMaterial: {fileID: -8981456009303234796, guid: 21dfad66dd8ffda4893598250a5cd377,
@@ -2524,7 +2528,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 53.3
+  m_fontSize: 26.65
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2565,12 +2569,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: -7.2714233}
   m_textInfo:
     textComponent: {fileID: 1078649078}
-    characterCount: 3
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 0
-    wordCount: 1
+    spaceCount: 3
+    wordCount: 6
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2818,6 +2822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 0
   objSpawnRef: {fileID: 3080132773470281592, guid: facf5b9852ac1184485b7cb9a14da360,
     type: 3}
@@ -3111,6 +3116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 3
   objSpawnRef: {fileID: 0}
   gridPos: {x: 0, y: 0}
@@ -3831,6 +3837,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 0
   objSpawnRef: {fileID: 6363081741319215257, guid: 04a46230f35f5fe439606f0d6a8999ab,
     type: 3}
@@ -4147,6 +4154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f054657c0dbd66041bcee4e8fdcecc7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMovable: 0
   type: 0
   objSpawnRef: {fileID: 2560173061085307046, guid: 7e77f0a9cd777f647bbae7d0885e5868,
     type: 3}

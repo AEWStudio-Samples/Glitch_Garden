@@ -79,7 +79,7 @@ public class PhantomControll : MonoBehaviour
 
     void Start()
     {
-        UpdateZombies(true);
+        UpdatePhantoms(true);
     }
 
     private void LinkGUI()
@@ -93,7 +93,7 @@ public class PhantomControll : MonoBehaviour
         }
     }
 
-    public void UpdateZombies(bool spawn)
+    public void UpdatePhantoms(bool spawn)
     {
         if (guiCon)
         {
@@ -156,17 +156,20 @@ public class PhantomControll : MonoBehaviour
         rankInsignia.SetActive(true);
         SetStats();
         anim.SetFloat(speedHash, speed);
+        guiCon.conTrack.mobCounts.x--;
+        guiCon.conTrack.mobCounts.y++;
+        guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
     }
 
     private void SetStats()
     {
-        if (guiCon.curRound > 4)
+        if (guiCon.conTrack.curRound > 4)
         {
-            rank = RandInt(3) + guiCon.curRound - 4;
+            rank = RandInt(3) + guiCon.conTrack.curRound - 4;
         }
         else
         {
-            rank = RandInt(guiCon.curRound - 1);
+            rank = RandInt(guiCon.conTrack.curRound - 1);
         }
 
         // Set the phantom's health //
@@ -217,6 +220,8 @@ public class PhantomControll : MonoBehaviour
     // Applies damage to target from a melee attack //
     public void Attack()
     {
+        if (!target) { return; }
+
         switch (target.tag)
         {
             case "Ninja":
@@ -232,6 +237,13 @@ public class PhantomControll : MonoBehaviour
     public void Walk()
     {
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
+        if (transform.position.x < -1f)
+        {
+            guiCon.conTrack.mobCounts.z++;
+            guiCon.conTrack.mobsThisRound--;
+            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
+            Destroy(gameObject);
+        }
     }
 
     // Applies damage when phantom gets hit //
@@ -243,6 +255,9 @@ public class PhantomControll : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetTrigger(killHash);
             anim.SetBool(deathHash, true);
+            guiCon.conTrack.mobCounts.y++;
+            guiCon.conTrack.mobsThisRound--;
+            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
         }
     }
 

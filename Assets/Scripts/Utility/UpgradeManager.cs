@@ -43,7 +43,7 @@ public class UpgradeManager : MonoBehaviour
 
     public bool CheckCoinCount()
     {
-        if (guiCon.curCoinCount >= upgradeCost)
+        if (guiCon.conTrack.curCoinCount >= upgradeCost)
         {
             return true;
         }

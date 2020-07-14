@@ -45,7 +45,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4879526819773887494}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -76,8 +76,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 343b7e67f59122845bb79e9cd9d3109a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseCharge: 3
+  baseCharge: 5
   pit: {fileID: 4879526819780955043}
+  colider: {fileID: 4879526819773887491}
   chargeCounter: {fileID: 4879526819962549934}
 --- !u!114 &4879526819773887490
 MonoBehaviour:
