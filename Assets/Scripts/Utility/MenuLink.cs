@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class MenuLink : MonoBehaviour
 {
     // state vars //
-    GUIControll guiCon;
+    private GUIControll guiCon;
 
-    void Awake()
+    private void Awake()
     {
         // Sanity Check //
         foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
@@ -25,7 +23,13 @@ public class MenuLink : MonoBehaviour
     public void StartGame(bool chk)
     {
         PlayButtonSnd();
-        guiCon.StartGame(chk);
+        guiCon.StartMenu(chk);
+    }
+
+    public void StartWithTut(bool chk)
+    {
+        PlayButtonSnd();
+        guiCon.StartWithTut(chk);
     }
 
     public void StartRound()
@@ -34,16 +38,16 @@ public class MenuLink : MonoBehaviour
         guiCon.ClearRound(false);
     }
 
-    public void StartWithTut(bool chk)
-    {
-        PlayButtonSnd();
-        guiCon.StartWithTut(chk);
-    }
-    
     public void PauseGame(bool chk)
     {
         PlayButtonSnd();
         guiCon.PauseGame(chk);
+    }
+
+    public void Options(bool chk)
+    {
+        PlayButtonSnd();
+        guiCon.OptionsMenu(chk);
     }
 
     public void QuitGame(bool chk)
@@ -52,10 +56,26 @@ public class MenuLink : MonoBehaviour
         guiCon.QuitGame(chk);
     }
 
+    public void SettingChanged(bool chk)
+    {
+        PlayButtonSnd();
+        if (chk)
+        {
+            guiCon.opManager.RevertSetings();
+            guiCon.SettingChanged(!chk);
+            guiCon.OptionsMenu(!chk);
+        }
+        else if (!chk)
+        {
+            guiCon.SettingChanged(chk);
+        }
+    }
+
     public void ExitGame()
     {
         PlayButtonSnd();
         guiCon.StartCoroutine(guiCon.ExitGame());
     }
+
     // End Code for sending commands to GUIControll.cs //
 }

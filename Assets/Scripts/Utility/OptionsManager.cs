@@ -1,6 +1,5 @@
 ﻿using ChrisTutorials.Persistent;
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,29 +7,34 @@ using UnityEngine.UI;
 public class OptionsManager : MonoBehaviour
 {
     // con fig vars //
+
     [Header("Sound Settings", order = 0)]
     [Space(5, order = 1)]
     [Header("Master Volume", order = 2)]
     public AudioManager.AudioChannel masterChannel;
+
     public Scrollbar masterScrollbar;
     public TextMeshProUGUI masterValueText;
 
     [Header("Sound Volume")]
     public AudioManager.AudioChannel soundChannel;
+
     public Scrollbar soundScrollbar;
     public TextMeshProUGUI soundValueText;
 
     [Header("Music Volume")]
     public AudioManager.AudioChannel musicChannel;
+
     public Scrollbar musicScrollbar;
     public TextMeshProUGUI musicValueText;
 
     // state vars //
+
     public bool initializing = true;
     public bool settingChanged = false;
-    int masterVolume;
-    int soundVolume;
-    int musicVolume;
+    private int masterVolume;
+    private int soundVolume;
+    private int musicVolume;
 
     private void Start()
     {
@@ -42,39 +46,58 @@ public class OptionsManager : MonoBehaviour
     private void InitializeSettings()
     {
         InitializeAudio();
+
         StartCoroutine(EndInitialization());
+    }
+
+    public void RevertSetings()
+    {
+        initializing = true;
+
+        InitializeSettings();
     }
 
     #region Audio
 
-    private void InitializeAudio()
+    public void GetAudioValues()
     {
         masterVolume = PlayerPrefs.GetInt("MasterVolume", 100);
         soundVolume = PlayerPrefs.GetInt("SoundVolume", 100);
-        musicVolume = PlayerPrefs.GetInt("MusiVolume", 100);
-        
+        musicVolume = PlayerPrefs.GetInt("MusicVolume", 100);
     }
 
-    public void SetAudioOptions()
+    private void InitializeAudio()
     {
+        GetAudioValues();
+
+        AudioManager.Instance.SetVolume(masterChannel, masterVolume);
+        AudioManager.Instance.SetVolume(soundChannel, soundVolume);
+        AudioManager.Instance.SetVolume(musicChannel, musicVolume);
+    }
+
+    public void OptMenuInitAudioSettings()
+    {
+        GetAudioValues();
+
         masterScrollbar.value = (float)masterVolume / 100;
         soundScrollbar.value = (float)soundVolume / 100;
         musicScrollbar.value = (float)musicVolume / 100;
 
         masterValueText.text = masterVolume + " / 100";
-        soundValueText.text = masterVolume + " / 100";
-        musicValueText.text = masterVolume + " / 100";
+        soundValueText.text = soundVolume + " / 100";
+        musicValueText.text = musicVolume + " / 100";
     }
 
     public IEnumerator EndInitialization()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSecondsRealtime(0.5f);
+        settingChanged = false;
         initializing = false;
     }
 
-    #endregion
+    #endregion Audio
 
-    #endregion
+    #endregion Initialization
 
     #region Change Settings
 
@@ -89,10 +112,12 @@ public class OptionsManager : MonoBehaviour
                 scrollbar = masterScrollbar;
                 valueText = masterValueText;
                 break;
+
             case AudioManager.AudioChannel.Sound:
                 scrollbar = soundScrollbar;
                 valueText = soundValueText;
                 break;
+
             case AudioManager.AudioChannel.Music:
                 scrollbar = musicScrollbar;
                 valueText = musicValueText;
@@ -106,7 +131,7 @@ public class OptionsManager : MonoBehaviour
         valueText.text = sliderValue + " / 100";
     }
 
-    #endregion
+    #endregion Change Settings
 
     #region Save Settings
 
@@ -123,5 +148,5 @@ public class OptionsManager : MonoBehaviour
         PlayerPrefs.SetInt("MusicVolume", (int)(musicScrollbar.value * 100));
     }
 
-    #endregion
+    #endregion Save Settings
 }

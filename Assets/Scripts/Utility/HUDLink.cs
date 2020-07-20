@@ -1,38 +1,48 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class HUDLink : MonoBehaviour
 {
-    // HUD elements that link to GUIControll //
-    [Header("GUIControll Elements")]
-    public TextMeshProUGUI ninjaCounter = null;
+    #region HUD Elements
+
+    #region Link to GUIControll.cs
+
+    [Header("GUIControll Elements")] public TextMeshProUGUI ninjaCounter = null;
     public TextMeshProUGUI zombieCounter = null;
     public TextMeshProUGUI roundCounter = null;
     public TextMeshProUGUI coinCounter = null;
 
-    // HUD elements that link to PriceManager //
-    [Header("PriceManager Elements")]
-    public TextMeshProUGUI ninjaPrice = null;
+    #endregion Link to GUIControll.cs
+
+    #region Link to PriceManager.cs
+
+    [Header("PriceManager Elements")] public TextMeshProUGUI ninjaPrice = null;
     public TextMeshProUGUI wallPrice = null;
     public TextMeshProUGUI pitPrice = null;
     public TextMeshProUGUI minePrice = null;
 
-    // HUD elements that link to TutControll //
-    [Header("TutControll Elements")]
-    public Button ninjaButton = null;
+    #endregion Link to PriceManager.cs
+
+    #region Link to TutControll.cs
+
+    [Header("TutControll Elements")] public Button ninjaButton = null;
     public Button wallButton = null;
     public Button pitButton = null;
     public Button mineButtton = null;
     public Button upgButton = null;
     public Button delButton = null;
 
-    // state vars //
-    GUIControll guiCon;
+    #endregion Link to TutControll.cs
 
-    void Awake()
+    #endregion HUD Elements
+
+    #region Get GUIControll
+
+    // state vars //
+    private GUIControll guiCon;
+
+    private void Awake()
     {
         // Sanity Check //
         foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
@@ -40,6 +50,10 @@ public class HUDLink : MonoBehaviour
             if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
     }
+
+    #endregion Get GUIControll
+
+    #region Link HUD elements to there scripts
 
     private void Start()
     {
@@ -71,11 +85,8 @@ public class HUDLink : MonoBehaviour
         guiCon.UpdateCounters();
         guiCon.priceCon.UpdatePrice();
 
-        if (guiCon.runTut)
-        {
-            guiCon.tutCon.DisableAllButtons();
-        }
-
         guiCon.loading = false;
     }
+
+    #endregion Link HUD elements to there scripts
 }

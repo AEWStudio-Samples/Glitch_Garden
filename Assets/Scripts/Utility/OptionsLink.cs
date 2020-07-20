@@ -1,6 +1,4 @@
 ﻿using ChrisTutorials.Persistent;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,33 +10,38 @@ public class OptionsLink : MonoBehaviour
     [Space(5, order = 1)]
     [Header("Master Volume", order = 2)]
     public Scrollbar masterScrollbar;
+
     public TextMeshProUGUI masterValueText;
-    public int masterValueDefault = 100;
 
     [Header("Sound Volume")]
     public Scrollbar soundScrollbar;
+
     public TextMeshProUGUI soundValueText;
-    public int soundValueDefault = 90;
 
     [Header("Music Volume")]
     public Scrollbar musicScrollbar;
+
     public TextMeshProUGUI musicValueText;
-    public int musicValueDefault = 90;
 
     // state vars //
-    GUIControll guiCon;
+    private GUIControll guiCon;
 
     public enum TestEnum { Master, Sound, Music }
 
     #region Initialization
 
-    void Awake()
+    private void Awake()
     {
         // Sanity Check //
         foreach (GUIControll guiTest in FindObjectsOfType<GUIControll>())
         {
             if (guiTest.CompareTag("GUI")) guiCon = guiTest;
         }
+    }
+
+    private void PlayButtonSnd()
+    {
+        guiCon.soundManager.PlayButtonSnd();
     }
 
     private void Start()
@@ -48,15 +51,17 @@ public class OptionsLink : MonoBehaviour
 
     private void LinkSettings()
     {
+        guiCon.opManager.initializing = true;
+
         LinkAudio();
+
+        guiCon.opManager.StartCoroutine(guiCon.opManager.EndInitialization());
     }
 
     #region Audio
 
     private void LinkAudio()
     {
-        guiCon.opManager.initializing = true;
-
         guiCon.opManager.masterScrollbar = masterScrollbar;
         guiCon.opManager.soundScrollbar = soundScrollbar;
         guiCon.opManager.musicScrollbar = musicScrollbar;
@@ -65,14 +70,12 @@ public class OptionsLink : MonoBehaviour
         guiCon.opManager.soundValueText = soundValueText;
         guiCon.opManager.musicValueText = musicValueText;
 
-        guiCon.opManager.SetAudioOptions();
-
-        guiCon.opManager.StartCoroutine(guiCon.opManager.EndInitialization());
+        guiCon.opManager.OptMenuInitAudioSettings();
     }
 
-    #endregion
+    #endregion Audio
 
-    #endregion
+    #endregion Initialization
 
     #region Change Setting
 
@@ -81,6 +84,7 @@ public class OptionsLink : MonoBehaviour
         if (guiCon.opManager.initializing) { return; }
 
         int sliderValue = 0;
+
         AudioManager.AudioChannel channel = AudioManager.AudioChannel.Master;
         switch (_switch)
         {
@@ -89,11 +93,13 @@ public class OptionsLink : MonoBehaviour
                 masterValueText.text = sliderValue + " / 100";
                 channel = AudioManager.AudioChannel.Master;
                 break;
+
             case "Sound":
                 sliderValue = (int)(soundScrollbar.value * 100);
                 soundValueText.text = sliderValue + " / 100";
                 channel = AudioManager.AudioChannel.Sound;
                 break;
+
             case "Music":
                 sliderValue = (int)(musicScrollbar.value * 100);
                 musicValueText.text = sliderValue + " / 100";
@@ -106,26 +112,36 @@ public class OptionsLink : MonoBehaviour
         guiCon.opManager.settingChanged = true;
     }
 
-    #endregion
+    #endregion Change Setting
 
     #region Use Final Button
 
     public void ApplySettings()
     {
+        PlayButtonSnd();
         guiCon.opManager.SaveSettings();
     }
 
     public void LoadDefaultSettings()
     {
-        masterScrollbar.value = (float)masterValueDefault / 100;
-        soundScrollbar.value = (float)soundValueDefault / 100;
-        musicScrollbar.value = (float)musicValueDefault / 100;
+        PlayButtonSnd();
+        masterScrollbar.value = 1;
+        soundScrollbar.value = 1;
+        musicScrollbar.value = 1;
     }
 
-    public void ExitOptinos()
+    public void ExitOptions()
     {
-
+        PlayButtonSnd();
+        if (guiCon.opManager.settingChanged)
+        {
+            guiCon.SettingChanged(true);
+        }
+        else
+        {
+            guiCon.OptionsMenu(false);
+        }
     }
 
-    #endregion
+    #endregion Use Final Button
 }
