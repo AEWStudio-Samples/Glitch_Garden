@@ -463,6 +463,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0ec01ea16180754abb95704b7f1b2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  endless: 0
   spawnCount: 5
   spawnTime: {x: 2, y: 10, z: 60}
   spawnPoints:
@@ -475,8 +476,8 @@ MonoBehaviour:
   - {fileID: 2673722956317373666, guid: 4595b847cbce95e44a3b6e05d0daba03, type: 3}
   - {fileID: 4026852555342188167, guid: 36e4f2afa52b96448af15646e7347bcf, type: 3}
   - {fileID: 3498740156474160711, guid: 5a684dd9ea1a1804aa192408fbe4eae0, type: 3}
-  spawnChance: 0f000000fbfffffff8ffffff
-  spawnChanceInc: 000000000500000008000000
+  spawnChance: fffffffffbfffffff8ffffff
+  spawnChanceInc: 010000000500000008000000
   spawnCntUsed: 010000000100000005000000
 --- !u!4 &1274314141
 Transform:
@@ -535,17 +536,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "[[[ HIGH PRIORITY ]]]\nUpdate code to prevent mobs from being double killed\n   
-    so the round ends after the last mob is killed.\nModify code for the mines and
-    ninja melee\n    so that they damage more than one target.\nAdd code for manualy
-    removing player units.\nAdd critical damage.\nAdd a visual for showing damage
-    delt.\n    White for damage caused by the player units.\n    Red for damage caused
-    by the hostile mobs.\n    Fancy for critical hits. No hostile crits.\nMake a
-    toutorial.\n\n[[[ LOW PRIORITY ]]]\nImplement game over after a set number of
-    hostiles get past.\nimplement an end of round upgrade system.\n    Add thorns
-    damage to the wall.\n    increase crit rate for ninja's melee damage.\n    Increase
-    crit rate for ninja's kuni damage.\n    Increase crit rate for mine damage.\nAdd
-    sound.\nAdd a system for saving game progress.\nRemove TODO list."
+  m_text: "||| Can publish game now but should make a tutorial |||\nMake a toutorial.\n\n[[[
+    LOW PRIORITY ]]]\nAdd sound.\nAdd a system for saving game progress.\nImplement
+    game over after a set number of hostiles get past.\nimplement an end of round
+    upgrade system.   ||| Partialy Implemented |||\n    Add thorns damage to the
+    wall.\n    Crit rate/mult for ninja's melee damage.\n    Crit rate/mult for ninja's
+    kuni damage.\n    Crit rate/mult for mine damage.\nRemove TODO list."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -590,7 +586,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 480
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -614,12 +610,12 @@ MonoBehaviour:
   m_margin: {x: 0.0043258667, y: 0.003194809, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1555203705}
-    characterCount: 843
+    characterCount: 457
     spriteCount: 0
-    spaceCount: 178
-    wordCount: 138
+    spaceCount: 93
+    wordCount: 73
     linkCount: 0
-    lineCount: 23
+    lineCount: 13
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -718,11 +714,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9080855812980427092, guid: 6c5aaa03b802e7f42ac3786c67598440,
-        type: 3}
-      propertyPath: startingCoinCount
-      value: 1000
-      objectReference: {fileID: 0}
     - target: {fileID: 9080855812980427094, guid: 6c5aaa03b802e7f42ac3786c67598440,
         type: 3}
       propertyPath: m_Name

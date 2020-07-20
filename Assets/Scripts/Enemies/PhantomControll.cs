@@ -9,10 +9,10 @@ public class PhantomControll : MonoBehaviour
 {
     // con fig vars //
     [SerializeField, Space(10)]
-    int hitPoints = 10;
+    int hitPoints = 120;
 
     [SerializeField, Space(10)]
-    int damage = 6;
+    int damage = 60;
 
     [SerializeField, Space(10)]
     GameObject[] phantoms = { };
@@ -32,6 +32,7 @@ public class PhantomControll : MonoBehaviour
     GUIControll guiCon;
     Material myMaterial;
     bool spawning = true;
+    bool dead = false;
     float speed = .5f;
     int rank;
 
@@ -43,24 +44,6 @@ public class PhantomControll : MonoBehaviour
     int blockHash = Animator.StringToHash("Blocked");
     int killHash = Animator.StringToHash("Kill");
     int deathHash = Animator.StringToHash("Dead");
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Find out what we walked in to //
-        switch (collision.tag)
-        {
-            // Hit by a kunai //
-            case "Kunai":
-                KunaiControll kunai = collision.GetComponent<KunaiControll>();
-                HandleHit(kunai.damage);
-                break;
-            // Walked in to a mine //
-            case "Mine":
-                MineControll mine = collision.GetComponent<MineControll>();
-                mine.Detonate(gameObject);
-                break;
-        }
-    }
 
     private void Awake()
     {
@@ -157,7 +140,6 @@ public class PhantomControll : MonoBehaviour
         SetStats();
         anim.SetFloat(speedHash, speed);
         guiCon.conTrack.mobCounts.x--;
-        guiCon.conTrack.mobCounts.y++;
         guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
     }
 
@@ -180,23 +162,12 @@ public class PhantomControll : MonoBehaviour
         rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
     }
 
-    void Update()
-    {
-        // Kills all phantoms while playing in the editor //
-        #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            anim.SetBool(killHash, true);
-            anim.SetBool(deathHash, true);
-        }
-        #endif
-    }
-
     // Checks the lane for a valid target //
     public void CheckLane()
     {
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
+        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position,
+            Vector2.left, 0.25f, playerLayer);
+
         if (hit)
         {
             anim.SetBool(blockHash, true);
@@ -213,21 +184,16 @@ public class PhantomControll : MonoBehaviour
         }
         else
         {
-            myBody.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            myBody.constraints = RigidbodyConstraints2D.FreezePositionY 
+                | RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
     // Applies damage to target from a melee attack //
     public void Attack()
     {
-        if (!target) { return; }
-
-        switch (target.tag)
-        {
-            case "Ninja":
-                target.GetComponent<NinjaControll>().HandleHit(damage);
-                break;
-        }
+        guiCon.dmgHand.SpawnHDMGText(damage, target.transform.position);
+        guiCon.dmgHand.DealDamage(damage, target);
 
         anim.SetBool(deathHash, true);
         HandleDeath(false);
@@ -239,8 +205,7 @@ public class PhantomControll : MonoBehaviour
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
         if (transform.position.x < -1f)
         {
-            guiCon.conTrack.mobCounts.z++;
-            guiCon.conTrack.mobsThisRound--;
+            guiCon.conTrack.mobCounts.y++;
             guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
             Destroy(gameObject);
         }
@@ -250,13 +215,12 @@ public class PhantomControll : MonoBehaviour
     public void HandleHit(int damage)
     {
         hitPoints -= damage;
-        if (hitPoints <= 0)
+        if (hitPoints <= 0 && !dead)
         {
+            dead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetTrigger(killHash);
             anim.SetBool(deathHash, true);
-            guiCon.conTrack.mobCounts.y++;
-            guiCon.conTrack.mobsThisRound--;
             guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
         }
     }

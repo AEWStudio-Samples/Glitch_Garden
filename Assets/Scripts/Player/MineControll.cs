@@ -9,7 +9,7 @@ using System;
 /// </summary>
 public class MineControll : MonoBehaviour
 {
-    // TODO add code for crit upgrade //
+    // TODO add code for upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
     float triggerDelay = 1f;
@@ -18,7 +18,7 @@ public class MineControll : MonoBehaviour
     int baseCharge = 5;
 
     [SerializeField, Space(10)]
-    int damage = 10;
+    int damage = 60;
 
     [SerializeField, Space(10)]
     float resetTime = 3;
@@ -35,6 +35,12 @@ public class MineControll : MonoBehaviour
     [SerializeField, Space(10)]
     GameObject blast = null;
 
+    [SerializeField, Space(10)]
+    float blastRange = 0.5f;
+
+    [SerializeField, Space(10)]
+    LayerMask enemyLayers = 0;
+
     // state vars //
     GUIControll guiCon;
     Material myMaterial;
@@ -46,6 +52,12 @@ public class MineControll : MonoBehaviour
     bool primed = true;
     bool spawning = true;
     int rank;
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        // Trigger the mine //
+        StartCoroutine(MineBlast());
+    }
 
     private void Awake()
     {
@@ -145,7 +157,10 @@ public class MineControll : MonoBehaviour
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the mine's capacity //
-        if (guiCon.conTrack.curRound > 4 && spawning) { roundBonus = baseCharge * (guiCon.conTrack.curRound - 4); }
+        if (guiCon.conTrack.curRound > 4 && spawning)
+        {
+            roundBonus = baseCharge * (guiCon.conTrack.curRound - 4);
+        }
         addCharge = ((baseCharge / 2) * rank) + roundBonus;
         maxCharge = baseCharge + addCharge;
         curCharge = baseCharge + addCharge;
@@ -163,75 +178,49 @@ public class MineControll : MonoBehaviour
         return rank;
     }
 
-    private void Update()
-    {
-        // Kills all pits while playing in the editor //
-        #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            myMaterial.SetInt("_Upgradeable", 0);
-            DestroyMine();
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            StartCoroutine(MineBlast(null));
-        }
-#endif
-    }
-
-    // Activates the mine when it gets triggered //
-    public void Detonate(GameObject target)
+    // Apply VFX and damage for the mine blast //
+    IEnumerator MineBlast()
     {
         if (primed)
         {
             primed = false;
             curCharge--;
             SetCounterText(curCharge);
-            StartCoroutine(MineBlast(target));
-        }
-    }
 
-    // Apply VFX for mine blast //
-    IEnumerator MineBlast(GameObject target)
-    {
-        yield return new WaitForSeconds(triggerDelay);
+            yield return new WaitForSeconds(triggerDelay);
 
-        float radious = 0;
-        float speed = blastMaterial.GetFloat("_BlastSpeed");
+            float radious = 0;
+            float speed = blastMaterial.GetFloat("_BlastSpeed");
 
-        while (radious < 1)
-        {
-            radious += Time.deltaTime * speed;
-
-            if (radious >= 1)
+            while (radious < 1)
             {
-                radious = 1;
+                radious += Time.deltaTime * speed;
+
+                if (radious >= 1)
+                {
+                    radious = 1;
+                }
+
+                blastMaterial.SetFloat("_BlastTime", radious);
+
+                yield return null;
             }
 
-            blastMaterial.SetFloat("_BlastTime", radious);
+            HandleTargets();
 
-            yield return null;
-        }
-
-        if (target)
-        {
-            //yield return new WaitForSeconds(0.5f);
-            HandleTarget(target);
-        }
-
-        while (radious > 0)
-        {
-            radious -= Time.deltaTime * speed;
-
-            if (radious <= 0)
+            while (radious > 0)
             {
-                radious = 0;
+                radious -= Time.deltaTime * speed;
+
+                if (radious <= 0)
+                {
+                    radious = 0;
+                }
+
+                blastMaterial.SetFloat("_BlastTime", radious);
+
+                yield return null;
             }
-
-            blastMaterial.SetFloat("_BlastTime", radious);
-
-            yield return null;
         }
 
         if (curCharge <= 0)
@@ -246,17 +235,35 @@ public class MineControll : MonoBehaviour
         primed = true;
     }
 
-    private void HandleTarget(GameObject target)
+    private void HandleTargets()
     {
-        switch(target.tag)
+        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(
+            transform.position, blastRange, enemyLayers);
+
+        foreach (Collider2D target in hitTargets)
         {
-            case "Zombie":
-                target.GetComponent<ZombieControll>().HandleHit(damage);
-                break;
-            case "Phantom":
-                target.GetComponent<PhantomControll>().HandleHit(damage / 2);
-                break;
+            guiCon.dmgHand.DealDamage(GetFinalDmg(target.transform.position), target);
         }
+    }
+
+    private int GetFinalDmg(Vector3 dtsp)
+    {
+        int finDmg;
+
+        if (guiCon.conTrack.mineCrit && guiCon.dmgHand.CheckCrit(guiCon.conTrack.mineCRCur))
+        {
+            finDmg = damage * guiCon.conTrack.mineCMPCur;
+
+            guiCon.dmgHand.SpawnCDMGText(finDmg, dtsp);
+        }
+        else
+        {
+            finDmg = damage;
+
+            guiCon.dmgHand.SpawnDMGText(finDmg, dtsp);
+        }
+
+        return finDmg;
     }
 
     // The pit has died //

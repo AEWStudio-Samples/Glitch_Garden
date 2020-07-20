@@ -12,9 +12,13 @@ public class UpgradeManager : MonoBehaviour
     [SerializeField]
     TextMeshPro upgradeText = null;
 
+    [SerializeField]
+    GameObject delMark = null;
+
     // state vars //
     internal int upgradeCost;
     internal bool upgradable;
+    internal bool deletable;
     GUIControll guiCon;
 
     private void Awake()
@@ -28,11 +32,27 @@ public class UpgradeManager : MonoBehaviour
 
         // Initialize Plate //
         TogglePlate(false);
+        ToggleDelMark(false);
+    }
+
+    private void Update()
+    {
+        if (guiCon.roundClear)
+        {
+            upgradable = false;
+            TogglePlate(false);
+            ToggleDelMark(false);
+        }
     }
 
     public void TogglePlate(bool togl)
     {
         upgradePlate.SetActive(togl);
+    }
+
+    public void ToggleDelMark(bool togl)
+    {
+        delMark.SetActive(togl);
     }
 
     public void SetUpgradeCost(int cost, int rank)

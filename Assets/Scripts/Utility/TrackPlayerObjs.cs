@@ -20,6 +20,7 @@ public class TrackPlayerObjs : MonoBehaviour
 
     // state vars //
     GUIControll guiCon;
+    UpgradeManager[] upgradables;
     static List<Vector2> usedLocations = new List<Vector2>();
 
     public Vector2 gridPos;
@@ -27,8 +28,14 @@ public class TrackPlayerObjs : MonoBehaviour
     static bool objSpawn;
     static GameObject objToSpawn;
     static bool objUpgrade = false;
+    static bool objDelete = false;
 
     enum TrackType { Button, Spawn, Token, Upgrade, Delete }
+
+    private void PlayButtonSnd()
+    {
+        guiCon.soundManager.PlayButtonSnd();
+    }
 
     private void Awake()
     {
@@ -101,6 +108,38 @@ public class TrackPlayerObjs : MonoBehaviour
             if(!CheckUsedLocations(false)) return;
             this.gameObject.transform.position = gridPos;
         }
+
+        upgradables = FindObjectsOfType<UpgradeManager>();
+
+        if (guiCon.roundClear)
+        {
+            objSpawn = false;
+            objUpgrade = false;
+            objDelete = false;
+        }
+
+        if (objUpgrade)
+        {
+            foreach (var upgrade in upgradables)
+            {
+                if (upgrade.CheckCoinCount())
+                {
+                    upgrade.upgradable = true;
+                }
+                else
+                {
+                    upgrade.upgradable = false;
+                }
+            }
+        }
+        else
+        {
+            foreach (var upgrade in upgradables)
+            {
+                upgrade.upgradable = false;
+            }
+            
+        }
     }
 
     private void OnMouseDown()
@@ -119,24 +158,35 @@ public class TrackPlayerObjs : MonoBehaviour
         switch(type)
         {
             case TrackType.Button:
+                guiCon.soundManager.soundUI.Play();
                 ButtonPressed();
                 break;
             case TrackType.Spawn:
                 SpawnObj();
                 break;
             case TrackType.Token:
+                if (objDelete)
+                {
+                    DelUnit();
+                    break;
+                }
                 if (objUpgrade)
                 {
                     ObjUpgrade();
                     break;
                 }
-                if (isMovable)
+                if (isMovable && !guiCon.roundClear)
                 {
                     isBeingHeld = true;
                 }
                 break;
             case TrackType.Upgrade:
+                guiCon.soundManager.PlayButtonSnd();
                 ToggleUpgrade();
+                break;
+            case TrackType.Delete:
+                guiCon.soundManager.PlayButtonSnd();
+                ToggleDelete();
                 break;
         }
     }
@@ -144,10 +194,26 @@ public class TrackPlayerObjs : MonoBehaviour
     // Used when pressing the Ninja, Wall, Pit or Mine buttons //
     void ButtonPressed()
     {
+        if (objUpgrade)
+        {
+            objUpgrade = false;
+            TogglePriceTag();
+        }
+
+        if (objDelete)
+        {
+            objDelete = false;
+            ToggleDeleteMark();
+        }
+
         if (objSpawnRef && !objSpawn)
         {
             objToSpawn = objSpawnRef;
             objSpawn = true;
+        }
+        else if (objSpawnRef && objSpawnRef != objToSpawn)
+        {
+            objToSpawn = objSpawnRef;
         }
         else { objSpawn = false; }
     }
@@ -166,6 +232,17 @@ public class TrackPlayerObjs : MonoBehaviour
     // Toggles upgrade on and off //
     void ToggleUpgrade()
     {
+        if (objSpawn)
+        {
+            objSpawn = false;
+        }
+
+        if (objDelete)
+        {
+            objDelete = false;
+            ToggleDeleteMark();
+        }
+
         objUpgrade = !objUpgrade;
 
         TogglePriceTag();
@@ -174,18 +251,12 @@ public class TrackPlayerObjs : MonoBehaviour
     // Toggles the upgrade price tags for upgrades that can be bought //
     private void TogglePriceTag()
     {
-        var upgradables = FindObjectsOfType<UpgradeManager>();
-
         if (objUpgrade)
         {
             // Turn price tag on //
             foreach (var upgrade in upgradables)
             {
-                if (upgrade.CheckCoinCount())
-                {
-                    upgrade.TogglePlate(true);
-                    upgrade.upgradable = true;
-                }
+                upgrade.TogglePlate(true);
             }
         }
         else
@@ -194,10 +265,8 @@ public class TrackPlayerObjs : MonoBehaviour
             foreach (var upgrade in upgradables)
             {
                 upgrade.TogglePlate(false);
-                upgrade.upgradable = false;
             }
         }
-
     }
 
     // Upgrades the object that is clicked on //
@@ -221,6 +290,7 @@ public class TrackPlayerObjs : MonoBehaviour
                     TogglePriceTag();
                 }
                 break;
+
             // Upgrade Wall //
             case "Wall":
                 if (GetComponent<UpgradeManager>().upgradable)
@@ -233,6 +303,7 @@ public class TrackPlayerObjs : MonoBehaviour
                     TogglePriceTag();
                 }
                 break;
+
             // Upgrade Pit //
             case "Pit":
                 if (GetComponent<UpgradeManager>().upgradable)
@@ -245,6 +316,7 @@ public class TrackPlayerObjs : MonoBehaviour
                     TogglePriceTag();
                 }
                 break;
+
             // Upgrade Mine //
             case "Mine":
                 if (GetComponent<UpgradeManager>().upgradable)
@@ -262,6 +334,94 @@ public class TrackPlayerObjs : MonoBehaviour
         // Update coin count //
         curCoinCount -= coinAdj;
         guiCon.UpdateCoinCount(curCoinCount);
+    }
+
+    private void ToggleDelete()
+    {
+        if (objSpawn)
+        {
+            objSpawn = false;
+        }
+
+        if (objUpgrade)
+        {
+            objUpgrade = false;
+            TogglePriceTag();
+        }
+
+        objDelete = !objDelete;
+
+        ToggleDeleteMark();
+    }
+
+    private void ToggleDeleteMark()
+    {
+        if (objDelete)
+        {
+            foreach (var delTarg in upgradables)
+            {
+                delTarg.deletable = true;
+                delTarg.ToggleDelMark(true);
+            }
+        }
+        else
+        {
+            foreach (var delTarg in upgradables)
+            {
+                delTarg.deletable = false;
+                delTarg.ToggleDelMark(false);
+            }
+        }
+    }
+
+    private void DelUnit()
+    {
+        switch (gameObject.tag)
+        {
+            // Delete Ninja //
+            case "Ninja":
+                if (GetComponent<UpgradeManager>().deletable)
+                {
+                    var controll = GetComponent<NinjaControll>();
+                    controll.HandleDeath();
+                    objDelete = false;
+                    ToggleDelete();
+                }
+                break;
+
+            // Delete Wall //
+            case "Wall":
+                if (GetComponent<UpgradeManager>().deletable)
+                {
+                    var controll = GetComponent<WallControll>();
+                    controll.DestroyWall();
+                    objDelete = false;
+                    ToggleDelete();
+                }
+                break;
+
+            // Delete Pit //
+            case "Pit":
+                if (GetComponent<UpgradeManager>().deletable)
+                {
+                    var controll = GetComponent<PitControll>();
+                    controll.DestroyPit();
+                    objDelete = false;
+                    ToggleDelete();
+                }
+                break;
+
+            // Delete Mine //
+            case "Mine":
+                if (GetComponent<UpgradeManager>().deletable)
+                {
+                    var controll = GetComponent<MineControll>();
+                    controll.DestroyMine();
+                    objDelete = false;
+                    ToggleDelete();
+                }
+                break;
+        }
     }
     
     public void HandleDeath()

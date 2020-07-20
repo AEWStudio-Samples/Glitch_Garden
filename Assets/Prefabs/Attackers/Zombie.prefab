@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2673722954785466830}
   - component: {fileID: 2673722954785466831}
   - component: {fileID: 2673722954785466828}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Rank Insignia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 2673722955285486630}
   - component: {fileID: 2673722955285486629}
   - component: {fileID: 2673722955285486628}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Zombie Girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 2673722956108577267}
   - component: {fileID: 2673722956108577269}
   - component: {fileID: 2673722956108577266}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Zombie Boy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,8 +430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fff4f3a9dee1220488f29689ccc0551b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 6
-  damage: 2
+  hitPoints: 30
+  damage: 20
   zombies:
   - {fileID: 2673722956108577271}
   - {fileID: 2673722955285486617}
@@ -440,9 +440,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 16640
-  enemyLayer:
-    serializedVersion: 2
-    m_Bits: 512
 --- !u!114 &2673722956359383048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -465,7 +462,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2673722956635536760}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Attack Point
   m_TagString: Untagged
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}

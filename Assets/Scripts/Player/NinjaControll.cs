@@ -9,19 +9,22 @@ using Random = UnityEngine.Random;
 /// </summary>
 public class NinjaControll : MonoBehaviour
 {
-    // TODO add code for crit upgrade //
+    // TODO add code for upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
-    int baseHP = 6;
+    int baseHP = 100;
 
     [SerializeField, Space(10)]
-    public int damage = 2;
+    int baseDMG = 20;
     
     [SerializeField, Space(10)]
     GameObject[] ninjas = { };
 
     [SerializeField, Space(10)]
     GameObject attackPoint = null;
+
+    [SerializeField, Space(10)]
+    float attackRange = 0.5f;
 
     [SerializeField, Space(10)]
     GameObject rankInsignia = null;
@@ -33,7 +36,7 @@ public class NinjaControll : MonoBehaviour
     GameObject kunai = null;
 
     [SerializeField, Space(10)]
-    LayerMask enemyLayer = 9;
+    LayerMask enemyLayers = 9;
 
     // state vars //
     GameObject activeNinja;
@@ -42,10 +45,9 @@ public class NinjaControll : MonoBehaviour
     Material heartMaterial;
 
     int hitPoints;
+    int damage;
     bool spawning = true;
     int rank;
-
-    Collider2D target;
 
     // state vars for the animator //
     Animator anim;
@@ -174,7 +176,7 @@ public class NinjaControll : MonoBehaviour
         int roundHP = 0;
         int roundDMG = 0;
         int addHP = baseHP * rank;
-        int addDMG = damage * rank;
+        int addDMG = baseDMG * rank;
 
         // Set Upgrade Cost //
         var upgradeCost = guiCon.conTrack.ninjaUpPrice;
@@ -183,12 +185,13 @@ public class NinjaControll : MonoBehaviour
         // Trigger the upgrade VFX if this method is called after spawning is done //
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
-        // Set the ninja's health and damage //
+        // Add extra health and damage for higher rounds //
         if (guiCon.conTrack.curRound > 4)
         {
             roundHP = baseHP * (guiCon.conTrack.curRound - 4);
             roundDMG = (damage / 2) * (guiCon.conTrack.curRound - 4);
-         }
+        }
+
         addHP += roundHP;
         addDMG += roundDMG;
         hitPoints = baseHP + addHP;
@@ -208,33 +211,20 @@ public class NinjaControll : MonoBehaviour
         return rank;
     }
 
-    private void Update()
-    {
-        // Kills all ninjas while playing in the editor //
-        #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            myMaterial.SetInt("_Upgradeable", 0);
-            anim.SetBool(deathHash, true);
-        }
-        #endif
-    }
-
     // Checks the lane for a valid target //
     public void CheckLane()
     {
         float distX = 9 - attackPoint.transform.position.x;
 
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.right, distX, enemyLayer);
-
+        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position,
+            Vector2.right, distX, enemyLayers);
+        
         if (hit)
         {
-            if (hit.distance <= 1)
+            if (hit.distance <= 0.5f)
             {
                 anim.SetBool(meleeHash, true);
                 anim.SetTrigger(attackHash);
-                target = hit.collider;
             }
             else
             {
@@ -247,15 +237,33 @@ public class NinjaControll : MonoBehaviour
     // Applies damage to target from a melee attack //
     public void Attack()
     {
-        switch (target.tag)
+        Collider2D[] hitTargets = Physics2D.OverlapCircleAll(
+            attackPoint.transform.position, attackRange, enemyLayers);
+
+        foreach (Collider2D target in hitTargets)
         {
-            case "Zombie":
-                target.GetComponent<ZombieControll>().HandleHit(damage);
-                break;
-            case "Phantom":
-                target.GetComponent<PhantomControll>().HandleHit(damage);
-                break;
+            guiCon.dmgHand.DealDamage(GetFinalDmg(target.transform.position), target);
         }
+    }
+
+    private int GetFinalDmg(Vector3 dtsp)
+    {
+        int finDmg;
+
+        if (guiCon.conTrack.meleeCrit && guiCon.dmgHand.CheckCrit(guiCon.conTrack.meleeCRCur))
+        {
+            finDmg = damage * guiCon.conTrack.meleeCMPCur;
+
+            guiCon.dmgHand.SpawnCDMGText(finDmg, dtsp);
+        }
+        else
+        {
+            finDmg = damage;
+
+            guiCon.dmgHand.SpawnDMGText(finDmg, dtsp);
+        }
+
+        return finDmg;
     }
 
     // Checks an int to see if it is even or odd //
@@ -275,7 +283,7 @@ public class NinjaControll : MonoBehaviour
         {
             Transform spawnPnt = attackPoint.transform;
 
-            var kunaiCnt = 1 + (guiCon.conTrack.curRound / 5);
+            var kunaiCnt = 1 + (guiCon.conTrack.curRound / 10);
             if (kunaiCnt > 5) { kunaiCnt = 5; }
             var spawnOff = kunai.GetComponent<KunaiControll>().spnOffset;
             int subCnt = 0;

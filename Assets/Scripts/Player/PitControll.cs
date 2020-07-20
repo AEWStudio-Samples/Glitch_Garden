@@ -9,7 +9,7 @@ using System;
 /// </summary>
 public class PitControll : MonoBehaviour
 {
-    // TODO add code for corps decay upgrade //
+    // TODO add code for upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
     int baseCharge = 3;
@@ -32,6 +32,12 @@ public class PitControll : MonoBehaviour
     int curCharge;
     bool spawning = true;
     int rank;
+
+    private void OnTriggerEnter2D(Collider2D target)
+    {
+        // Find out what walking over the pit //
+        if (target.tag == "Zombie") { Fall(target); }
+    }
 
     private void Awake()
     {
@@ -160,7 +166,7 @@ public class PitControll : MonoBehaviour
     }
 
     // Activates the mine when it gets triggered //
-    public void Fall(GameObject target)
+    public void Fall(Collider2D target)
     {
         if (curCharge < maxCharge)
         {
@@ -170,16 +176,12 @@ public class PitControll : MonoBehaviour
         }
     }
 
-    private void HandleTarget(GameObject target)
+    private void HandleTarget(Collider2D target)
     {
-        switch (target.tag)
-        {
-            case "Zombie":
-                ZombieControll zombie = target.GetComponent<ZombieControll>();
-                zombie.HandleHit(zombie.GetHP());
-                StartCoroutine(zombie.Dissolve(0, true));
-                break;
-        }
+        ZombieControll zombie = target.GetComponent<ZombieControll>();
+        int damage = zombie.GetHP();
+        guiCon.dmgHand.DealDamage(damage, target);
+        StartCoroutine(zombie.Dissolve(0, true));
     }
 
     // The pit has died //

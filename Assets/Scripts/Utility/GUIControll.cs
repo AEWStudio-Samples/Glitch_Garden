@@ -17,11 +17,15 @@ public class GUIControll : MonoBehaviour
 {
     // con fig vars //
     public bool debugging;
+    public LayerMask enemieLayers = 0;
 
     [Space(10)]
     public ContentTracker conTrack = null;
     public PriceManager priceCon = null;
     public TutControll tutCon = null;
+    public DamageHandler dmgHand = null;
+    public SoundManager soundManager = null;
+    public OptionsManager opManager = null;
 
     [Header("Round Information")]
     public TextMeshProUGUI coinCounter = null;
@@ -32,20 +36,17 @@ public class GUIControll : MonoBehaviour
     // state vars //
     MasterSpawner spawner;
     [Header("Exposed for other scripts to acess")]
-    public int mobCntrInc = 0;
     public bool loading = false;
     public bool runTut = false;
+    public bool roundClear = false;
 
     bool startGame = false;
     bool newGame = true;
-    bool roundClear = false;
     bool roundStart = false;
     bool quitChk = false;
     bool paused = false;
 
-    string[] mobCntrText = new string[3];
-
-    int curMobCnt;
+    string mobCntrText;
 
     // state vars tracking the active scene //
     string curSceneName;
@@ -56,24 +57,26 @@ public class GUIControll : MonoBehaviour
 
     private void CheckInput()
     {
-        // Increase the current round by 1 while playing in the editor //
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            UpdateCurRound(conTrack.curRound + 1);
-        }
-#endif
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (startGame) { StartGame(false); return; }
 
+
             if (curScene == AtScene.Start)
             {
+                soundManager.PlayButtonSnd();
                 QuitGame(!quitChk);
             }
             else if (curScene == AtScene.MainGame)
             {
+                soundManager.PlayButtonSnd();
+
+                if (roundClear)
+                {
+                    QuitGame(!quitChk);
+                    return;
+                }
+
                 if (paused && quitChk)
                 {
                     QuitGame(false);
@@ -100,6 +103,7 @@ public class GUIControll : MonoBehaviour
 
     void Awake()
     {
+        soundManager.SwitchGameUIMusic(soundManager.atMenu);
 #if UNITY_EDITOR
 #else
         debugging = false;
@@ -138,6 +142,7 @@ public class GUIControll : MonoBehaviour
         else if (curSceneName == "MainGame")
         {
             curScene = AtScene.MainGame;
+            soundManager.StartGameMusic();
             spawner = FindObjectOfType<MasterSpawner>();
             StartCoroutine(StartRound());
             if (newGame)
@@ -167,12 +172,11 @@ public class GUIControll : MonoBehaviour
     // Goes to a scene with the given name //
     public void GoToScene(string name)
     {
+        Time.timeScale = 1;
         startGame = false;
         paused = false;
         quitChk = false;
         loading = true;
-        ResetCounters();
-        priceCon.ResetPrice();
         SceneManager.LoadScene(name);
         StartCoroutine(CheckScene());
     }
@@ -186,14 +190,46 @@ public class GUIControll : MonoBehaviour
             UpdateButtons();
         }
 
+        TestForHostiles();
 
-
-        if (conTrack.mobsThisRound == 0 && roundStart)
+        if (conTrack.mobCounts.x == 0 && !TestForHostiles() && roundStart)
         {
             roundStart = false;
+            StartCoroutine(CheckClear());
+        }
+    }
+
+    IEnumerator CheckClear()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        if (spawner.endless)
+        {
+            conTrack.curRound++;
+            conTrack.mobCounts.x = conTrack.mobSpawnCountBase.x * conTrack.curRound;
+            UpdateCounters();
+            StartCoroutine(StartRound());
+        }
+        else
+        {
             roundClear = true;
             ClearRound(true);
         }
+    }
+
+    private bool TestForHostiles()
+    {
+        GameObject[] mobs = FindObjectsOfType<GameObject>();
+
+        foreach (var mob in mobs)
+        {
+            if (mob.tag == "Zombie" || mob.tag == "Phantom")
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     // Show the main menu GUI //
@@ -329,20 +365,23 @@ public class GUIControll : MonoBehaviour
     }
 
     // Close the game down completely //
-    public void ExitGame()
+    public IEnumerator ExitGame()
     {
-        // If in the editor stop playing otherwise quit the application when at the main menu //
-        if (curScene == AtScene.Start)
+        if (curScene == AtScene.MainGame)
         {
+            yield return null;
+            GoToScene("StartScene");
+        }
+        // If in the editor stop playing otherwise quit the application when at the main menu //
+        else if (curScene == AtScene.Start)
+        {
+            StartCoroutine(ToggleMenu("QuitMenu", false));
+            yield return new WaitForSeconds(0.5f);
 #if UNITY_EDITOR
             EditorApplication.isPlaying = false;
 #else
         Application.Quit();
 #endif
-        }
-        else if (curScene == AtScene.MainGame)
-        {
-            GoToScene("StartScene");
         }
     }
     // End Code that is triggered by MenuLink.cs //
@@ -356,7 +395,6 @@ public class GUIControll : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         roundStart = true;
-        StartCoroutine(MobCntrCycle());
 
         if (spawner)
         {
@@ -395,23 +433,40 @@ public class GUIControll : MonoBehaviour
         if (runTut) { return; }
 
         if (roundClear) { tutCon.DisableAllButtons(); return; }
-        else
-        {
-            tutCon.ToggleUpgBtn(true);
-            tutCon.ToggleDelBtn(true);
-        }
 
         tutCon.ToggleNinja(conTrack.curNinjaCost <= conTrack.curCoinCount 
             && conTrack.ninjaCount < conTrack.maxNinjas);
         tutCon.ToggleWall(conTrack.curWallCost <= conTrack.curCoinCount);
         tutCon.TogglePit(conTrack.curPitCost <= conTrack.curCoinCount);
         tutCon.ToggleMine(conTrack.curMineCost <= conTrack.curCoinCount);
+
+        tutCon.ToggleUpgBtn(TestForPlayerUnits());
+        tutCon.ToggleDelBtn(TestForPlayerUnits());
+    }
+
+    private bool TestForPlayerUnits()
+    {
+        var units = FindObjectsOfType<GameObject>();
+        var tags = new string[] { "Ninja", "Wall", "Pit", "Mine" };
+
+        foreach (var unit in units)
+        {
+            foreach (var tag in tags)
+            {
+                if (unit.tag == tag) { return true; }
+            }
+        }
+
+        return false;
     }
 
     // Set the counters to there default state for starting a new game //
     private void ResetCounters()
     {
-        FindObjectOfType<TrackPlayerObjs>().ResetTracker();
+        var tpobjs = FindObjectOfType<TrackPlayerObjs>();
+
+        if (tpobjs) { tpobjs.ResetTracker(); }
+
         conTrack.curRound = 1;
         conTrack.ninjaCount = 0;
         conTrack.curCoinCount = conTrack.startCoinCount;
@@ -431,9 +486,13 @@ public class GUIControll : MonoBehaviour
     // Begin update functions //
     public void UpdateMaxNinjas()
     {
-        if (conTrack.curRound < 15)
+        if (conTrack.curRound == 1)
         {
-            conTrack.maxNinjas = conTrack.curRound;
+            conTrack.maxNinjas = conTrack.maxNinjasBase;
+        }
+        else if (conTrack.curRound < 15)
+        {
+            conTrack.maxNinjas = conTrack.curRound + conTrack.maxNinjasBase - 1;
         }
         else { conTrack.maxNinjas = 15; }
 
@@ -456,32 +515,20 @@ public class GUIControll : MonoBehaviour
         conTrack.curRound = round;
 
         roundCounter.text = round.ToString("Round : 00");
+
+        if (spawner.endless)
+        {
+            roundCounter.text = "Endless";
+        }
     }
 
-    public void UpdateMobCnt(Vector3Int cnt)
+    public void UpdateMobCnt(Vector2Int cnt)
     {
         conTrack.mobCounts = cnt;
 
-        mobCntrText[0] = "SPAWNING\n" + cnt.x;
-        mobCntrText[1] = "KILLED\n" + cnt.y;
-        mobCntrText[2] = "ESCAPED\n" + cnt.z;
+        mobCntrText = "SPAWNING\n" + cnt.x;
 
-        mobCounter.text = mobCntrText[mobCntrInc];
-    }
-
-    IEnumerator MobCntrCycle()
-    {
-        while (roundStart)
-        {
-            mobCounter.text = mobCntrText[mobCntrInc];
-            mobCntrInc++;
-
-            if (mobCntrInc == 3) { mobCntrInc = 0; }
-
-            yield return new WaitForSeconds(3);
-        }
-        mobCounter.text = mobCntrText[0];
-        mobCntrInc = 0;
+        mobCounter.text = mobCntrText;
     }
     // End update functions //
 

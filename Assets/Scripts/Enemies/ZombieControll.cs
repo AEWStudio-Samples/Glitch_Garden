@@ -9,10 +9,10 @@ public class ZombieControll : MonoBehaviour
 {
     // con fig vars //
     [SerializeField, Space(10)]
-    int hitPoints = 6;
+    int hitPoints = 60;
 
     [SerializeField, Space(10)]
-    int damage = 2;
+    int damage = 20;
 
     [SerializeField, Space(10)]
     GameObject[] zombies = { };
@@ -32,6 +32,7 @@ public class ZombieControll : MonoBehaviour
     GUIControll guiCon;
     Material myMaterial;
     bool spawning = true;
+    bool dead = false;
     float speed = .5f;
     int rank;
 
@@ -43,30 +44,6 @@ public class ZombieControll : MonoBehaviour
     int blockHash = Animator.StringToHash("Blocked");
     int killHash = Animator.StringToHash("Kill");
     int deathHash = Animator.StringToHash("Dead");
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        // Find out what we walked in to //
-        switch(collision.tag)
-        {
-            // Hit by a kunai //
-            case "Kunai":
-                KunaiControll kunai = collision.GetComponent<KunaiControll>();
-                HandleHit(kunai.damage);
-                Destroy(kunai.gameObject);
-                break;
-            // Walked in to a pit //
-            case "Pit":
-                PitControll pit = collision.GetComponent<PitControll>();
-                pit.Fall(gameObject);
-                break;
-            // Walked in to a mine //
-            case "Mine":
-                MineControll mine = collision.GetComponent<MineControll>();
-                mine.Detonate(gameObject);
-                break;
-        }
-    }
 
     private void Awake()
     {
@@ -184,23 +161,12 @@ public class ZombieControll : MonoBehaviour
         rankInsignia.GetComponent<RankManager>().SetInsignia(rank);
     }
 
-    void Update()
-    {
-        // Kills all zombies while playing in the editor //
-        #if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            gameObject.GetComponent<Collider2D>().enabled = false;
-            anim.SetBool(killHash, true);
-            anim.SetBool(deathHash, true);
-        }
-        #endif
-    }
-
     // Checks the lane for a valid target //
     public void CheckLane()
     {
-        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, playerLayer);
+        RaycastHit2D hit = Physics2D.Raycast(attackPoint.transform.position,
+            Vector2.left, 0.25f, playerLayer);
+
         if (hit)
         {
             // Attack ninjas and walls //
@@ -212,44 +178,22 @@ public class ZombieControll : MonoBehaviour
             anim.SetBool(blockHash, false);
         }
 
-        /*RaycastHit2D freeze = Physics2D.Raycast(attackPoint.transform.position, Vector2.left, 0.25f, enemyLayer);
-        if (freeze)
-        {
-            if (!anim.GetBool(frozenHash))
-            {
-                anim.SetTrigger(frezeHash);
-            }
-            anim.SetBool(frozenHash, true);
-        }
-        else
-        {
-            anim.SetBool(frozenHash, false);
-        }*/
-
-        if (anim.GetBool(blockHash) /*|| anim.GetBool(frozenHash)*/)
+        if (anim.GetBool(blockHash))
         {
             myBody.constraints = RigidbodyConstraints2D.FreezeAll;
         }
         else
         {
-            myBody.constraints = RigidbodyConstraints2D.FreezePositionY | RigidbodyConstraints2D.FreezeRotation;
+            myBody.constraints = RigidbodyConstraints2D.FreezePositionY 
+                | RigidbodyConstraints2D.FreezeRotation;
         }
     }
 
     // Applies damage to target from a melee attack //
     public void Attack()
     {
-        if (!target) { return; }
-
-        switch (target.tag)
-        {
-            case "Ninja":
-                target.GetComponent<NinjaControll>().HandleHit(damage);
-                break;
-            case "Wall":
-                target.GetComponent<WallControll>().HandleHit(damage);
-                break;
-        }
+        guiCon.dmgHand.SpawnHDMGText(damage, target.transform.position);
+        guiCon.dmgHand.DealDamage(damage, target);
     }
 
     // Makes the zombie move //
@@ -258,8 +202,7 @@ public class ZombieControll : MonoBehaviour
         myBody.velocity = Vector2.left * anim.GetFloat(speedHash);
         if (transform.position.x < -1f)
         {
-            guiCon.conTrack.mobCounts.z++;
-            guiCon.conTrack.mobsThisRound--;
+            guiCon.conTrack.mobCounts.y++;
             guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
             Destroy(gameObject);
         }
@@ -269,13 +212,12 @@ public class ZombieControll : MonoBehaviour
     public void HandleHit(int damage)
     {
         hitPoints -= damage;
-        if (hitPoints <= 0)
+        if (hitPoints <= 0 && !dead)
         {
+            dead = true;
             gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetTrigger(killHash);
             anim.SetBool(deathHash, true);
-            guiCon.conTrack.mobCounts.y++;
-            guiCon.conTrack.mobsThisRound--;
             guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
         }
     }

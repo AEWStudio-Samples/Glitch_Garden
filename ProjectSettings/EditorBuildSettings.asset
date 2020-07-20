@@ -33,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Menus/ClearMenu.unity
     guid: 3b01e366933df7641b21cc6ccf4edb7f
   - enabled: 1
-    path: Assets/Scenes/Menus/MenuTest.unity
+    path: Assets/Scenes/Menus/OptionsMenu.unity
     guid: 092254de305171240bfa4ed6a5f8c659
   m_configObjects: {}

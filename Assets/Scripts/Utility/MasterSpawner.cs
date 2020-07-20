@@ -11,6 +11,7 @@ using Random = UnityEngine.Random;
 public class MasterSpawner : MonoBehaviour
 {
     // con fig vars //
+    public bool endless;
     [Header("Spawn Parameters")]
     [SerializeField]
     int spawnCount = 30;
@@ -29,41 +30,16 @@ public class MasterSpawner : MonoBehaviour
     int[] spawnCntUsed = { 1, 1 };
 
     // state vars //
+    bool firstWave = true;
     int cntUsed = 0;
     List<int> spawnMobList = new List<int> { };
     List<int[]> spawnGroups = new List<int[]> { };
     int[] spawnGroup = new int[5];
 
-    /*void Start()
-    {
-        List<int[]> testList = new List<int[]> { };
-        int[] testArray = new int[5];
-
-        for (int i = 0; i < spawnCount; i++)
-        {
-            for (int a = 0; a < 5; a++)
-            {
-                testArray[a] = Random.Range(0, 2);
-            }
-
-            testList.Add(testArray);
-        }
-
-        int pass = 0;
-        print("Starting Matrix Test");
-        foreach (int[] testA in testList)
-        {
-            pass++;
-            foreach (int testB in testA)
-            {
-                print("TEST PASS " + pass + ": " + testB);
-            }
-        }
-    }*/
-
     public void StartRound(int cnt)
     {
         spawnCount = cnt;
+
         cntUsed = 0;
         spawnMobList = new List<int> { };
         spawnGroups = new List<int[]> { };
@@ -191,7 +167,7 @@ public class MasterSpawner : MonoBehaviour
         GameObject spm;
         Vector3 spl;
 
-        yield return new WaitForSeconds(sd);
+        if (firstWave) { yield return new WaitForSeconds(sd); }
 
         while (i < spawnGroups.Count && m < spawnCount)
         {
@@ -203,11 +179,11 @@ public class MasterSpawner : MonoBehaviour
                 {
                     mob = mobs[spawnMobList[m]];
                     spm = spawnPoints[sp];
-                    spl = new Vector3(spm.transform.position.x,
-                        spm.transform.position.y,
-                        spm.transform.position.z);
+                    spl = spm.transform.position;
 
-                    Instantiate<GameObject>(mob, spl, Quaternion.identity);
+                    GameObject smob = Instantiate(mob, spl,
+                        Quaternion.identity, spm.transform);
+                    m++;
                 }
 
                 sp++;
@@ -222,5 +198,9 @@ public class MasterSpawner : MonoBehaviour
             }
         }
 
+        if (endless)
+        {
+            firstWave = false;
+        }
     }
 }

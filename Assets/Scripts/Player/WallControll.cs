@@ -7,10 +7,10 @@ using UnityEngine;
 /// </summary>
 public class WallControll : MonoBehaviour
 {
-    // TODO add code for thorns and crit upgrades //
+    // TODO add code for upgrades //
     // con fig vars //
     [SerializeField, Space(10)]
-    int baseHP = 10;
+    int baseHP = 100;
 
     [SerializeField, Space(10)]
     GameObject wall = null;
@@ -141,7 +141,11 @@ public class WallControll : MonoBehaviour
         if (!spawning) { StartCoroutine(UpgradeVFX()); }
 
         // Set the wall's health //
-        if (guiCon.conTrack.curRound > 4) { roundHP = baseHP * (guiCon.conTrack.curRound - 4); }
+        if (guiCon.conTrack.curRound > 4)
+        {
+            roundHP = baseHP * (guiCon.conTrack.curRound - 4);
+        }
+
         addHP = (baseHP * rank) + roundHP;
         hitPoints = baseHP + addHP;
 
