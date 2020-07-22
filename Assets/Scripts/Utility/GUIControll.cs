@@ -2,6 +2,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 #if UNITY_EDITOR
 
@@ -36,7 +37,9 @@ public class GUIControll : MonoBehaviour
 
     public TextMeshProUGUI ninjaCounter = null;
     public TextMeshProUGUI roundCounter = null;
-    public TextMeshProUGUI mobCounter = null;
+    public TextMeshProUGUI spawnCounter = null;
+
+    public Slider escapeTracker = null;
 
     #endregion con fig vars
 
@@ -412,7 +415,7 @@ public class GUIControll : MonoBehaviour
         UpdateMaxNinjas();
         UpdateCoinCount(conTrack.curCoinCount);
         UpdateCurRound(conTrack.curRound);
-        UpdateMobCnt(conTrack.mobCounts);
+        UpdateSpawnCounter(conTrack.mobCounts);
         conTrack.mobsThisRound = conTrack.mobCounts.x;
     }
 
@@ -461,13 +464,30 @@ public class GUIControll : MonoBehaviour
         }
     }
 
-    public void UpdateMobCnt(Vector2Int cnt)
+    public void UpdateSpawnCounter(Vector2Int cnt)
     {
         conTrack.mobCounts = cnt;
 
         mobCntrText = "SPAWNING\n" + cnt.x;
 
-        mobCounter.text = mobCntrText;
+        spawnCounter.text = mobCntrText;
+
+        escapeTracker.maxValue = 5 + conTrack.curRound;
+
+        escapeTracker.value = cnt.y;
+
+        if (escapeTracker.value == escapeTracker.maxValue)
+        {
+            StartCoroutine(GameOver());
+        }
+    }
+
+    private IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(0.5f);
+
+        // Replace with code to show a loos screen //
+        GoToScene("StartScene");
     }
 
     #endregion GUI Updates

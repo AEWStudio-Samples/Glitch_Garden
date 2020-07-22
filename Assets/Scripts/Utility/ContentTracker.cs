@@ -11,7 +11,7 @@ public class ContentTracker : MonoBehaviour
 
     [Header("Starting Values")]
     public int startCoinCount = 200;
-    public Vector2Int mobSpawnCountBase = new Vector2Int { x = 5, y = 0 };
+    public Vector2Int mobSpawnCountBase = new Vector2Int { x = 15, y = 0 };
 
     [Header("Counters")]
     public int curCoinCount = 0;

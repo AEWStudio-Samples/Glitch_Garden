@@ -9,17 +9,17 @@ public class OptionsLink : MonoBehaviour
     [Header("Sound Settings", order = 0)]
     [Space(5, order = 1)]
     [Header("Master Volume", order = 2)]
-    public Scrollbar masterScrollbar;
+    public Slider masterScrollbar;
 
     public TextMeshProUGUI masterValueText;
 
     [Header("Sound Volume")]
-    public Scrollbar soundScrollbar;
+    public Slider soundScrollbar;
 
     public TextMeshProUGUI soundValueText;
 
     [Header("Music Volume")]
-    public Scrollbar musicScrollbar;
+    public Slider musicScrollbar;
 
     public TextMeshProUGUI musicValueText;
 

@@ -8,10 +8,14 @@ public class HUDLink : MonoBehaviour
 
     #region Link to GUIControll.cs
 
-    [Header("GUIControll Elements")] public TextMeshProUGUI ninjaCounter = null;
-    public TextMeshProUGUI zombieCounter = null;
+    [Header("GUIControll Elements")]
+    public TextMeshProUGUI ninjaCounter = null;
+
+    public TextMeshProUGUI spawnCounter = null;
     public TextMeshProUGUI roundCounter = null;
     public TextMeshProUGUI coinCounter = null;
+
+    public Slider escapeTracker = null;
 
     #endregion Link to GUIControll.cs
 
@@ -64,9 +68,10 @@ public class HUDLink : MonoBehaviour
     {
         // Link HUD elements to GUIControll //
         guiCon.ninjaCounter = ninjaCounter;
-        guiCon.mobCounter = zombieCounter;
+        guiCon.spawnCounter = spawnCounter;
         guiCon.roundCounter = roundCounter;
         guiCon.coinCounter = coinCounter;
+        guiCon.escapeTracker = escapeTracker;
 
         // Link HUD elements to PriceManager //
         guiCon.priceCon.ninjaPrice = ninjaPrice;

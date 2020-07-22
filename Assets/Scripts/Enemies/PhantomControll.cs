@@ -140,7 +140,7 @@ public class PhantomControll : MonoBehaviour
         SetStats();
         anim.SetFloat(speedHash, speed);
         guiCon.conTrack.mobCounts.x--;
-        guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
+        guiCon.UpdateSpawnCounter(guiCon.conTrack.mobCounts);
     }
 
     private void SetStats()
@@ -206,7 +206,7 @@ public class PhantomControll : MonoBehaviour
         if (transform.position.x < -1f)
         {
             guiCon.conTrack.mobCounts.y++;
-            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
+            guiCon.UpdateSpawnCounter(guiCon.conTrack.mobCounts);
             Destroy(gameObject);
         }
     }
@@ -221,7 +221,7 @@ public class PhantomControll : MonoBehaviour
             gameObject.GetComponent<Collider2D>().enabled = false;
             anim.SetTrigger(killHash);
             anim.SetBool(deathHash, true);
-            guiCon.UpdateMobCnt(guiCon.conTrack.mobCounts);
+            guiCon.UpdateSpawnCounter(guiCon.conTrack.mobCounts);
         }
     }
 

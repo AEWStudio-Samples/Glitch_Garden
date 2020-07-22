@@ -13,19 +13,19 @@ public class OptionsManager : MonoBehaviour
     [Header("Master Volume", order = 2)]
     public AudioManager.AudioChannel masterChannel;
 
-    public Scrollbar masterScrollbar;
+    public Slider masterScrollbar;
     public TextMeshProUGUI masterValueText;
 
     [Header("Sound Volume")]
     public AudioManager.AudioChannel soundChannel;
 
-    public Scrollbar soundScrollbar;
+    public Slider soundScrollbar;
     public TextMeshProUGUI soundValueText;
 
     [Header("Music Volume")]
     public AudioManager.AudioChannel musicChannel;
 
-    public Scrollbar musicScrollbar;
+    public Slider musicScrollbar;
     public TextMeshProUGUI musicValueText;
 
     // state vars //
@@ -103,7 +103,7 @@ public class OptionsManager : MonoBehaviour
 
     public void UpdateSoundLevels(AudioManager.AudioChannel channel)
     {
-        Scrollbar scrollbar = masterScrollbar;
+        Slider scrollbar = masterScrollbar;
         TextMeshProUGUI valueText = masterValueText;
 
         switch (channel)
